@@ -1,0 +1,15 @@
+corlin/
+├── index.html                  ← Main hub page (existing, will update in Step 6)
+├── sitemap.xml                 ← NEW — below
+├── jordan/
+│   └── index.html              ← NEW — Step 2
+├── tsuenwan/
+│   └── index.html              ← NEW — Step 3
+├── startup/
+│   └── index.html              ← NEW — Step 4 (简体)
+├── startup-hk/
+│   └── index.html              ← NEW — Step 5 (繁體)
+├── images/
+│   ├── (your existing images)
+│   └── (OG images — you can add later via Canva)
+└── (other existing files like CSS/JS)
