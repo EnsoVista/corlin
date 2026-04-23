@@ -1,10 +1,943 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-HK">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>佐敦補習社 | CorLin 芯啟教育 — 即將推出</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>荃灣補習 — 芯啟教育 CorLin | 1:5 小班 中英數專科 P1-S6</title>
+    <meta name="description" content="荃灣補習首選 — 芯啟教育 CorLin。1:5 黃金比例小班，中英數專科策略教學，覆蓋小一至中六、呈分試到 DSE。逾 800 位家長真實推薦。">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --brand-50:#EEF2FF;--brand-100:#E0E7FF;--brand-200:#C7D2FE;--brand-300:#A5B4FC;
+            --brand-400:#818CF8;--brand-500:#6366F1;--brand-600:#4F46E5;--brand-700:#4338CA;
+            --brand-800:#3730A3;--brand-900:#312E81;
+        }
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Noto Sans TC','Noto Sans SC','Inter',sans-serif;color:#1E293B;background:#fff;overflow-x:hidden;}
+
+        /* NAV */
+        .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(99,102,241,.08);transition:box-shadow .3s;}
+        .nav.scrolled{box-shadow:0 4px 24px rgba(67,56,202,.08);}
+        .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;}
+        .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+        .nav-logo img{height:36px;width:auto;border-radius:8px;object-fit:contain;}
+        .nav-logo span{font-weight:700;font-size:18px;color:var(--brand-700);}
+        .nav-links{display:flex;gap:24px;align-items:center;}
+        .nav-links a{text-decoration:none;font-size:15px;font-weight:500;color:#475569;transition:color .2s;}
+        .nav-links a:hover,.nav-links a.active{color:var(--brand-600);}
+        .nav-cta{background:var(--brand-600);color:#fff!important;padding:8px 20px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;transition:background .2s;}
+        .nav-cta:hover{background:var(--brand-700);}
+        .hamburger{display:none;background:none;border:none;font-size:22px;color:#475569;cursor:pointer;}
+        .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#fff;z-index:99;padding:24px;flex-direction:column;gap:8px;overflow-y:auto;}
+        .mobile-menu.open{display:flex;}
+        .mobile-menu a{display:block;padding:14px 16px;border-radius:10px;text-decoration:none;font-size:16px;font-weight:500;color:#334155;transition:background .2s;}
+        .mobile-menu a:hover{background:var(--brand-50);color:var(--brand-600);}
+        @media(max-width:768px){.nav-links{display:none;}.hamburger{display:block;}}
+
+        /* LANG SWITCHER */
+        .lang-switcher{position:relative;}
+        .lang-btn{background:var(--brand-50);color:var(--brand-600);border:1px solid var(--brand-200);padding:6px 14px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;transition:background .2s;}
+        .lang-btn:hover{background:var(--brand-100);}
+        .lang-dropdown{display:none;position:absolute;top:calc(100% + 6px);right:0;background:#fff;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.12);overflow:hidden;min-width:140px;z-index:200;border:1px solid #E2E8F0;}
+        .lang-dropdown.open{display:block;}
+        .lang-dropdown a{display:block;padding:10px 16px;font-size:14px;color:#334155;text-decoration:none;transition:background .2s;}
+        .lang-dropdown a:hover{background:var(--brand-50);}
+        .lang-dropdown a.active{color:var(--brand-600);font-weight:600;background:var(--brand-50);}
+        .mobile-lang{display:flex;gap:8px;padding:14px 16px;}
+        .mobile-lang button{flex:1;padding:10px;border-radius:8px;border:1px solid #E2E8F0;background:#fff;font-size:14px;font-weight:500;color:#475569;cursor:pointer;transition:all .2s;}
+        .mobile-lang button.active{background:var(--brand-600);color:#fff;border-color:var(--brand-600);}
+
+        /* HERO */
+        .hero{position:relative;padding:140px 24px 100px;background:linear-gradient(135deg,var(--brand-700) 0%,var(--brand-500) 50%,#818CF8 100%);overflow:hidden;color:#fff;text-align:center;}
+        .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+        .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);padding:8px 18px;border-radius:50px;font-size:14px;font-weight:500;margin-bottom:24px;position:relative;}
+        .hero h1{font-size:clamp(30px,5.5vw,52px);font-weight:900;line-height:1.2;margin-bottom:16px;position:relative;}
+        .hero p{font-size:clamp(16px,2.5vw,20px);opacity:.9;max-width:680px;margin:0 auto 36px;position:relative;line-height:1.7;}
+        .hero-stats{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;position:relative;margin-bottom:36px;}
+        .hero-stat{text-align:center;}
+        .hero-stat .val{font-size:36px;font-weight:900;}
+        .hero-stat .label{font-size:13px;opacity:.8;margin-top:4px;}
+        .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;}
+        .btn-white{background:#fff;color:var(--brand-700);padding:14px 32px;border-radius:12px;font-size:16px;font-weight:700;text-decoration:none;transition:transform .2s,box-shadow .2s;display:inline-flex;align-items:center;gap:8px;}
+        .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.15);}
+        .btn-outline{background:transparent;color:#fff;padding:14px 32px;border:2px solid rgba(255,255,255,.4);border-radius:12px;font-size:16px;font-weight:600;text-decoration:none;transition:background .2s,border-color .2s;display:inline-flex;align-items:center;gap:8px;}
+        .btn-outline:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.7);}
+
+        /* INFO BAR */
+        .info-bar{max-width:1000px;margin:-52px auto 0;position:relative;z-index:10;padding:0 24px;}
+        .info-bar-inner{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border-radius:16px;box-shadow:0 12px 40px rgba(67,56,202,.12);overflow:hidden;}
+        .info-item{padding:28px 24px;text-align:center;border-right:1px solid #F1F5F9;}
+        .info-item:last-child{border-right:none;}
+        .info-item i{font-size:24px;color:var(--brand-500);margin-bottom:10px;}
+        .info-item h3{font-size:15px;font-weight:700;color:#1E293B;margin-bottom:4px;}
+        .info-item p{font-size:13px;color:#64748B;line-height:1.6;}
+        @media(max-width:640px){.info-bar-inner{grid-template-columns:1fr;}.info-item{border-right:none;border-bottom:1px solid #F1F5F9;}.info-item:last-child{border-bottom:none;}}
+
+        /* SECTIONS */
+        section{padding:80px 24px;}
+        .section-inner{max-width:1100px;margin:0 auto;}
+        .section-label{display:inline-flex;align-items:center;gap:8px;background:var(--brand-50);color:var(--brand-600);padding:6px 16px;border-radius:50px;font-size:13px;font-weight:600;margin-bottom:12px;}
+        .section-title{font-size:clamp(26px,4vw,38px);font-weight:800;color:#1E293B;margin-bottom:14px;line-height:1.3;}
+        .section-subtitle{font-size:17px;color:#64748B;max-width:600px;line-height:1.7;margin-bottom:48px;}
+
+        /* PHILOSOPHY */
+        .philosophy-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+        .philosophy-img{width:100%;border-radius:20px;aspect-ratio:4/3;overflow:hidden;background:#E2E8F0;}
+        .philosophy-img img{width:100%;height:100%;object-fit:cover;display:block;}
+        .philosophy-text h2{font-size:32px;font-weight:800;color:#1E293B;margin-bottom:16px;}
+        .philosophy-text>p{font-size:16px;color:#475569;line-height:1.8;margin-bottom:24px;}
+        .phi-features{display:flex;flex-direction:column;gap:16px;}
+        .phi-feat{display:flex;align-items:start;gap:14px;}
+        .phi-feat-icon{width:40px;height:40px;border-radius:10px;background:var(--brand-50);color:var(--brand-600);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;margin-top:2px;}
+        .phi-feat-text h4{font-size:15px;font-weight:700;color:#1E293B;margin-bottom:2px;}
+        .phi-feat-text p{font-size:14px;color:#64748B;line-height:1.6;}
+        @media(max-width:768px){.philosophy-grid{grid-template-columns:1fr;}}
+
+        /* 90-MIN FLOW */
+        .flow-section{background:#F8FAFC;}
+        .flow-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:900px;margin:0 auto;}
+        .flow-step{background:#fff;border-radius:16px;padding:28px 24px;border:1px solid #E2E8F0;text-align:center;position:relative;transition:transform .25s,box-shadow .25s;}
+        .flow-step:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(67,56,202,.1);}
+        .flow-step-num{width:40px;height:40px;border-radius:50%;background:var(--brand-600);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;margin:0 auto 16px;}
+        .flow-step h3{font-size:17px;font-weight:700;color:#1E293B;margin-bottom:6px;}
+        .flow-step .flow-sub{font-size:12px;font-weight:600;color:var(--brand-500);margin-bottom:10px;}
+        .flow-step p{font-size:14px;color:#64748B;line-height:1.6;}
+        @media(max-width:640px){.flow-steps{grid-template-columns:1fr;}}
+
+        /* COURSES */
+        .course-block{background:#fff;border-radius:20px;padding:40px;border:1px solid #E2E8F0;margin-bottom:32px;box-shadow:0 2px 12px rgba(67,56,202,.04);}
+        .course-block-header{display:flex;align-items:center;gap:16px;margin-bottom:8px;}
+        .course-block-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+        .course-block-header h3{font-size:22px;font-weight:800;color:#1E293B;}
+        .course-block>p{font-size:15px;color:#475569;line-height:1.7;margin-bottom:24px;margin-left:68px;}
+        .course-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:28px;margin-left:68px;}
+        .course-feat-item{display:flex;align-items:center;gap:10px;font-size:14px;color:#334155;}
+        .course-feat-item i{color:var(--brand-500);font-size:14px;width:20px;text-align:center;}
+        .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-left:68px;}
+        .price-card{background:#F8FAFC;border-radius:12px;padding:20px;text-align:center;border:1px solid #E2E8F0;transition:border-color .2s;}
+        .price-card:hover{border-color:var(--brand-300);}
+        .price-card .time{font-size:13px;font-weight:600;color:#64748B;margin-bottom:6px;}
+        .price-card .amount{font-size:26px;font-weight:800;color:var(--brand-600);}
+        .price-card .unit{font-size:13px;color:#94A3B8;}
+        .price-note{margin-left:68px;margin-top:16px;font-size:13px;color:#94A3B8;font-style:italic;}
+        .subject-pricing{margin-left:68px;}
+        .subject-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:12px;overflow:hidden;margin-bottom:20px;box-shadow:0 2px 8px rgba(67,56,202,.06);}
+        .subject-table th{background:var(--brand-600);color:#fff;padding:14px 20px;text-align:left;font-size:14px;font-weight:600;}
+        .subject-table td{padding:14px 20px;font-size:14px;color:#475569;border-bottom:1px solid #F1F5F9;background:#fff;}
+        .subject-table tr:last-child td{border-bottom:none;}
+        .subject-table tr:hover td{background:var(--brand-50);}
+        .original-price{text-decoration:line-through;color:#94A3B8;margin-right:6px;}
+        .best-price{font-weight:700;color:var(--brand-600);}
+        .promo-box{background:linear-gradient(135deg,#FEF3C7,#FFFBEB);border-radius:14px;padding:24px;margin-top:20px;border:1px solid #FDE68A;}
+        .promo-box h4{font-size:16px;font-weight:700;color:#92400E;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+        .promo-item{display:flex;align-items:start;gap:10px;padding:6px 0;font-size:14px;color:#78350F;}
+        .promo-item i{color:#F59E0B;margin-top:3px;font-size:13px;}
+        .promo-note{font-size:12px;color:#A16207;margin-top:10px;}
+        @media(max-width:640px){.course-block{padding:24px;}.course-block>p,.course-features,.pricing-grid,.price-note,.subject-pricing{margin-left:0;}.subjects-grid-offset{margin-left:0!important;}}
+
+        /* SUBJECT CARDS */
+        .subjects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:24px;}
+        .subject-card{background:#fff;border-radius:14px;padding:24px;border:1px solid #E2E8F0;text-align:center;transition:transform .2s,box-shadow .2s;}
+        .subject-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(67,56,202,.08);}
+        .subject-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 14px;}
+        .subject-card h4{font-size:16px;font-weight:700;color:#1E293B;margin-bottom:4px;}
+        .subject-card p{font-size:13px;color:#64748B;line-height:1.5;}
+
+        /* FACILITIES */
+        .facilities-section{background:#F8FAFC;}
+        .facilities-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+        .facility-card{background:#fff;border-radius:16px;padding:24px;text-align:center;border:1px solid #E2E8F0;transition:transform .2s,box-shadow .2s;}
+        .facility-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(67,56,202,.08);}
+        .facility-icon-box{width:56px;height:56px;border-radius:14px;background:var(--brand-50);color:var(--brand-500);display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 14px;}
+        .facility-card h3{font-size:16px;font-weight:700;color:#1E293B;margin-bottom:6px;}
+        .facility-card p{font-size:13px;color:#64748B;line-height:1.6;}
+
+        /* LOCATION */
+        .location-section{background:var(--brand-50);}
+        .location-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+        .map-placeholder{width:100%;aspect-ratio:4/3;border-radius:16px;background:#E2E8F0;overflow:hidden;}
+        .map-placeholder iframe{width:100%;height:100%;border:0;}
+        .location-details{display:flex;flex-direction:column;gap:24px;}
+        .loc-item{display:flex;gap:16px;}
+        .loc-icon{width:44px;height:44px;border-radius:12px;background:#fff;color:var(--brand-600);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;box-shadow:0 2px 8px rgba(67,56,202,.08);}
+        .loc-text h4{font-size:15px;font-weight:700;color:#1E293B;margin-bottom:4px;}
+        .loc-text p{font-size:14px;color:#64748B;line-height:1.6;}
+        .loc-text a{color:var(--brand-600);text-decoration:none;font-weight:600;}
+        .loc-text a:hover{text-decoration:underline;}
+        @media(max-width:768px){.location-grid{grid-template-columns:1fr;}}
+
+        /* HOURS TABLE */
+        .hours-table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(67,56,202,.06);}
+        .hours-table th{background:var(--brand-600);color:#fff;padding:14px 20px;text-align:left;font-size:14px;font-weight:600;}
+        .hours-table td{padding:14px 20px;font-size:14px;color:#475569;border-bottom:1px solid #F1F5F9;}
+        .hours-table tr:last-child td{border-bottom:none;}
+        .hours-table tr:hover td{background:var(--brand-50);}
+
+        /* CTA */
+        .cta-section{background:linear-gradient(135deg,var(--brand-700),var(--brand-500));text-align:center;color:#fff;}
+        .cta-section h2{font-size:clamp(26px,4vw,38px);font-weight:800;margin-bottom:14px;}
+        .cta-section p{font-size:17px;opacity:.9;max-width:520px;margin:0 auto 32px;line-height:1.7;}
+        .cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+        /* FOOTER */
+        footer{background:#0F172A;color:#94A3B8;padding:48px 24px 28px;}
+        .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:32px;}
+        .footer-brand span{font-size:18px;font-weight:700;color:#fff;}
+        .footer-brand p{font-size:14px;margin-top:8px;line-height:1.6;}
+        .footer-links h4{font-size:14px;font-weight:600;color:#fff;margin-bottom:12px;}
+        .footer-links a{display:block;font-size:14px;color:#94A3B8;text-decoration:none;padding:4px 0;transition:color .2s;}
+        .footer-links a:hover{color:#E0E7FF;}
+        .footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:24px;border-top:1px solid #1E293B;text-align:center;font-size:13px;}
+
+        /* ANIMATIONS */
+        .fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
+        .fade-up.visible{opacity:1;transform:translateY(0);}
+        .fade-up.d1{transition-delay:.1s;}.fade-up.d2{transition-delay:.2s;}.fade-up.d3{transition-delay:.3s;}
+    </style>
 </head>
 <body>
-    <p>頁面建設中，敬請期待。</p>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a class="nav-logo" href="https://ensovista.com/corlin/">
+            <img src="https://ensovista.com/corlin/assets/logo.jpg" alt="CorLin Logo">
+            <span data-i18n="brand">芯啟教育</span>
+        </a>
+        <div class="nav-links">
+            <a href="https://ensovista.com/corlin/" data-i18n="nav_home">主頁</a>
+            <a href="#courses" data-i18n="nav_courses">課程</a>
+            <a href="#" class="active" data-i18n="nav_tw">荃灣分校</a>
+            <a href="https://ensovista.com/corlin/jordan/" data-i18n="nav_jordan">佐敦分校</a>
+            <a href="#faq" data-i18n="nav_faq">常見問題</a>
+            <div class="lang-switcher">
+                <button class="lang-btn" id="langBtn"><i class="fas fa-globe" style="font-size:13px;"></i> <span id="langBtnText">繁中</span> <i class="fas fa-chevron-down" style="font-size:10px;"></i></button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <a href="#" data-lang="zh-TW" class="active">繁體中文</a>
+                    <a href="#" data-lang="zh-CN">简体中文</a>
+                    <a href="#" data-lang="en">English</a>
+                </div>
+            </div>
+            <a href="https://wa.me/85256668296" class="nav-cta"><i class="fab fa-whatsapp"></i> <span data-i18n="nav_cta">WhatsApp 查詢</span></a>
+        </div>
+        <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="https://ensovista.com/corlin/" data-i18n="nav_home">主頁</a>
+    <a href="#courses" data-i18n="nav_courses">課程</a>
+    <a href="#" style="background:var(--brand-50);color:var(--brand-600);" data-i18n="nav_tw">荃灣分校</a>
+    <a href="https://ensovista.com/corlin/jordan/" data-i18n="nav_jordan">佐敦分校</a>
+    <a href="#faq" data-i18n="nav_faq">常見問題</a>
+    <div class="mobile-lang">
+        <button data-lang="zh-TW" class="active">繁中</button>
+        <button data-lang="zh-CN">简中</button>
+        <button data-lang="en">EN</button>
+    </div>
+    <a href="https://wa.me/85256668296" style="background:var(--brand-600);color:#fff;text-align:center;border-radius:10px;margin-top:8px;"><i class="fab fa-whatsapp"></i> <span data-i18n="nav_cta">WhatsApp 查詢</span></a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-badge"><i class="fas fa-book-open"></i> <span data-i18n="hero_badge">中、英、數專科</span></div>
+    <h1 data-i18n="hero_title">荃灣補習 — 多元系統教學<br>拒絕盲目操練</h1>
+    <p data-i18n="hero_desc">「核心聯繫」教學法，助學生打通知識點。1:5 黃金比例小班，覆蓋小一至中六、呈分試到 DSE。逾 800 位家長真實推薦。</p>
+    <div class="hero-stats">
+        <div class="hero-stat"><div class="val">1:5</div><div class="label" data-i18n="hero_ratio">師生比例</div></div>
+        <div class="hero-stat"><div class="val">90<span style="font-size:20px;">min</span></div><div class="label" data-i18n="hero_duration">每堂時長</div></div>
+        <div class="hero-stat"><div class="val">P1–S6</div><div class="label" data-i18n="hero_levels">全級覆蓋</div></div>
+    </div>
+    <div class="hero-actions">
+        <a href="https://wa.me/85256668296" class="btn-white"><i class="fab fa-whatsapp"></i> <span data-i18n="hero_btn_wa">WhatsApp 查詢</span></a>
+        <a href="#courses" class="btn-outline"><i class="fas fa-dollar-sign"></i> <span data-i18n="hero_btn_price">查看收費</span></a>
+    </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+    <div class="info-bar-inner">
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3 data-i18n="info_addr_title">地址</h3>
+            <p data-i18n="info_addr_desc">荃灣海壩街 132 號<br>荃立方 S63</p>
+        </div>
+        <div class="info-item">
+            <i class="fab fa-whatsapp"></i>
+            <h3 data-i18n="info_wa_title">WhatsApp 查詢</h3>
+            <p>5666 8296</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <h3 data-i18n="info_hours_title">功課輔導班時段</h3>
+            <p data-i18n="info_hours_desc">星期一至五：16:00 – 19:00</p>
+        </div>
+    </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<section style="padding-top:100px;">
+    <div class="section-inner">
+        <div class="philosophy-grid fade-up">
+            <div class="philosophy-img">
+                <img src="https://ensovista.com/corlin/assets/corlin_TW_photo_1.png" alt="CorLin Tsuen Wan Campus">
+            </div>
+            <div class="philosophy-text">
+                <div class="section-label"><i class="fas fa-lightbulb"></i> <span data-i18n="phi_label">教學理念</span></div>
+                <h2 data-i18n="phi_title">「芯」於同理，「啟」於策略</h2>
+                <p data-i18n="phi_desc">導師成績只是基本，具備同理心才是關鍵。我們站在學生角度，診斷「不明白」的根源，讓學習回歸簡單。</p>
+                <div class="phi-features">
+                    <div class="phi-feat">
+                        <div class="phi-feat-icon"><i class="fas fa-hands-helping"></i></div>
+                        <div class="phi-feat-text">
+                            <h4 data-i18n="phi_f1_title">同理心教學</h4>
+                            <p data-i18n="phi_f1_desc">導師與學生不只是師生，更是深知彼此的學習夥伴。深厚的信任感，讓導師能為孩子量身打造最合適的升學與成長策略。</p>
+                        </div>
+                    </div>
+                    <div class="phi-feat">
+                        <div class="phi-feat-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="phi-feat-text">
+                            <h4 data-i18n="phi_f2_title">策略性分配</h4>
+                            <p data-i18n="phi_f2_desc">以「家長願景 → 學生弱點 → 優先順序」為核心邏輯，將每分鐘轉化為最高分數回報。</p>
+                        </div>
+                    </div>
+                    <div class="phi-feat">
+                        <div class="phi-feat-icon"><i class="fas fa-layer-group"></i></div>
+                        <div class="phi-feat-text">
+                            <h4 data-i18n="phi_f3_title">分段分流</h4>
+                            <p data-i18n="phi_f3_desc">堅持「逐一教學、逐一操練、逐一優化」，為孩子量身打造的知識長跑。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 90-MIN FLOW -->
+<section class="flow-section">
+    <div class="section-inner">
+        <div style="text-align:center;" class="fade-up">
+            <div class="section-label"><i class="fas fa-stopwatch"></i> <span data-i18n="flow_label">課堂流程</span></div>
+            <div class="section-title" data-i18n="flow_title">每堂 90 分鐘的流程</div>
+            <div class="section-subtitle" style="margin-left:auto;margin-right:auto;" data-i18n="flow_subtitle">科學化設計，確保每分鐘都有效</div>
+        </div>
+        <div class="flow-steps fade-up">
+            <div class="flow-step">
+                <div class="flow-step-num">1</div>
+                <h3 data-i18n="flow_s1_title">快速評估</h3>
+                <div class="flow-sub" data-i18n="flow_s1_sub">前 5 分鐘</div>
+                <p data-i18n="flow_s1_desc">當日測驗、學習進度、心理狀態，全面掌握學生狀況。</p>
+            </div>
+            <div class="flow-step">
+                <div class="flow-step-num">2</div>
+                <h3 data-i18n="flow_s2_title">針對性施教</h3>
+                <div class="flow-sub" data-i18n="flow_s2_sub">攻弱點或備考試</div>
+                <p data-i18n="flow_s2_desc">根據評估結果即時調整教學方向，不浪費一分鐘。</p>
+            </div>
+            <div class="flow-step">
+                <div class="flow-step-num">3</div>
+                <h3 data-i18n="flow_s3_title">即時反饋</h3>
+                <div class="flow-sub" data-i18n="flow_s3_sub">雲端備課 · 現場列印</div>
+                <p data-i18n="flow_s3_desc">教材與學生的學習節奏 100% 同步，絕非千篇一律。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+    <div class="section-inner">
+        <div style="text-align:center;" class="fade-up">
+            <div class="section-label"><i class="fas fa-book-open"></i> <span data-i18n="courses_label">荃灣分校課程</span></div>
+            <div class="section-title" data-i18n="courses_title">課程及收費</div>
+            <div class="section-subtitle" style="margin-left:auto;margin-right:auto;" data-i18n="courses_subtitle">功課輔導 + 精英專科，全面覆蓋 P1 至 S6</div>
+        </div>
+
+        <!-- Homework -->
+        <div class="course-block fade-up">
+            <div class="course-block-header">
+                <div class="course-block-icon" style="background:#ECFDF5;color:#059669;"><i class="fas fa-clipboard-check"></i></div>
+                <div><h3 data-i18n="hw_title">全方位功課輔導班</h3></div>
+            </div>
+            <p data-i18n="hw_desc">1:5 小班模式，以高效方式完成功課、預備默書及測驗，剩餘時間鞏固中英數基礎。</p>
+            <div class="course-features">
+                <div class="course-feat-item"><i class="fas fa-check-circle"></i> <span data-i18n="hw_f1">1:5 小班，確保每位學生被看見</span></div>
+                <div class="course-feat-item"><i class="fas fa-check-circle"></i> <span data-i18n="hw_f2">依優先次序、高效完成功課</span></div>
+                <div class="course-feat-item"><i class="fas fa-check-circle"></i> <span data-i18n="hw_f3">每日模擬默書 / 測驗預備</span></div>
+                <div class="course-feat-item"><i class="fas fa-check-circle"></i> <span data-i18n="hw_f4">剩餘時間中英數基礎鞏固</span></div>
+            </div>
+            <div style="margin-left:68px;margin-bottom:12px;">
+                <span style="font-size:14px;font-weight:700;color:#1E293B;" data-i18n="hw_pricing_mode">收費模式：月費制（星期一至五）</span>
+            </div>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="time">16:00 – 17:30</div>
+                    <div class="amount">$1,480</div>
+                    <div class="unit" data-i18n="per_month">/ 月</div>
+                </div>
+                <div class="price-card">
+                    <div class="time">17:30 – 19:00</div>
+                    <div class="amount">$1,480</div>
+                    <div class="unit" data-i18n="per_month">/ 月</div>
+                </div>
+                <div class="price-card" style="border-color:var(--brand-300);background:var(--brand-50);">
+                    <div class="time" data-i18n="hw_full_slot">16:00 – 19:00（全時段）</div>
+                    <div class="amount" style="color:var(--brand-700);">$2,600</div>
+                    <div class="unit" data-i18n="per_month">/ 月</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subject Strategy -->
+        <div class="course-block fade-up">
+            <div class="course-block-header">
+                <div class="course-block-icon" style="background:#EEF2FF;color:#4F46E5;"><i class="fas fa-trophy"></i></div>
+                <div><h3 data-i18n="elite_title">精英專科加強班</h3></div>
+            </div>
+            <p data-i18n="elite_desc">策略導向教學，使用原創針對性教材與獨家解題公式，簡化繁瑣知識，適合想在成績上取得突破的學生。</p>
+            <div class="course-features">
+                <div class="course-feat-item"><i class="fas fa-check-circle"></i> <span data-i18n="elite_f1">中、英、數策略導向教學</span></div>
+                <div class="course-feat-item"><i class="fas fa-check-circle"></i> <span data-i18n="elite_f2">每堂前 5 分鐘診斷式學習</span></div>
+                <div class="course-feat-item"><i class="fas fa-check-circle"></i> <span data-i18n="elite_f3">配合校情的原創針對性教材</span></div>
+                <div class="course-feat-item"><i class="fas fa-check-circle"></i> <span data-i18n="elite_f4">獨家解題公式，簡化繁瑣知識</span></div>
+            </div>
+
+            <div class="subjects-grid subjects-grid-offset" style="margin-left:68px;margin-bottom:28px;">
+                <div class="subject-card">
+                    <div class="subject-icon" style="background:#FEF3C7;color:#D97706;"><i class="fas fa-language"></i></div>
+                    <h4 data-i18n="subj_chi">中文</h4>
+                    <p data-i18n="subj_chi_desc">閱讀理解、寫作、文言文</p>
+                </div>
+                <div class="subject-card">
+                    <div class="subject-icon" style="background:#EEF2FF;color:#4F46E5;"><i class="fas fa-spell-check"></i></div>
+                    <h4 data-i18n="subj_eng">英文</h4>
+                    <p data-i18n="subj_eng_desc">文法、閱讀、寫作、拼音</p>
+                </div>
+                <div class="subject-card">
+                    <div class="subject-icon" style="background:#ECFDF5;color:#059669;"><i class="fas fa-calculator"></i></div>
+                    <h4 data-i18n="subj_math">數學</h4>
+                    <p data-i18n="subj_math_desc">解題技巧、應用題、備考</p>
+                </div>
+                <div class="subject-card">
+                    <div class="subject-icon" style="background:#FDF2F8;color:#DB2777;"><i class="fas fa-comments"></i></div>
+                    <h4 data-i18n="subj_oral">英文口語</h4>
+                    <p data-i18n="subj_oral_desc">會話訓練、口試技巧</p>
+                </div>
+            </div>
+
+            <div class="subject-pricing">
+                <table class="subject-table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="th_level">程度</th>
+                            <th data-i18n="th_standard">標準學費</th>
+                            <th data-i18n="th_best">最優惠價</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-i18n="lvl_pri"><strong>小學</strong> P1–P6</td>
+                            <td><span class="original-price">$138/hr</span></td>
+                            <td><span class="best-price">$78/hr</span></td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="lvl_jss"><strong>初中</strong> S1–S3</td>
+                            <td><span class="original-price">$148/hr</span></td>
+                            <td><span class="best-price">$88/hr</span></td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="lvl_sss"><strong>高中</strong> S4–S6</td>
+                            <td><span class="original-price">$158/hr</span></td>
+                            <td><span class="best-price">$98/hr</span></td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="lvl_oral"><strong>英文口語</strong></td>
+                            <td><span class="original-price">$158/hr</span></td>
+                            <td><span class="best-price">$98/hr</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="promo-box">
+                    <h4 data-i18n="promo_title">🎁 三大限時疊加優惠</h4>
+                    <div class="promo-item"><i class="fas fa-star"></i><span data-i18n="promo_1"><strong>【多科獎勵】</strong>報讀兩科或以上，每小時減 $20</span></div>
+                    <div class="promo-item"><i class="fas fa-star"></i><span data-i18n="promo_2"><strong>【口碑推薦】</strong>介紹一位新朋友報名，每小時減 $20</span></div>
+                    <div class="promo-item"><i class="fas fa-star"></i><span data-i18n="promo_3"><strong>【雙重推薦】</strong>介紹第二位新朋友報名，每小時減 $20</span></div>
+                    <div class="promo-note" data-i18n="promo_note">* 最優惠學費已包含全部優惠疊加（最高每小時減免 $60）</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FACILITIES -->
+<section class="facilities-section">
+    <div class="section-inner">
+        <div style="text-align:center;" class="fade-up">
+            <div class="section-label"><i class="fas fa-building"></i> <span data-i18n="fac_label">中心設施</span></div>
+            <div class="section-title" data-i18n="fac_title">舒適學習環境</div>
+            <div class="section-subtitle" style="margin-left:auto;margin-right:auto;" data-i18n="fac_subtitle">為學生打造專注、高效的學習空間</div>
+        </div>
+        <div class="facilities-grid fade-up">
+            <div class="facility-card">
+                <div class="facility-icon-box"><i class="fas fa-users"></i></div>
+                <h3 data-i18n="fac_c1_title">1:5 小班教室</h3>
+                <p data-i18n="fac_c1_desc">每班最多 5 人，確保每位學生被充分關注</p>
+            </div>
+            <div class="facility-card">
+                <div class="facility-icon-box"><i class="fas fa-cloud"></i></div>
+                <h3 data-i18n="fac_c2_title">雲端教材系統</h3>
+                <p data-i18n="fac_c2_desc">電子化管理，教材與學習節奏 100% 同步</p>
+            </div>
+            <div class="facility-card">
+                <div class="facility-icon-box"><i class="fas fa-print"></i></div>
+                <h3 data-i18n="fac_c3_title">即時列印教材</h3>
+                <p data-i18n="fac_c3_desc">現場列印針對性練習，絕非千篇一律</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOURS -->
+<section>
+    <div class="section-inner">
+        <div style="text-align:center;" class="fade-up">
+            <div class="section-label"><i class="fas fa-clock"></i> <span data-i18n="hrs_label">開放時間</span></div>
+            <div class="section-title" data-i18n="hrs_title">課堂時間</div>
+            <div class="section-subtitle" style="margin-left:auto;margin-right:auto;" data-i18n="hrs_subtitle">歡迎 WhatsApp 查詢詳細上課時間安排</div>
+        </div>
+        <div style="max-width:600px;margin:0 auto;" class="fade-up">
+            <table class="hours-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="hrs_th_day">日期</th>
+                        <th data-i18n="hrs_th_hw">功課輔導班</th>
+                        <th data-i18n="hrs_th_elite">專科加強班</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="hrs_mon_fri">星期一至五</td>
+                        <td>16:00 – 19:00</td>
+                        <td data-i18n="hrs_enquire">歡迎查詢</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="hrs_sat">星期六</td>
+                        <td>—</td>
+                        <td data-i18n="hrs_enquire">歡迎查詢</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="hrs_sun">星期日及公眾假期</td>
+                        <td data-i18n="hrs_closed">休息</td>
+                        <td data-i18n="hrs_enquire">歡迎查詢</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location-section" id="location">
+    <div class="section-inner">
+        <div style="text-align:center;" class="fade-up">
+            <div class="section-label"><i class="fas fa-map-marked-alt"></i> <span data-i18n="loc_label">位置</span></div>
+            <div class="section-title" data-i18n="loc_title">荃灣分校位置</div>
+            <div class="section-subtitle" style="margin-left:auto;margin-right:auto;" data-i18n="loc_subtitle">位於荃灣海壩街荃立方，鄰近荃灣港鐵站</div>
+        </div>
+        <div class="location-grid fade-up">
+            <div class="map-placeholder">
+                <iframe src="https://www.google.com/maps?q=荃灣海壩街132號+荃立方&z=17&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="location-details">
+                <div class="loc-item">
+                    <div class="loc-icon"><i class="fas fa-building"></i></div>
+                    <div class="loc-text">
+                        <h4 data-i18n="loc_addr_title">詳細地址</h4>
+                        <p data-i18n="loc_addr_desc">荃灣海壩街 132 號<br>荃立方 S63</p>
+                    </div>
+                </div>
+                <div class="loc-item">
+                    <div class="loc-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="loc-text">
+                        <h4 data-i18n="loc_wa_title">WhatsApp 查詢</h4>
+                        <p><a href="https://wa.me/85256668296">5666 8296</a></p>
+                    </div>
+                </div>
+                <div class="loc-item">
+                    <div class="loc-icon"><i class="fab fa-weixin"></i></div>
+                    <div class="loc-text">
+                        <h4>WeChat</h4>
+                        <p>85256668296</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+    <div class="section-inner">
+        <div style="text-align:center;" class="fade-up">
+            <div class="section-label"><i class="fas fa-question-circle"></i> <span data-i18n="faq_label">常見問題</span></div>
+            <div class="section-title" data-i18n="faq_title">常見問題</div>
+            <div class="section-subtitle" style="margin-left:auto;margin-right:auto;" data-i18n="faq_subtitle">家長最常查詢的問題</div>
+        </div>
+        <div style="max-width:800px;margin:0 auto;" class="fade-up">
+            <div style="border:1px solid #E2E8F0;border-radius:14px;overflow:hidden;">
+                <div class="faq-item" style="border-bottom:1px solid #F1F5F9;padding:20px 24px;cursor:pointer;" onclick="toggleFaq(this)">
+                    <div style="display:flex;justify-content:space-between;align-items:center;">
+                        <h4 style="font-size:15px;font-weight:700;color:#1E293B;" data-i18n="faq_q1">芯啟教育的師生比例是多少？</h4>
+                        <i class="fas fa-chevron-down faq-chevron" style="color:#94A3B8;transition:transform .3s;font-size:13px;flex-shrink:0;margin-left:12px;"></i>
+                    </div>
+                    <div class="faq-answer" style="display:none;margin-top:12px;font-size:14px;color:#64748B;line-height:1.7;" data-i18n="faq_a1">我們堅持 1:5 黃金比例小班教學，確保每位學生都能獲得導師充分的關注和個別指導。這個比例是精心設計的，讓導師能在有限的時間內提供高質量的個性化教學。</div>
+                </div>
+                <div class="faq-item" style="border-bottom:1px solid #F1F5F9;padding:20px 24px;cursor:pointer;" onclick="toggleFaq(this)">
+                    <div style="display:flex;justify-content:space-between;align-items:center;">
+                        <h4 style="font-size:15px;font-weight:700;color:#1E293B;" data-i18n="faq_q2">功課輔導班和專科加強班有什麼分別？</h4>
+                        <i class="fas fa-chevron-down faq-chevron" style="color:#94A3B8;transition:transform .3s;font-size:13px;flex-shrink:0;margin-left:12px;"></i>
+                    </div>
+                    <div class="faq-answer" style="display:none;margin-top:12px;font-size:14px;color:#64748B;line-height:1.7;" data-i18n="faq_a2"><strong>功課輔導班</strong>聚焦於完成日常功課、測驗預備和基礎知識鞏固。<strong>專科加強班</strong>則採用策略導向教學，針對特定科目進行深度教學，使用原創教材和獨家解題方法，適合想在成績上取得突破的學生。</div>
+                </div>
+                <div class="faq-item" style="border-bottom:1px solid #F1F5F9;padding:20px 24px;cursor:pointer;" onclick="toggleFaq(this)">
+                    <div style="display:flex;justify-content:space-between;align-items:center;">
+                        <h4 style="font-size:15px;font-weight:700;color:#1E293B;" data-i18n="faq_q3">課程覆蓋哪些年級？</h4>
+                        <i class="fas fa-chevron-down faq-chevron" style="color:#94A3B8;transition:transform .3s;font-size:13px;flex-shrink:0;margin-left:12px;"></i>
+                    </div>
+                    <div class="faq-answer" style="display:none;margin-top:12px;font-size:14px;color:#64748B;line-height:1.7;" data-i18n="faq_a3">我們的課程覆蓋小一至中六（P1-S6）全級，包括小學、初中及高中階段。無論是基礎鞏固還是 DSE 備考，我們都有針對性的課程和導師配置。</div>
+                </div>
+                <div class="faq-item" style="border-bottom:1px solid #F1F5F9;padding:20px 24px;cursor:pointer;" onclick="toggleFaq(this)">
+                    <div style="display:flex;justify-content:space-between;align-items:center;">
+                        <h4 style="font-size:15px;font-weight:700;color:#1E293B;" data-i18n="faq_q4">功課輔導班的收費是多少？</h4>
+                        <i class="fas fa-chevron-down faq-chevron" style="color:#94A3B8;transition:transform .3s;font-size:13px;flex-shrink:0;margin-left:12px;"></i>
+                    </div>
+                    <div class="faq-answer" style="display:none;margin-top:12px;font-size:14px;color:#64748B;line-height:1.7;" data-i18n="faq_a4">功課輔導班採月費制（星期一至五）。16:00-17:30 時段為 $1,480（1.5小時），17:30-19:00 時段為 $1,480（1.5小時），16:00-19:00 全時段為 $2,600（3小時）。</div>
+                </div>
+                <div class="faq-item" style="padding:20px 24px;cursor:pointer;" onclick="toggleFaq(this)">
+                    <div style="display:flex;justify-content:space-between;align-items:center;">
+                        <h4 style="font-size:15px;font-weight:700;color:#1E293B;" data-i18n="faq_q5">專科加強班的收費如何計算？</h4>
+                        <i class="fas fa-chevron-down faq-chevron" style="color:#94A3B8;transition:transform .3s;font-size:13px;flex-shrink:0;margin-left:12px;"></i>
+                    </div>
+                    <div class="faq-answer" style="display:none;margin-top:12px;font-size:14px;color:#64748B;line-height:1.7;" data-i18n="faq_a5">專科加強班按小時計費。小學 $138/小時（優惠價 $78/小時），初中 $148/小時（優惠價 $88/小時），高中 $158/小時（優惠價 $98/小時）。報讀多科、介紹朋友報名等均有額外優惠，最高每小時減免 $60。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="section-inner fade-up">
+        <h2 data-i18n="cta_title">為孩子找到最適合的學習方式</h2>
+        <p data-i18n="cta_desc">1:5 黃金比例小班，讓每位學生都被看見。立即 WhatsApp 免費諮詢！</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/85256668296" class="btn-white"><i class="fab fa-whatsapp"></i> <span data-i18n="cta_btn_wa">WhatsApp 免費諮詢</span></a>
+            <a href="#courses" class="btn-outline"><i class="fas fa-book-open"></i> <span data-i18n="cta_btn_courses">瀏覽課程</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <span data-i18n="footer_brand">CorLin 芯啟教育</span>
+            <p data-i18n="footer_tagline">「芯」於同理，「啟」於策略<br>讓學習回歸簡單</p>
+        </div>
+        <div class="footer-links">
+            <h4 data-i18n="footer_campus">分校</h4>
+            <a href="#" data-i18n="nav_tw">荃灣分校</a>
+            <a href="https://ensovista.com/corlin/jordan/" data-i18n="nav_jordan">佐敦分校</a>
+        </div>
+        <div class="footer-links">
+            <h4 data-i18n="footer_courses">課程</h4>
+            <a href="#courses" data-i18n="hw_title">功課輔導班</a>
+            <a href="#courses" data-i18n="elite_title">精英專科加強班</a>
+        </div>
+        <div class="footer-links">
+            <h4 data-i18n="footer_contact">聯絡</h4>
+            <a href="https://wa.me/85256668296"><i class="fab fa-whatsapp"></i> 5666 8296</a>
+            <a href="#"><i class="fab fa-weixin"></i> WeChat</a>
+        </div>
+    </div>
+    <div class="footer-bottom">&copy; 2016 CorLin Education 芯啟教育. All rights reserved.</div>
+</footer>
+
+<script>
+// ── TRANSLATIONS ──
+const T = {
+'zh-TW': {
+    brand:'芯啟教育',
+    nav_home:'主頁',nav_courses:'課程',nav_tw:'荃灣分校',nav_jordan:'佐敦分校',nav_faq:'常見問題',nav_cta:'WhatsApp 查詢',
+    hero_badge:'中、英、數專科',
+    hero_title:'荃灣補習 — 多元系統教學<br>拒絕盲目操練',
+    hero_desc:'「核心聯繫」教學法，助學生打通知識點。1:5 黃金比例小班，覆蓋小一至中六、呈分試到 DSE。逾 800 位家長真實推薦。',
+    hero_ratio:'師生比例',hero_duration:'每堂時長',hero_levels:'全級覆蓋',
+    hero_btn_wa:'WhatsApp 查詢',hero_btn_price:'查看收費',
+    info_addr_title:'地址',info_addr_desc:'荃灣海壩街 132 號<br>荃立方 S63',
+    info_wa_title:'WhatsApp 查詢',info_hours_title:'功課輔導班時段',info_hours_desc:'星期一至五：16:00 – 19:00',
+    phi_label:'教學理念',phi_title:'「芯」於同理，「啟」於策略',
+    phi_desc:'導師成績只是基本，具備同理心才是關鍵。我們站在學生角度，診斷「不明白」的根源，讓學習回歸簡單。',
+    phi_f1_title:'同理心教學',phi_f1_desc:'導師與學生不只是師生，更是深知彼此的學習夥伴。深厚的信任感，讓導師能為孩子量身打造最合適的升學與成長策略。',
+    phi_f2_title:'策略性分配',phi_f2_desc:'以「家長願景 → 學生弱點 → 優先順序」為核心邏輯，將每分鐘轉化為最高分數回報。',
+    phi_f3_title:'分段分流',phi_f3_desc:'堅持「逐一教學、逐一操練、逐一優化」，為孩子量身打造的知識長跑。',
+    flow_label:'課堂流程',flow_title:'每堂 90 分鐘的流程',flow_subtitle:'科學化設計，確保每分鐘都有效',
+    flow_s1_title:'快速評估',flow_s1_sub:'前 5 分鐘',flow_s1_desc:'當日測驗、學習進度、心理狀態，全面掌握學生狀況。',
+    flow_s2_title:'針對性施教',flow_s2_sub:'攻弱點或備考試',flow_s2_desc:'根據評估結果即時調整教學方向，不浪費一分鐘。',
+    flow_s3_title:'即時反饋',flow_s3_sub:'雲端備課 · 現場列印',flow_s3_desc:'教材與學生的學習節奏 100% 同步，絕非千篇一律。',
+    courses_label:'荃灣分校課程',courses_title:'課程及收費',courses_subtitle:'功課輔導 + 精英專科，全面覆蓋 P1 至 S6',
+    hw_title:'全方位功課輔導班',hw_desc:'1:5 小班模式，以高效方式完成功課、預備默書及測驗，剩餘時間鞏固中英數基礎。',
+    hw_f1:'1:5 小班，確保每位學生被看見',hw_f2:'依優先次序、高效完成功課',hw_f3:'每日模擬默書 / 測驗預備',hw_f4:'剩餘時間中英數基礎鞏固',
+    hw_pricing_mode:'收費模式：月費制（星期一至五）',per_month:'/ 月',hw_full_slot:'16:00 – 19:00（全時段）',
+    elite_title:'精英專科加強班',elite_desc:'策略導向教學，使用原創針對性教材與獨家解題公式，簡化繁瑣知識，適合想在成績上取得突破的學生。',
+    elite_f1:'中、英、數策略導向教學',elite_f2:'每堂前 5 分鐘診斷式學習',elite_f3:'配合校情的原創針對性教材',elite_f4:'獨家解題公式，簡化繁瑣知識',
+    subj_chi:'中文',subj_chi_desc:'閱讀理解、寫作、文言文',
+    subj_eng:'英文',subj_eng_desc:'文法、閱讀、寫作、拼音',
+    subj_math:'數學',subj_math_desc:'解題技巧、應用題、備考',
+    subj_oral:'英文口語',subj_oral_desc:'會話訓練、口試技巧',
+    th_level:'程度',th_standard:'標準學費',th_best:'最優惠價',
+    lvl_pri:'<strong>小學</strong> P1–P6',lvl_jss:'<strong>初中</strong> S1–S3',lvl_sss:'<strong>高中</strong> S4–S6',lvl_oral:'<strong>英文口語</strong>',
+    promo_title:'🎁 三大限時疊加優惠',
+    promo_1:'<strong>【多科獎勵】</strong>報讀兩科或以上，每小時減 $20',
+    promo_2:'<strong>【口碑推薦】</strong>介紹一位新朋友報名，每小時減 $20',
+    promo_3:'<strong>【雙重推薦】</strong>介紹第二位新朋友報名，每小時減 $20',
+    promo_note:'* 最優惠學費已包含全部優惠疊加（最高每小時減免 $60）',
+    fac_label:'中心設施',fac_title:'舒適學習環境',fac_subtitle:'為學生打造專注、高效的學習空間',
+    fac_c1_title:'1:5 小班教室',fac_c1_desc:'每班最多 5 人，確保每位學生被充分關注',
+    fac_c2_title:'雲端教材系統',fac_c2_desc:'電子化管理，教材與學習節奏 100% 同步',
+    fac_c3_title:'即時列印教材',fac_c3_desc:'現場列印針對性練習，絕非千篇一律',
+    hrs_label:'開放時間',hrs_title:'課堂時間',hrs_subtitle:'歡迎 WhatsApp 查詢詳細上課時間安排',
+    hrs_th_day:'日期',hrs_th_hw:'功課輔導班',hrs_th_elite:'專科加強班',
+    hrs_mon_fri:'星期一至五',hrs_sat:'星期六',hrs_sun:'星期日及公眾假期',hrs_enquire:'歡迎查詢',hrs_closed:'休息',
+    loc_label:'位置',loc_title:'荃灣分校位置',loc_subtitle:'位於荃灣海壩街荃立方，鄰近荃灣港鐵站',
+    loc_addr_title:'詳細地址',loc_addr_desc:'荃灣海壩街 132 號<br>荃立方 S63',loc_wa_title:'WhatsApp 查詢',
+    faq_label:'常見問題',faq_title:'常見問題',faq_subtitle:'家長最常查詢的問題',
+    faq_q1:'芯啟教育的師生比例是多少？',
+    faq_a1:'我們堅持 1:5 黃金比例小班教學，確保每位學生都能獲得導師充分的關注和個別指導。這個比例是精心設計的，讓導師能在有限的時間內提供高質量的個性化教學。',
+    faq_q2:'功課輔導班和專科加強班有什麼分別？',
+    faq_a2:'<strong>功課輔導班</strong>聚焦於完成日常功課、測驗預備和基礎知識鞏固。<strong>專科加強班</strong>則採用策略導向教學，針對特定科目進行深度教學，使用原創教材和獨家解題方法，適合想在成績上取得突破的學生。',
+    faq_q3:'課程覆蓋哪些年級？',
+    faq_a3:'我們的課程覆蓋小一至中六（P1-S6）全級，包括小學、初中及高中階段。無論是基礎鞏固還是 DSE 備考，我們都有針對性的課程和導師配置。',
+    faq_q4:'功課輔導班的收費是多少？',
+    faq_a4:'功課輔導班採月費制（星期一至五）。16:00-17:30 時段為 $1,480（1.5小時），17:30-19:00 時段為 $1,480（1.5小時），16:00-19:00 全時段為 $2,600（3小時）。',
+    faq_q5:'專科加強班的收費如何計算？',
+    faq_a5:'專科加強班按小時計費。小學 $138/小時（優惠價 $78/小時），初中 $148/小時（優惠價 $88/小時），高中 $158/小時（優惠價 $98/小時）。報讀多科、介紹朋友報名等均有額外優惠，最高每小時減免 $60。',
+    cta_title:'為孩子找到最適合的學習方式',cta_desc:'1:5 黃金比例小班，讓每位學生都被看見。立即 WhatsApp 免費諮詢！',
+    cta_btn_wa:'WhatsApp 免費諮詢',cta_btn_courses:'瀏覽課程',
+    footer_brand:'CorLin 芯啟教育',footer_tagline:'「芯」於同理，「啟」於策略<br>讓學習回歸簡單',
+    footer_campus:'分校',footer_courses:'課程',footer_contact:'聯絡'
+},
+'zh-CN': {
+    brand:'芯启教育',
+    nav_home:'主页',nav_courses:'课程',nav_tw:'荃湾分校',nav_jordan:'佐敦分校',nav_faq:'常见问题',nav_cta:'WhatsApp 查询',
+    hero_badge:'中、英、数专科',
+    hero_title:'荃湾补习 — 多元系统教学<br>拒绝盲目操练',
+    hero_desc:'「核心联系」教学法，助学生打通知识点。1:5 黄金比例小班，覆盖小一至中六、呈分试到 DSE。逾 800 位家长真实推荐。',
+    hero_ratio:'师生比例',hero_duration:'每堂时长',hero_levels:'全级覆盖',
+    hero_btn_wa:'WhatsApp 查询',hero_btn_price:'查看收费',
+    info_addr_title:'地址',info_addr_desc:'荃湾海坝街 132 号<br>荃立方 S63',
+    info_wa_title:'WhatsApp 查询',info_hours_title:'功课辅导班时段',info_hours_desc:'星期一至五：16:00 – 19:00',
+    phi_label:'教学理念',phi_title:'「芯」于同理，「启」于策略',
+    phi_desc:'导师成绩只是基本，具备同理心才是关键。我们站在学生角度，诊断「不明白」的根源，让学习回归简单。',
+    phi_f1_title:'同理心教学',phi_f1_desc:'导师与学生不只是师生，更是深知彼此的学习伙伴。深厚的信任感，让导师能为孩子量身打造最合适的升学与成长策略。',
+    phi_f2_title:'策略性分配',phi_f2_desc:'以「家长愿景 → 学生弱点 → 优先顺序」为核心逻辑，将每分钟转化为最高分数回报。',
+    phi_f3_title:'分段分流',phi_f3_desc:'坚持「逐一教学、逐一操练、逐一优化」，为孩子量身打造的知识长跑。',
+    flow_label:'课堂流程',flow_title:'每堂 90 分钟的流程',flow_subtitle:'科学化设计，确保每分钟都有效',
+    flow_s1_title:'快速评估',flow_s1_sub:'前 5 分钟',flow_s1_desc:'当日测验、学习进度、心理状态，全面掌握学生状况。',
+    flow_s2_title:'针对性施教',flow_s2_sub:'攻弱点或备考试',flow_s2_desc:'根据评估结果即时调整教学方向，不浪费一分钟。',
+    flow_s3_title:'即时反馈',flow_s3_sub:'云端备课 · 现场打印',flow_s3_desc:'教材与学生的学习节奏 100% 同步，绝非千篇一律。',
+    courses_label:'荃湾分校课程',courses_title:'课程及收费',courses_subtitle:'功课辅导 + 精英专科，全面覆盖 P1 至 S6',
+    hw_title:'全方位功课辅导班',hw_desc:'1:5 小班模式，以高效方式完成功课、预备默书及测验，剩余时间巩固中英数基础。',
+    hw_f1:'1:5 小班，确保每位学生被看见',hw_f2:'依优先次序、高效完成功课',hw_f3:'每日模拟默书 / 测验预备',hw_f4:'剩余时间中英数基础巩固',
+    hw_pricing_mode:'收费模式：月费制（星期一至五）',per_month:'/ 月',hw_full_slot:'16:00 – 19:00（全时段）',
+    elite_title:'精英专科加强班',elite_desc:'策略导向教学，使用原创针对性教材与独家解题公式，简化繁琐知识，适合想在成绩上取得突破的学生。',
+    elite_f1:'中、英、数策略导向教学',elite_f2:'每堂前 5 分钟诊断式学习',elite_f3:'配合校情的原创针对性教材',elite_f4:'独家解题公式，简化繁琐知识',
+    subj_chi:'中文',subj_chi_desc:'阅读理解、写作、文言文',
+    subj_eng:'英文',subj_eng_desc:'语法、阅读、写作、拼音',
+    subj_math:'数学',subj_math_desc:'解题技巧、应用题、备考',
+    subj_oral:'英文口语',subj_oral_desc:'会话训练、口试技巧',
+    th_level:'程度',th_standard:'标准学费',th_best:'最优惠价',
+    lvl_pri:'<strong>小学</strong> P1–P6',lvl_jss:'<strong>初中</strong> S1–S3',lvl_sss:'<strong>高中</strong> S4–S6',lvl_oral:'<strong>英文口语</strong>',
+    promo_title:'🎁 三大限时叠加优惠',
+    promo_1:'<strong>【多科奖励】</strong>报读两科或以上，每小时减 $20',
+    promo_2:'<strong>【口碑推荐】</strong>介绍一位新朋友报名，每小时减 $20',
+    promo_3:'<strong>【双重推荐】</strong>介绍第二位新朋友报名，每小时减 $20',
+    promo_note:'* 最优惠学费已包含全部优惠叠加（最高每小时减免 $60）',
+    fac_label:'中心设施',fac_title:'舒适学习环境',fac_subtitle:'为学生打造专注、高效的学习空间',
+    fac_c1_title:'1:5 小班教室',fac_c1_desc:'每班最多 5 人，确保每位学生被充分关注',
+    fac_c2_title:'云端教材系统',fac_c2_desc:'电子化管理，教材与学习节奏 100% 同步',
+    fac_c3_title:'即时打印教材',fac_c3_desc:'现场打印针对性练习，绝非千篇一律',
+    hrs_label:'开放时间',hrs_title:'课堂时间',hrs_subtitle:'欢迎 WhatsApp 查询详细上课时间安排',
+    hrs_th_day:'日期',hrs_th_hw:'功课辅导班',hrs_th_elite:'专科加强班',
+    hrs_mon_fri:'星期一至五',hrs_sat:'星期六',hrs_sun:'星期日及公众假期',hrs_enquire:'欢迎查询',hrs_closed:'休息',
+    loc_label:'位置',loc_title:'荃湾分校位置',loc_subtitle:'位于荃湾海坝街荃立方，邻近荃湾港铁站',
+    loc_addr_title:'详细地址',loc_addr_desc:'荃湾海坝街 132 号<br>荃立方 S63',loc_wa_title:'WhatsApp 查询',
+    faq_label:'常见问题',faq_title:'常见问题',faq_subtitle:'家长最常查询的问题',
+    faq_q1:'芯启教育的师生比例是多少？',
+    faq_a1:'我们坚持 1:5 黄金比例小班教学，确保每位学生都能获得导师充分的关注和个别指导。这个比例是精心设计的，让导师能在有限的时间内提供高质量的个性化教学。',
+    faq_q2:'功课辅导班和专科加强班有什么区别？',
+    faq_a2:'<strong>功课辅导班</strong>聚焦于完成日常功课、测验预备和基础知识巩固。<strong>专科加强班</strong>则采用策略导向教学，针对特定科目进行深度教学，使用原创教材和独家解题方法，适合想在成绩上取得突破的学生。',
+    faq_q3:'课程覆盖哪些年级？',
+    faq_a3:'我们的课程覆盖小一至中六（P1-S6）全级，包括小学、初中及高中阶段。无论是基础巩固还是 DSE 备考，我们都有针对性的课程和导师配置。',
+    faq_q4:'功课辅导班的收费是多少？',
+    faq_a4:'功课辅导班采月费制（星期一至五）。16:00-17:30 时段为 $1,480（1.5小时），17:30-19:00 时段为 $1,480（1.5小时），16:00-19:00 全时段为 $2,600（3小时）。',
+    faq_q5:'专科加强班的收费如何计算？',
+    faq_a5:'专科加强班按小时计费。小学 $138/小时（优惠价 $78/小时），初中 $148/小时（优惠价 $88/小时），高中 $158/小时（优惠价 $98/小时）。报读多科、介绍朋友报名等均有额外优惠，最高每小时减免 $60。',
+    cta_title:'为孩子找到最适合的学习方式',cta_desc:'1:5 黄金比例小班，让每位学生都被看见。立即 WhatsApp 免费咨询！',
+    cta_btn_wa:'WhatsApp 免费咨询',cta_btn_courses:'浏览课程',
+    footer_brand:'CorLin 芯启教育',footer_tagline:'「芯」于同理，「启」于策略<br>让学习回归简单',
+    footer_campus:'分校',footer_courses:'课程',footer_contact:'联络'
+},
+'en': {
+    brand:'CorLin',
+    nav_home:'Home',nav_courses:'Courses',nav_tw:'Tsuen Wan',nav_jordan:'Jordan',nav_faq:'FAQ',nav_cta:'WhatsApp Us',
+    hero_badge:'Chinese, English & Maths',
+    hero_title:'Tsuen Wan Tutoring — Strategic<br>Multi-Dimensional Teaching',
+    hero_desc:'"Core-Link" pedagogy helps students connect the dots. 1:5 golden-ratio small classes from P1 to S6, covering assessments through DSE. Trusted by 800+ parents.',
+    hero_ratio:'Student : Teacher',hero_duration:'Per Session',hero_levels:'All Levels',
+    hero_btn_wa:'WhatsApp Us',hero_btn_price:'View Pricing',
+    info_addr_title:'Address',info_addr_desc:'132 Hoi Pa Street, Tsuen Wan<br>Citycube S63',
+    info_wa_title:'WhatsApp',info_hours_title:'Homework Class Hours',info_hours_desc:'Mon – Fri: 16:00 – 19:00',
+    phi_label:'Our Philosophy',phi_title:'Empathy at the Core, Strategy in Action',
+    phi_desc:'Good grades are just the starting point — empathy is the key. We see through the student\'s eyes, diagnose the root of confusion, and make learning simple again.',
+    phi_f1_title:'Empathetic Teaching',phi_f1_desc:'Our tutors are more than teachers — they\'re trusted learning partners who truly understand each child, crafting the most fitting academic and growth strategies.',
+    phi_f2_title:'Strategic Allocation',phi_f2_desc:'Following the logic of "parent\'s vision → student\'s weakness → priority order", we convert every minute into maximum score returns.',
+    phi_f3_title:'Step-by-Step Progression',phi_f3_desc:'We insist on "teach one, practise one, refine one" — a knowledge marathon tailor-made for every child.',
+    flow_label:'Class Flow',flow_title:'Our 90-Minute Session',flow_subtitle:'Scientifically designed to make every minute count',
+    flow_s1_title:'Quick Assessment',flow_s1_sub:'First 5 Minutes',flow_s1_desc:'Today\'s tests, learning progress, and emotional state — a full snapshot of each student.',
+    flow_s2_title:'Targeted Teaching',flow_s2_sub:'Address Weaknesses or Prep for Exams',flow_s2_desc:'Teaching direction adjusts instantly based on the assessment — not a minute wasted.',
+    flow_s3_title:'Instant Feedback',flow_s3_sub:'Cloud-Based Prep · On-Site Printing',flow_s3_desc:'Materials stay 100% in sync with each student\'s pace — never one-size-fits-all.',
+    courses_label:'Tsuen Wan Courses',courses_title:'Courses & Fees',courses_subtitle:'Homework Support + Elite Subject Classes — P1 to S6',
+    hw_title:'All-Round Homework Support',hw_desc:'1:5 small class — efficiently complete homework, prepare for dictations and tests, then reinforce Chinese, English & Maths fundamentals.',
+    hw_f1:'1:5 small class — every student is seen',hw_f2:'Prioritised, efficient homework completion',hw_f3:'Daily dictation / test simulation prep',hw_f4:'Remaining time for core subject reinforcement',
+    hw_pricing_mode:'Pricing: Monthly fee (Mon – Fri)',per_month:'/ mo',hw_full_slot:'16:00 – 19:00 (Full Session)',
+    elite_title:'Elite Subject Intensive',elite_desc:'Strategy-driven teaching with original targeted materials and exclusive problem-solving formulas that simplify complex knowledge — for students aiming for breakthroughs.',
+    elite_f1:'Chinese, English & Maths strategic teaching',elite_f2:'5-min diagnostic assessment every session',elite_f3:'Original materials tailored to each school',elite_f4:'Exclusive formulas to simplify complexity',
+    subj_chi:'Chinese',subj_chi_desc:'Reading, writing, classical Chinese',
+    subj_eng:'English',subj_eng_desc:'Grammar, reading, writing, phonics',
+    subj_math:'Maths',subj_math_desc:'Problem-solving, word problems, exam prep',
+    subj_oral:'English Oral',subj_oral_desc:'Conversation & oral exam skills',
+    th_level:'Level',th_standard:'Standard Fee',th_best:'Best Price',
+    lvl_pri:'<strong>Primary</strong> P1–P6',lvl_jss:'<strong>Junior Secondary</strong> S1–S3',lvl_sss:'<strong>Senior Secondary</strong> S4–S6',lvl_oral:'<strong>English Oral</strong>',
+    promo_title:'🎁 Triple Stackable Discounts',
+    promo_1:'<strong>[Multi-Subject]</strong> Enrol in 2+ subjects — save $20/hr',
+    promo_2:'<strong>[Referral]</strong> Refer one new friend — save $20/hr',
+    promo_3:'<strong>[Double Referral]</strong> Refer a second new friend — save $20/hr',
+    promo_note:'* Best price already includes all stacked discounts (up to $60/hr off)',
+    fac_label:'Facilities',fac_title:'Comfortable Learning Space',fac_subtitle:'Purpose-built for focus and efficiency',
+    fac_c1_title:'1:5 Classrooms',fac_c1_desc:'Max 5 students per class — every child gets full attention',
+    fac_c2_title:'Cloud-Based Materials',fac_c2_desc:'Digitally managed — materials stay 100% in sync with each student',
+    fac_c3_title:'On-Site Printing',fac_c3_desc:'Targeted worksheets printed on the spot — never generic',
+    hrs_label:'Hours',hrs_title:'Class Schedule',hrs_subtitle:'WhatsApp us for detailed timetable arrangements',
+    hrs_th_day:'Day',hrs_th_hw:'Homework Class',hrs_th_elite:'Subject Intensive',
+    hrs_mon_fri:'Mon – Fri',hrs_sat:'Saturday',hrs_sun:'Sun & Public Holidays',hrs_enquire:'Enquire',hrs_closed:'Closed',
+    loc_label:'Location',loc_title:'Tsuen Wan Campus',loc_subtitle:'Located at Citycube on Hoi Pa Street, near Tsuen Wan MTR Station',
+    loc_addr_title:'Address',loc_addr_desc:'132 Hoi Pa Street, Tsuen Wan<br>Citycube S63',loc_wa_title:'WhatsApp',
+    faq_label:'FAQ',faq_title:'Frequently Asked Questions',faq_subtitle:'Common questions from parents',
+    faq_q1:'What is CorLin\'s student-to-teacher ratio?',
+    faq_a1:'We maintain a 1:5 golden-ratio small class, ensuring every student receives ample individual attention and guidance. This carefully designed ratio allows tutors to deliver high-quality personalised teaching.',
+    faq_q2:'What\'s the difference between Homework Support and Subject Intensive?',
+    faq_a2:'<strong>Homework Support</strong> focuses on daily homework completion, test preparation, and foundational reinforcement. <strong>Subject Intensive</strong> uses strategy-driven teaching with original materials and exclusive problem-solving methods — ideal for students aiming for grade breakthroughs.',
+    faq_q3:'What grade levels are covered?',
+    faq_a3:'Our courses cover P1 through S6, spanning primary, junior secondary, and senior secondary. Whether it\'s foundational consolidation or DSE preparation, we have targeted courses and tutor configurations.',
+    faq_q4:'How much does Homework Support cost?',
+    faq_a4:'Homework Support is charged monthly (Mon–Fri). The 16:00-17:30 slot is $1,480/mo (1.5 hrs), the 17:30-19:00 slot is $1,480/mo (1.5 hrs), and the full 16:00-19:00 session is $2,600/mo (3 hrs).',
+    faq_q5:'How is Subject Intensive priced?',
+    faq_a5:'Subject Intensive is charged hourly. Primary: $138/hr (best price $78/hr), Junior Secondary: $148/hr (best price $88/hr), Senior Secondary: $158/hr (best price $98/hr). Multi-subject enrolment and referrals offer additional discounts — up to $60/hr off.',
+    cta_title:'Find the Right Learning Approach for Your Child',cta_desc:'1:5 golden-ratio small classes — every student is seen. WhatsApp us for a free consultation!',
+    cta_btn_wa:'Free WhatsApp Consultation',cta_btn_courses:'Browse Courses',
+    footer_brand:'CorLin Education',footer_tagline:'Empathy at the Core, Strategy in Action<br>Making learning simple again',
+    footer_campus:'Campuses',footer_courses:'Courses',footer_contact:'Contact'
+}
+};
+
+let currentLang = 'zh-TW';
+
+function switchLanguage(lang) {
+    if (!T[lang]) return;
+    currentLang = lang;
+    document.documentElement.lang = lang === 'zh-TW' ? 'zh-Hant' : lang === 'zh-CN' ? 'zh-Hans' : 'en';
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (T[lang][key] !== undefined) el.innerHTML = T[lang][key];
+    });
+    const names = {'zh-TW':'繁中','zh-CN':'简中','en':'EN'};
+    document.getElementById('langBtnText').textContent = names[lang];
+    document.querySelectorAll('[data-lang]').forEach(a => {
+        a.classList.toggle('active', a.getAttribute('data-lang') === lang);
+    });
+    document.getElementById('langDropdown').classList.remove('open');
+}
+
+// FAQ toggle
+function toggleFaq(item) {
+    const ans = item.querySelector('.faq-answer');
+    const chev = item.querySelector('.faq-chevron');
+    const isOpen = ans.style.display !== 'none';
+    ans.style.display = isOpen ? 'none' : 'block';
+    chev.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+}
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// Hamburger
+document.getElementById('hamburger').addEventListener('click', () => {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('open');
+    const icon = document.querySelector('#hamburger i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+});
+
+// Language dropdown (desktop)
+document.getElementById('langBtn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    document.getElementById('langDropdown').classList.toggle('open');
+});
+document.addEventListener('click', () => {
+    document.getElementById('langDropdown').classList.remove('open');
+});
+document.querySelectorAll('.lang-dropdown a').forEach(a => {
+    a.addEventListener('click', (e) => {
+        e.preventDefault();
+        switchLanguage(a.getAttribute('data-lang'));
+    });
+});
+
+// Language buttons (mobile)
+document.querySelectorAll('.mobile-lang button').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        switchLanguage(btn.getAttribute('data-lang'));
+    });
+});
+
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#') {
+            e.preventDefault();
+            document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('mobileMenu').classList.remove('open');
+            const icon = document.querySelector('#hamburger i');
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-times');
+        }
+    });
+});
+</script>
 </body>
 </html>
