@@ -2,9 +2,1600 @@
 <html lang="zh-Hant-HK">
 <head>
     <meta charset="UTF-8">
-    <title>佐敦補習社 | CorLin 芯啟教育 — 即將推出</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorLin 芯啟教育 | 香港補習創業顧問服務 | 15萬港幣起步</title>
+    <meta name="description" content="芯啟教育CorLin — 10年實戰，7間店舖經驗。15萬港幣在香港開辦補習事業，免牌照、3個月盈利、全套自動化營運系統。雙減轉型者、高才通簽證首選。">
+    <meta name="keywords" content="香港補習創業,香港開補習社,雙減政策,高才通續簽,教育創業,小班補習,香港教育市場,補習社加盟,CorLin Education,芯啟教育">
+    <meta property="og:title" content="CorLin 芯啟教育 | 15萬港幣，在香港開啟你的教育事業">
+    <meta property="og:description" content="免牌照、3個月盈利、全套營運系統。10年實戰，7間店舖經驗。">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #0c2340;
+            --primary: #1a4d7c;
+            --primary-light: #2d7ab5;
+            --primary-lighter: #e8f2fb;
+            --accent: #e8913a;
+            --accent-hover: #d17a2a;
+            --accent-light: #fef3e2;
+            --bg-light: #f7f9fc;
+            --bg-white: #ffffff;
+            --text-dark: #1a202c;
+            --text-medium: #4a5568;
+            --text-light: #718096;
+            --border: #e2e8f0;
+            --success: #38a169;
+            --radius: 12px;
+            --shadow: 0 4px 24px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.12);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--bg-white);
+            overflow-x: hidden;
+        }
+
+        /* Language toggle */
+        .en { display: none; }
+        body.english .tc { display: none !important; }
+        body.english .en { display: inline !important; }
+        body.english div.en,
+        body.english p.en,
+        body.english h1.en,
+        body.english h2.en,
+        body.english h3.en,
+        body.english h4.en,
+        body.english li.en,
+        body.english section.en { display: block !important; }
+        body.english span.en,
+        body.english a.en { display: inline !important; }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow 0.3s;
+        }
+        .navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto; padding: 0 24px;
+            display: flex; align-items: center; justify-content: space-between; height: 64px;
+        }
+        .nav-logo {
+            font-weight: 700; font-size: 1.15rem; color: var(--primary-dark);
+            text-decoration: none; display: flex; align-items: center; gap: 10px;
+        }
+        .nav-logo img { height: 36px; width: auto; border-radius: 4px; }
+        .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+        .nav-links a {
+            text-decoration: none; color: var(--text-medium);
+            font-size: 0.9rem; font-weight: 500; transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+        .lang-toggle {
+            display: flex; align-items: center; gap: 4px;
+            background: var(--bg-light); border-radius: 8px; padding: 4px; font-size: 0.8rem;
+        }
+        .lang-btn {
+            padding: 4px 10px; border: none; background: transparent; border-radius: 6px;
+            cursor: pointer; font-size: 0.8rem; color: var(--text-medium);
+            font-weight: 500; transition: all 0.2s; font-family: inherit;
+            text-decoration: none; text-align: center;
+        }
+        .lang-btn.active { background: var(--primary); color: white; }
+        .hamburger {
+            display: none; flex-direction: column; gap: 5px;
+            cursor: pointer; border: none; background: none; padding: 4px;
+        }
+        .hamburger span {
+            display: block; width: 24px; height: 2px;
+            background: var(--text-dark); transition: 0.3s; border-radius: 2px;
+        }
+        .mobile-menu {
+            display: none; position: fixed; top: 64px; left: 0; right: 0;
+            background: white; border-bottom: 1px solid var(--border);
+            padding: 16px 24px; box-shadow: var(--shadow); z-index: 999;
+        }
+        .mobile-menu.open { display: block; }
+        .mobile-menu a {
+            display: block; padding: 12px 0; text-decoration: none;
+            color: var(--text-dark); font-weight: 500; border-bottom: 1px solid var(--border);
+        }
+        .mobile-menu a:last-child { border: none; }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            color: white; padding: 100px 24px 60px; position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(232,145,58,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero::after {
+            content: ''; position: absolute; bottom: -30%; left: -10%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(45,122,181,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-inner {
+            max-width: 1200px; margin: 0 auto; width: 100%;
+            position: relative; z-index: 1;
+        }
+        .hero-badge {
+            display: inline-block; background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.25); border-radius: 50px;
+            padding: 6px 18px; font-size: 0.85rem; margin-bottom: 24px;
+            backdrop-filter: blur(4px);
+        }
+        .hero h1 {
+            font-size: 3rem; font-weight: 900; line-height: 1.2;
+            margin-bottom: 20px; max-width: 700px;
+        }
+        .hero .subtitle {
+            font-size: 1.2rem; opacity: 0.9; max-width: 600px;
+            margin-bottom: 36px; line-height: 1.8; font-weight: 300;
+        }
+        .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px; border-radius: 8px; font-size: 1rem;
+            font-weight: 600; text-decoration: none; border: none;
+            cursor: pointer; transition: all 0.3s; font-family: inherit;
+        }
+        .btn-accent { background: var(--accent); color: white; }
+        .btn-accent:hover { background: var(--accent-hover); transform: translateY(-2px); }
+        .btn-outline-white {
+            background: transparent; color: white;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+        .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: white; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .hero-stats {
+            display: flex; gap: 32px; flex-wrap: wrap;
+            padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        .hero-stat { text-align: center; }
+        .hero-stat .num {
+            font-size: 2rem; font-weight: 900; color: var(--accent); display: block;
+        }
+        .hero-stat .label { font-size: 0.85rem; opacity: 0.8; font-weight: 300; }
+
+        /* ===== SECTIONS ===== */
+        section { padding: 80px 24px; }
+        .section-inner { max-width: 1200px; margin: 0 auto; }
+        .section-label {
+            display: inline-block; background: var(--primary-lighter);
+            color: var(--primary); padding: 4px 14px; border-radius: 50px;
+            font-size: 0.8rem; font-weight: 600; margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        .section-title {
+            font-size: 2.2rem; font-weight: 800; color: var(--primary-dark);
+            margin-bottom: 16px; line-height: 1.3;
+        }
+        .section-desc {
+            font-size: 1.05rem; color: var(--text-medium);
+            max-width: 700px; margin-bottom: 48px; line-height: 1.8;
+        }
+        .bg-light { background: var(--bg-light); }
+
+        /* ===== MARKET ===== */
+        .market-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 48px;
+        }
+        .market-card {
+            background: white; border-radius: var(--radius);
+            padding: 36px; box-shadow: var(--shadow); border-top: 4px solid var(--primary);
+        }
+        .market-card.warning { border-top-color: #e53e3e; }
+        .market-card.success { border-top-color: var(--success); }
+        .market-card h3 {
+            font-size: 1.3rem; margin-bottom: 16px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .market-card p { color: var(--text-medium); line-height: 1.8; margin-bottom: 12px; }
+        .market-card ul { list-style: none; padding: 0; }
+        .market-card ul li {
+            padding: 8px 0; padding-left: 24px; position: relative;
+            color: var(--text-medium); line-height: 1.6;
+        }
+        .market-card ul li::before {
+            content: ''; position: absolute; left: 0; top: 14px;
+            width: 8px; height: 8px; border-radius: 50%; background: var(--primary-light);
+        }
+        .market-card.warning ul li::before { background: #e53e3e; }
+        .market-card.success ul li::before { background: var(--success); }
+
+        /* ===== BIRTH CHART ===== */
+        .birth-chart {
+            background: white; border-radius: var(--radius);
+            padding: 36px; box-shadow: var(--shadow);
+        }
+        .birth-chart h3 { font-size: 1.3rem; margin-bottom: 24px; color: var(--primary-dark); }
+        .chart-bars { display: flex; gap: 12px; height: 300px; }
+        .chart-col {
+            flex: 1; display: flex; flex-direction: column;
+            align-items: center; min-width: 0;
+        }
+        .chart-val {
+            font-size: 0.75rem; font-weight: 600; color: var(--text-medium);
+            margin-bottom: 6px; white-space: nowrap; flex-shrink: 0;
+        }
+        .chart-bar-wrap {
+            flex: 1; width: 100%; display: flex;
+            align-items: flex-end; justify-content: center;
+        }
+        .chart-bar {
+            width: 70%; max-width: 60px; height: 0;
+            border-radius: 6px 6px 0 0; transition: height 1s ease;
+            position: relative;
+        }
+        .chart-bar.high { background: linear-gradient(180deg, var(--primary-light), var(--primary)); }
+        .chart-bar.mid { background: linear-gradient(180deg, var(--accent), var(--accent-hover)); }
+        .chart-bar.low { background: linear-gradient(180deg, #e53e3e, #c53030); }
+        .chart-decline {
+            position: absolute; top: -6px; left: 50%; transform: translate(-50%, -100%);
+            font-size: 0.65rem; font-weight: 700; color: #e53e3e;
+            white-space: nowrap; background: #fff5f5; padding: 1px 6px;
+            border-radius: 4px; border: 1px solid #feb2b2;
+        }
+        .chart-lbl {
+            font-size: 0.78rem; color: var(--text-light);
+            margin-top: 8px; font-weight: 500; flex-shrink: 0;
+        }
+        .chart-note {
+            margin-top: 20px; padding: 16px; background: var(--accent-light);
+            border-radius: 8px; font-size: 0.9rem;
+            color: var(--text-medium); line-height: 1.6;
+        }
+        .chart-note i { color: var(--accent); margin-right: 6px; }
+
+        /* ===== ADVANTAGES ===== */
+        .adv-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 24px; margin-bottom: 32px;
+        }
+        .adv-card {
+            background: white; border-radius: var(--radius); padding: 32px;
+            box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--border);
+        }
+        .adv-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .adv-icon {
+            width: 56px; height: 56px; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem; margin-bottom: 20px; color: white;
+        }
+        .adv-icon.blue { background: linear-gradient(135deg, var(--primary), var(--primary-light)); }
+        .adv-icon.orange { background: linear-gradient(135deg, var(--accent), var(--accent-hover)); }
+        .adv-icon.green { background: linear-gradient(135deg, #38a169, #2f855a); }
+        .adv-icon.purple { background: linear-gradient(135deg, #805ad5, #6b46c1); }
+        .adv-icon.red { background: linear-gradient(135deg, #e53e3e, #c53030); }
+        .adv-card h3 { font-size: 1.15rem; margin-bottom: 10px; color: var(--primary-dark); }
+        .adv-card p { font-size: 0.92rem; color: var(--text-medium); line-height: 1.7; }
+        .adv-highlight {
+            display: inline-block; background: var(--accent-light); color: var(--accent-hover);
+            padding: 2px 10px; border-radius: 4px; font-weight: 700;
+            font-size: 0.85rem; margin-top: 10px;
+        }
+
+        /* ===== LICENSE ===== */
+        .license-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+        .license-box { border-radius: var(--radius); padding: 32px; }
+        .license-box.bad { background: #fff5f5; border: 2px solid #feb2b2; }
+        .license-box.good { background: #f0fff4; border: 2px solid #9ae6b4; }
+        .license-box h4 {
+            font-size: 1.1rem; margin-bottom: 16px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .license-box.bad h4 { color: #c53030; }
+        .license-box.good h4 { color: #276749; }
+        .license-box ul { list-style: none; padding: 0; }
+        .license-box ul li {
+            padding: 6px 0; padding-left: 28px; position: relative;
+            font-size: 0.92rem; color: var(--text-medium);
+        }
+        .license-box.bad ul li::before {
+            content: '✕'; position: absolute; left: 0; color: #e53e3e; font-weight: 700;
+        }
+        .license-box.good ul li::before {
+            content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: 700;
+        }
+        .license-note {
+            margin-top: 24px; padding: 20px; background: var(--primary-lighter);
+            border-radius: 8px; font-size: 0.9rem; color: var(--primary-dark); line-height: 1.7;
+        }
+        .license-note strong { color: var(--primary); }
+
+        /* ===== CASES ===== */
+        .cases-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .case-card {
+            background: white; border-radius: var(--radius); padding: 32px;
+            box-shadow: var(--shadow); border-left: 4px solid var(--primary);
+            transition: transform 0.3s;
+        }
+        .case-card:hover { transform: translateY(-3px); }
+        .case-card:nth-child(2) { border-left-color: var(--accent); }
+        .case-card:nth-child(3) { border-left-color: var(--success); }
+        .case-card:nth-child(4) { border-left-color: #805ad5; }
+        .case-num {
+            display: inline-block; width: 32px; height: 32px; border-radius: 50%;
+            background: var(--primary-lighter); color: var(--primary);
+            text-align: center; line-height: 32px; font-size: 0.85rem;
+            font-weight: 700; margin-bottom: 16px;
+        }
+        .case-card:nth-child(2) .case-num { background: var(--accent-light); color: var(--accent-hover); }
+        .case-card:nth-child(3) .case-num { background: #f0fff4; color: var(--success); }
+        .case-card:nth-child(4) .case-num { background: #faf5ff; color: #805ad5; }
+        .case-card h3 { font-size: 1.15rem; margin-bottom: 8px; color: var(--primary-dark); }
+        .case-card .case-who {
+            font-size: 0.85rem; color: var(--text-light);
+            margin-bottom: 12px; font-style: italic;
+        }
+        .case-card p { font-size: 0.92rem; color: var(--text-medium); line-height: 1.7; }
+
+        /* ===== PACKAGE ===== */
+        .package-wrapper { display: flex; justify-content: center; }
+        .package-card {
+            background: white; border-radius: 16px; box-shadow: var(--shadow-lg);
+            max-width: 650px; width: 100%; overflow: hidden;
+            border: 2px solid var(--primary-light);
+        }
+        .package-header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white; padding: 36px; text-align: center;
+        }
+        .package-header .price { font-size: 3rem; font-weight: 900; margin: 12px 0 4px; }
+        .package-header .price-note { font-size: 0.9rem; opacity: 0.8; }
+        .package-body { padding: 36px; }
+        .package-item {
+            display: flex; align-items: flex-start; gap: 14px;
+            padding: 14px 0; border-bottom: 1px solid var(--border);
+        }
+        .package-item:last-child { border: none; }
+        .package-item > i {
+            color: var(--success); margin-top: 4px; font-size: 0.9rem; flex-shrink: 0;
+        }
+        .package-item .item-title { font-weight: 600; color: var(--text-dark); }
+        .package-item .item-desc {
+            font-size: 0.85rem; color: var(--text-light); margin-top: 2px; line-height: 1.6;
+        }
+        .price-strike {
+            text-decoration: line-through; color: #e53e3e;
+            font-size: 0.82rem; margin-top: 6px; display: inline-block;
+        }
+        .price-saved {
+            color: #38a169; font-weight: 700; font-size: 0.82rem; display: inline-block;
+        }
+        .savings-box {
+            margin-top: 10px; background: #f0fff4; border-radius: 8px;
+            padding: 14px; border: 1px dashed #9ae6b4; font-size: 0.82rem;
+        }
+        .savings-title {
+            font-weight: 700; color: #276749; margin-bottom: 8px;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .savings-row {
+            display: flex; justify-content: space-between;
+            color: var(--text-medium); padding: 3px 0;
+        }
+        .savings-amount { font-weight: 600; color: #276749; }
+        .savings-total {
+            display: flex; justify-content: space-between; font-weight: 700;
+            color: #276749; padding-top: 8px; margin-top: 8px; border-top: 1px solid #9ae6b4;
+        }
+        .client-pays {
+            margin-top: 10px; background: #fffaf0; border-radius: 8px;
+            padding: 12px 14px; border: 1px solid #feebc8; font-size: 0.82rem;
+        }
+        .client-pays-title {
+            font-weight: 600; color: var(--accent-hover); margin-bottom: 4px;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .client-pays-row {
+            color: var(--text-medium); padding: 2px 0; padding-left: 18px; position: relative;
+        }
+        .client-pays-row::before {
+            content: '•'; position: absolute; left: 4px; color: var(--accent);
+        }
+        .package-footer { padding: 0 36px 36px; text-align: center; }
+        .package-annual {
+            background: var(--bg-light); border-radius: 8px; padding: 16px;
+            margin-bottom: 20px; font-size: 0.9rem; color: var(--text-medium);
+        }
+
+        /* ===== TRACK RECORD ===== */
+        .track-stats { display: flex; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; }
+        .track-stat {
+            flex: 1; min-width: 140px; background: white; border-radius: var(--radius);
+            padding: 28px; text-align: center; box-shadow: var(--shadow);
+        }
+        .track-stat .num { font-size: 2.5rem; font-weight: 900; color: var(--primary); display: block; }
+        .track-stat .label { font-size: 0.9rem; color: var(--text-medium); margin-top: 4px; }
+        .track-locations { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .loc-group {
+            background: white; border-radius: var(--radius);
+            padding: 28px; box-shadow: var(--shadow);
+        }
+        .loc-group h4 {
+            font-size: 1rem; margin-bottom: 16px;
+            display: flex; align-items: center; gap: 8px; color: var(--primary-dark);
+        }
+        .loc-item {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem;
+        }
+        .loc-item:last-child { border: none; }
+        .loc-name { font-weight: 500; color: var(--text-dark); }
+        .loc-detail { color: var(--text-light); font-size: 0.8rem; }
+        .loc-badge {
+            font-size: 0.75rem; padding: 2px 10px; border-radius: 50px; font-weight: 600;
+        }
+        .loc-badge.active { background: #f0fff4; color: var(--success); }
+        .loc-badge.sold { background: var(--accent-light); color: var(--accent-hover); }
+
+        /* ===== SYSTEM ===== */
+        .system-features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .sys-feature {
+            background: white; border-radius: var(--radius); padding: 28px;
+            text-align: center; box-shadow: var(--shadow); transition: transform 0.3s;
+        }
+        .sys-feature:hover { transform: translateY(-3px); }
+        .sys-feature i { font-size: 2rem; color: var(--primary); margin-bottom: 16px; }
+        .sys-feature h4 { font-size: 0.95rem; margin-bottom: 8px; color: var(--primary-dark); }
+        .sys-feature p { font-size: 0.8rem; color: var(--text-light); }
+
+        /* ===== FAQ ===== */
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item {
+            background: white; border-radius: var(--radius); margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04); border: 1px solid var(--border); overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px 24px; font-weight: 600; cursor: pointer;
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.95rem; color: var(--text-dark); user-select: none;
+        }
+        .faq-question:hover { color: var(--primary); }
+        .faq-question i { transition: transform 0.3s; font-size: 0.8rem; color: var(--text-light); }
+        .faq-item.open .faq-question i { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+        .faq-item.open .faq-answer { max-height: 400px; padding: 0 24px 20px; }
+        .faq-answer p { font-size: 0.9rem; color: var(--text-medium); line-height: 1.8; }
+
+        /* ===== CONTACT ===== */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .contact-form-wrap {
+            background: white; border-radius: var(--radius);
+            padding: 36px; box-shadow: var(--shadow);
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block; font-size: 0.9rem; font-weight: 600;
+            color: var(--text-dark); margin-bottom: 6px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%; padding: 12px 16px; border: 1px solid var(--border);
+            border-radius: 8px; font-size: 0.95rem; font-family: inherit;
+            transition: border-color 0.2s; color: var(--text-dark); background: var(--bg-white);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none; border-color: var(--primary-light);
+            box-shadow: 0 0 0 3px rgba(45,122,181,0.1);
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .contact-channels { display: flex; flex-direction: column; gap: 20px; }
+        .channel-card {
+            background: white; border-radius: var(--radius); padding: 28px;
+            box-shadow: var(--shadow); display: flex; align-items: center;
+            gap: 20px; transition: transform 0.3s; text-decoration: none; color: inherit;
+        }
+        .channel-card:hover { transform: translateY(-2px); }
+        .channel-icon {
+            width: 56px; height: 56px; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; color: white; flex-shrink: 0;
+        }
+        .channel-icon.whatsapp { background: #25d366; }
+        .channel-icon.wechat { background: #07c160; }
+        .channel-icon.location { background: var(--primary); }
+        .channel-info h4 { font-size: 1rem; color: var(--text-dark); margin-bottom: 4px; }
+        .channel-info p { font-size: 0.85rem; color: var(--text-light); }
+        .form-success {
+            display: none; text-align: center; padding: 40px 20px;
+        }
+        .form-success.show { display: block; }
+        .form-success i { font-size: 3rem; color: var(--success); margin-bottom: 16px; }
+        .form-success h3 { font-size: 1.3rem; margin-bottom: 8px; color: var(--text-dark); }
+        .form-success p { color: var(--text-medium); font-size: 0.95rem; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary-dark); color: rgba(255,255,255,0.7); padding: 48px 24px 24px;
+        }
+        .footer-inner {
+            max-width: 1200px; margin: 0 auto; display: flex;
+            justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+        }
+        .footer-brand { font-size: 1.1rem; font-weight: 700; color: white; }
+        .footer-links { display: flex; gap: 20px; }
+        .footer-links a {
+            color: rgba(255,255,255,0.6); text-decoration: none;
+            font-size: 0.85rem; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: white; }
+        .footer-copy {
+            width: 100%; text-align: center; padding-top: 24px; margin-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-up {
+            opacity: 0; transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .adv-grid { grid-template-columns: 1fr 1fr; }
+            .system-features { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .hero h1 { font-size: 2rem; }
+            .hero .subtitle { font-size: 1rem; }
+            .hero-stats { gap: 20px; }
+            .hero-stat .num { font-size: 1.5rem; }
+            .section-title { font-size: 1.7rem; }
+            .market-grid, .license-compare, .cases-grid,
+            .track-locations, .contact-grid { grid-template-columns: 1fr; }
+            .adv-grid { grid-template-columns: 1fr; }
+            .system-features { grid-template-columns: 1fr 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .track-stats { gap: 12px; }
+            .track-stat { padding: 20px; }
+            .track-stat .num { font-size: 1.8rem; }
+            section { padding: 60px 20px; }
+            .chart-bars { height: 220px; gap: 8px; }
+        }
+        @media (max-width: 480px) {
+            .hero { padding: 80px 16px 40px; }
+            .hero h1 { font-size: 1.7rem; }
+            .hero-cta { flex-direction: column; }
+            .hero-cta .btn { width: 100%; justify-content: center; }
+            .hero-stats { flex-direction: column; gap: 16px; align-items: flex-start; }
+            .system-features { grid-template-columns: 1fr; }
+            .package-header .price { font-size: 2.2rem; }
+        }
+    </style>
 </head>
 <body>
-    <p>頁面建設中，敬請期待。</p>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="https://ensovista.com/corlin/jordan/" class="nav-logo">
+                <img src="https://ensovista.com/corlin/assets/logo.jpg" alt="CorLin 芯啟教育">
+                <span>CorLin 芯啟教育</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#market"><span class="tc">市場機遇</span><span class="en">Market</span></a></li>
+                <li><a href="#advantages"><span class="tc">核心優勢</span><span class="en">Advantages</span></a></li>
+                <li><a href="#cases"><span class="tc">案例</span><span class="en">Cases</span></a></li>
+                <li><a href="#package"><span class="tc">服務</span><span class="en">Service</span></a></li>
+                <li><a href="#track"><span class="tc">往績</span><span class="en">Track Record</span></a></li>
+                <li><a href="#contact"><span class="tc">聯絡我們</span><span class="en">Contact</span></a></li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <div class="lang-toggle">
+                    <a href="../startup-cn/index.html" class="lang-btn">简体</a>
+                    <button class="lang-btn active" id="langTC" onclick="setLang('tc')">繁體</button>
+                    <button class="lang-btn" id="langEN" onclick="setLang('en')">EN</button>
+                </div>
+                <button class="hamburger" id="hamburger" onclick="toggleMobile()">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#market" onclick="closeMobile()"><span class="tc">市場機遇</span><span class="en">Market</span></a>
+        <a href="#advantages" onclick="closeMobile()"><span class="tc">核心優勢</span><span class="en">Advantages</span></a>
+        <a href="#cases" onclick="closeMobile()"><span class="tc">案例</span><span class="en">Cases</span></a>
+        <a href="#package" onclick="closeMobile()"><span class="tc">服務</span><span class="en">Service</span></a>
+        <a href="#track" onclick="closeMobile()"><span class="tc">往績</span><span class="en">Track Record</span></a>
+        <a href="#contact" onclick="closeMobile()"><span class="tc">聯絡我們</span><span class="en">Contact</span></a>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <span class="tc"><i class="fa-solid fa-rocket"></i>&nbsp; 芯啟教育 · 創業顧問服務</span>
+                <span class="en"><i class="fa-solid fa-rocket"></i>&nbsp; CorLin Education · Startup Consulting</span>
+            </div>
+            <h1>
+                <span class="tc">在香港，開啟你的教育事業</span>
+                <span class="en">Start Your Education Business in Hong Kong</span>
+            </h1>
+            <p class="subtitle">
+                <span class="tc">15萬港幣起步 · 3個月內盈利 · 免牌照經營 · 自動化營運系統<br>10年實戰經驗，累計開設7間店舖——你的創業導航。</span>
+                <span class="en">From HK$150K · Profitable in 3 Months · No Licence Required · Automated Operating System<br>10 years of proven experience, 7 locations built — Your startup navigator.</span>
+            </p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-accent">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span class="tc">立即諮詢</span><span class="en">Contact Us</span>
+                </a>
+                <a href="#advantages" class="btn btn-outline-white">
+                    <span class="tc">了解更多</span><span class="en">Learn More</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="num">10+</span>
+                    <span class="label"><span class="tc">年行業經驗</span><span class="en">Years Experience</span></span>
+                </div>
+                <div class="hero-stat">
+                    <span class="num">7</span>
+                    <span class="label"><span class="tc">間店舖實績</span><span class="en">Locations Built</span></span>
+                </div>
+                <div class="hero-stat">
+                    <span class="num">3</span>
+                    <span class="label"><span class="tc">個月內盈利</span><span class="en">Months to Profit</span></span>
+                </div>
+                <div class="hero-stat">
+                    <span class="num">15<span style="font-size:1.2rem">萬</span></span>
+                    <span class="label"><span class="tc">港幣起步</span><span class="en">HKD to Start</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MARKET OPPORTUNITY ===== -->
+    <section id="market" class="bg-light">
+        <div class="section-inner">
+            <div class="fade-up">
+                <span class="section-label">
+                    <span class="tc">市場機遇</span><span class="en">MARKET OPPORTUNITY</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="tc">為什麼現在是在香港創辦補習事業的最佳時機？</span>
+                    <span class="en">Why Is Now the Best Time to Start a Tutoring Business in Hong Kong?</span>
+                </h2>
+                <p class="section-desc">
+                    <span class="tc">內地「雙減」政策關上了一扇門，但香港的教育市場正為你敞開另一扇窗。</span>
+                    <span class="en">China's "Double Reduction" policy closed one door, but Hong Kong's education market opens another.</span>
+                </p>
+            </div>
+
+            <div class="market-grid fade-up">
+                <div class="market-card warning">
+                    <h3>
+                        <i class="fa-solid fa-ban" style="color:#e53e3e"></i>
+                        <span class="tc">內地：學科補習全面禁止</span>
+                        <span class="en">Mainland China: Academic Tutoring Banned</span>
+                    </h3>
+                    <p>
+                        <span class="tc">2021年7月，中國國務院發佈「雙減政策」，學科類校外培訓遭受全面打擊：</span>
+                        <span class="en">In July 2021, China's State Council issued the "Double Reduction" policy, devastating the tutoring industry:</span>
+                    </p>
+                    <ul>
+                        <li><span class="tc">義務教育階段（1至9年級）學科補習全面禁止營利</span><span class="en">For-profit academic tutoring banned for grades 1–9</span></li>
+                        <li><span class="tc">周末、節假日、寒暑假不得開展學科培訓</span><span class="en">No tutoring allowed on weekends, holidays, or vacations</span></li>
+                        <li><span class="tc">外資禁止進入學科類培訓領域</span><span class="en">Foreign investment in academic tutoring is prohibited</span></li>
+                        <li><span class="tc">新東方、學而思等行業巨頭被迫轉型或關閉</span><span class="en">Industry giants like New Oriental and TAL Education forced to pivot or close</span></li>
+                    </ul>
+                </div>
+                <div class="market-card success">
+                    <h3>
+                        <i class="fa-solid fa-check-circle" style="color:#38a169"></i>
+                        <span class="tc">香港：教育市場合法蓬勃</span>
+                        <span class="en">Hong Kong: Legal &amp; Thriving Education Market</span>
+                    </h3>
+                    <p>
+                        <span class="tc">作為特別行政區，香港的教育市場不受「雙減」影響，補習行業持續發展：</span>
+                        <span class="en">As a Special Administrative Region, Hong Kong's education market is unaffected by the "Double Reduction" policy:</span>
+                    </p>
+                    <ul>
+                        <li><span class="tc">學科補習完全合法，受市場自由競爭驅動</span><span class="en">Academic tutoring is fully legal, driven by free market competition</span></li>
+                        <li><span class="tc">緊鄰大灣區，跨境學童需求持續增長</span><span class="en">Adjacent to the Greater Bay Area with growing cross-border student demand</span></li>
+                        <li><span class="tc">國際化教育體系，家長對課外輔導需求旺盛</span><span class="en">International education system with strong parental demand for tutoring</span></li>
+                        <li><span class="tc">小班化趨勢明顯，市場正向精品化轉型</span><span class="en">Clear trend toward small-class, premium tutoring models</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Birth Rate Chart -->
+            <div class="birth-chart fade-up">
+                <h3>
+                    <i class="fa-solid fa-chart-simple" style="color:var(--primary)"></i>&nbsp;
+                    <span class="tc">香港出生率持續下降 — 小班模式成為未來</span>
+                    <span class="en">Hong Kong Birth Rate in Decline — Small Class Is the Future</span>
+                </h3>
+                <div class="chart-bars" id="birthChart">
+                    <div class="chart-col">
+                        <div class="chart-val">5.7<span class="tc">萬</span><span class="en">K</span></div>
+                        <div class="chart-bar-wrap">
+                            <div class="chart-bar high" data-height="93"></div>
+                        </div>
+                        <div class="chart-lbl">2013</div>
+                    </div>
+                    <div class="chart-col">
+                        <div class="chart-val">6.1<span class="tc">萬</span><span class="en">K</span></div>
+                        <div class="chart-bar-wrap">
+                            <div class="chart-bar high" data-height="100"></div>
+                        </div>
+                        <div class="chart-lbl">2016</div>
+                    </div>
+                    <div class="chart-col">
+                        <div class="chart-val">5.4<span class="tc">萬</span><span class="en">K</span></div>
+                        <div class="chart-bar-wrap">
+                            <div class="chart-bar high" data-height="88"></div>
+                        </div>
+                        <div class="chart-lbl">2018</div>
+                    </div>
+                    <div class="chart-col">
+                        <div class="chart-val">4.3<span class="tc">萬</span><span class="en">K</span></div>
+                        <div class="chart-bar-wrap">
+                            <div class="chart-bar mid" data-height="70"></div>
+                        </div>
+                        <div class="chart-lbl">2020</div>
+                    </div>
+                    <div class="chart-col">
+                        <div class="chart-val">3.3<span class="tc">萬</span><span class="en">K</span></div>
+                        <div class="chart-bar-wrap">
+                            <div class="chart-bar low" data-height="54">
+                                <span class="chart-decline">↓46%</span>
+                            </div>
+                        </div>
+                        <div class="chart-lbl">2022</div>
+                    </div>
+                    <div class="chart-col">
+                        <div class="chart-val">3.3<span class="tc">萬</span><span class="en">K</span></div>
+                        <div class="chart-bar-wrap">
+                            <div class="chart-bar low" data-height="54"></div>
+                        </div>
+                        <div class="chart-lbl">2023</div>
+                    </div>
+                </div>
+                <div class="chart-note">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span class="tc">
+                        <strong>資料來源：香港統計處。</strong>香港出生人數從2016年高峰的約6.1萬，大幅下降至2023年的約3.3萬——降幅近46%。教育局預計，到2029/30學年，小學生總人數將顯著減少，多所學校面臨縮班或合併。這意味著傳統大班補習模式將難以為繼，<strong>而小班精品模式將成為主流</strong>——正是芯啟模式的核心優勢。
+                    </span>
+                    <span class="en">
+                        <strong>Source: Hong Kong Census &amp; Statistics Dept.</strong> Live births dropped from ~61,000 in 2016 to ~33,000 in 2023 — a 46% decline. The Education Bureau projects significant falls in primary enrolment by 2029/30, with many schools merging or closing. Traditional large-class tutoring is becoming unsustainable. <strong>Small-class, boutique models are the future</strong> — exactly what CorLin's system is built for.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CORE ADVANTAGES ===== -->
+    <section id="advantages">
+        <div class="section-inner">
+            <div class="fade-up">
+                <span class="section-label">
+                    <span class="tc">核心優勢</span><span class="en">CORE ADVANTAGES</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="tc">芯啟系統：為什麼成功率遠高於同行？</span>
+                    <span class="en">The CorLin System: Why Our Success Rate Far Exceeds the Industry</span>
+                </h2>
+                <p class="section-desc">
+                    <span class="tc">大部分初創補習社在1-2年內倒閉。芯啟獨創的商業模式，從定價、成本、營運到擴展，每一環都經過10年實戰打磨。</span>
+                    <span class="en">Most startup tutoring centres close within 1–2 years. CorLin's proprietary business model — pricing, cost, operations, and scaling — has been refined through 10 years of real-world practice.</span>
+                </p>
+            </div>
+
+            <div class="adv-grid">
+                <div class="adv-card fade-up">
+                    <div class="adv-icon blue"><i class="fa-solid fa-tags"></i></div>
+                    <h3><span class="tc">最優定價策略</span><span class="en">Optimal Pricing Strategy</span></h3>
+                    <p>
+                        <span class="tc">低於市場競爭對手近50%的學費，在家長負擔能力、市場競爭力和盈利之間取得最佳平衡。這是經過大量數據驗證的「甜蜜點」——既能吸引最大量的學生，又能保證長期可持續的利潤。</span>
+                        <span class="en">Tuition fees ~50% below market competitors, perfectly balancing affordability, competitiveness, and profitability. This data-proven "sweet spot" attracts maximum students while ensuring sustainable long-term profit.</span>
+                    </p>
+                    <span class="adv-highlight"><span class="tc">↓ 低於市場約50%</span><span class="en">↓ ~50% Below Market</span></span>
+                </div>
+
+                <div class="adv-card fade-up">
+                    <div class="adv-icon orange"><i class="fa-solid fa-coins"></i></div>
+                    <h3><span class="tc">極低營運成本</span><span class="en">Ultra-Low Operating Costs</span></h3>
+                    <p>
+                        <span class="tc">營運成本遠低於競爭對手。小班制意味著每班只需2名學生即可盈利——這是傳統補習社無法企及的成本結構，極大降低了創業風險。</span>
+                        <span class="en">Operating costs far below competitors. With small classes, just 2 students per class is already profitable — a cost structure traditional tutoring centres can't match, dramatically reducing startup risk.</span>
+                    </p>
+                    <span class="adv-highlight"><span class="tc">每班 2 人即盈利</span><span class="en">2 Students = Profitable</span></span>
+                </div>
+
+                <div class="adv-card fade-up">
+                    <div class="adv-icon green"><i class="fa-solid fa-user-check"></i></div>
+                    <h3><span class="tc">簡單易營運</span><span class="en">Easy to Operate</span></h3>
+                    <p>
+                        <span class="tc">專注學科補習，師資招聘門檻低、培訓週期短。銷售和市場推廣訊息簡潔明瞭，大幅節省傳統補習社在宣傳上的高額開支。無需複雜課程設計。</span>
+                        <span class="en">Focused purely on academics — low hiring threshold, short training cycles. Clear, simple messaging for sales and marketing drastically cuts the high promotion costs of traditional centres. No complex curriculum design needed.</span>
+                    </p>
+                    <span class="adv-highlight"><span class="tc">純學科 · 簡單聚焦</span><span class="en">Pure Academic · Simple Focus</span></span>
+                </div>
+
+                <div class="adv-card fade-up">
+                    <div class="adv-icon purple"><i class="fa-solid fa-clone"></i></div>
+                    <h3><span class="tc">無限複製擴展</span><span class="en">Unlimited Replication</span></h3>
+                    <p>
+                        <span class="tc">店舖設置極其簡單，可快速複製。更獨特的是：你可以在同一商場或大廈內開設多間分店，共享營運成本。理論上，在同一地點開3間店即可賺取3倍收入，而成本會下降66%。</span>
+                        <span class="en">Shop setup is extremely simple and quick to replicate. Even more uniquely: you can open multiple units in the same building, sharing operating costs. In theory, 3 shops in one location = 3x revenue, while costs drop by 66%.</span>
+                    </p>
+                    <span class="adv-highlight"><span class="tc">同地點 3x 收入 · 成本 -66%</span><span class="en">Same Location 3x Revenue · -66% Cost</span></span>
+                </div>
+
+                <div class="adv-card fade-up" style="border:2px solid var(--accent);">
+                    <div class="adv-icon red"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3><span class="tc">⭐ 免牌照經營</span><span class="en">⭐ No Licence Required</span></h3>
+                    <p>
+                        <span class="tc">每班不超過8名學生，每日不超過20名學生——根據香港《教育條例》相關規定，此規模無需申請學校註冊。這是芯啟模式最強大的競爭壁壘之一。</span>
+                        <span class="en">Max 8 students per class, max 20 students per day — under Hong Kong's Education Ordinance, this scale does not require school registration. This is one of CorLin's most powerful competitive advantages.</span>
+                    </p>
+                    <span class="adv-highlight"><span class="tc">≤8人/班 · ≤20人/日</span><span class="en">≤8/class · ≤20/day</span></span>
+                </div>
+            </div>
+
+            <!-- License Comparison -->
+            <div class="license-compare fade-up">
+                <div class="license-box bad">
+                    <h4>
+                        <i class="fa-solid fa-file-circle-xmark"></i>
+                        <span class="tc">需要牌照的困境</span><span class="en">With Licence — The Burden</span>
+                    </h4>
+                    <ul>
+                        <li><span class="tc">申請週期長達1年或以上</span><span class="en">Application takes 1+ years</span></li>
+                        <li><span class="tc">申請要求極其複雜（消防、建築、衞生等）</span><span class="en">Extremely complex requirements (fire, building, hygiene, etc.)</span></li>
+                        <li><span class="tc">獲批後須嚴格遵守政府監管（不能隨意變更課室設置）</span><span class="en">Must strictly follow government regulations after approval</span></li>
+                        <li><span class="tc">人事變更困難（更換校監需審批）</span><span class="en">HR changes are difficult (school manager changes need approval)</span></li>
+                        <li><span class="tc">無法自由複製業務（大多數開第二間店不申請牌照屬違法）</span><span class="en">Cannot freely replicate (opening unlicensed 2nd location is illegal)</span></li>
+                        <li><span class="tc">續租談判被動（業主知道你無法搬遷）</span><span class="en">Weak lease negotiation (landlord knows you can't relocate)</span></li>
+                        <li><span class="tc">前僱員爭議可能導致合規投訴</span><span class="en">Employee disputes may lead to compliance complaints</span></li>
+                    </ul>
+                </div>
+                <div class="license-box good">
+                    <h4>
+                        <i class="fa-solid fa-file-circle-check"></i>
+                        <span class="tc">芯啟模式 · 免牌照優勢</span><span class="en">CorLin Model · Licence-Free</span>
+                    </h4>
+                    <ul>
+                        <li><span class="tc">無需申請，即日可營運</span><span class="en">No application needed, start operating immediately</span></li>
+                        <li><span class="tc">無複雜合規要求</span><span class="en">No complex compliance requirements</span></li>
+                        <li><span class="tc">自由調整課室佈局和設置</span><span class="en">Freely adjust classroom layout and setup</span></li>
+                        <li><span class="tc">人事變動靈活自主</span><span class="en">Flexible and independent HR management</span></li>
+                        <li><span class="tc">可無限複製到任何地點</span><span class="en">Unlimited replication to any location</span></li>
+                        <li><span class="tc">租約到期可自由搬遷，談判主動權在手</span><span class="en">Free to relocate at lease end, strong negotiation power</span></li>
+                        <li><span class="tc">營運靈活，根據需求快速開店或關店</span><span class="en">Agile operations — open or close shops as needed</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="license-note fade-up">
+                <i class="fa-solid fa-balance-scale"></i>&nbsp;
+                <span class="tc"><strong>合法合規：</strong>根據香港《教育條例》（第279章），在任何一天內於有關處所向不多於20人在任何時間提供教育的課程，且任何時間接受教育的人數不多於8人，可獲豁免註冊。芯啟模式嚴格在此法律框架內營運。</span>
+                <span class="en"><strong>Fully Legal:</strong> Under Hong Kong's Education Ordinance (Cap. 279), premises providing education to no more than 20 persons in any one day, with no more than 8 persons at any one time, are exempt from registration. CorLin's model operates strictly within this legal framework.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CASE STUDIES ===== -->
+    <section id="cases" class="bg-light">
+        <div class="section-inner">
+            <div class="fade-up">
+                <span class="section-label">
+                    <span class="tc">適合人群</span><span class="en">WHO IS THIS FOR</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="tc">這個項目適合誰？</span><span class="en">Who Is This Programme For?</span>
+                </h2>
+                <p class="section-desc">
+                    <span class="tc">無論你的背景如何，芯啟都能幫你在香港建立可持續的教育事業。</span>
+                    <span class="en">Whatever your background, CorLin can help you build a sustainable education business in Hong Kong.</span>
+                </p>
+            </div>
+
+            <div class="cases-grid">
+                <div class="case-card fade-up">
+                    <span class="case-num">1</span>
+                    <h3><span class="tc">香港本地創業者</span><span class="en">Hong Kong Local Entrepreneurs</span></h3>
+                    <p class="case-who">
+                        <span class="tc">想發展副業或轉型的香港居民、在職人士</span>
+                        <span class="en">HK residents and working professionals looking for a side business or career change</span>
+                    </p>
+                    <p>
+                        <span class="tc">你熟悉香港的教育環境和家長需求，這是你最大的優勢。15萬港幣起步，3個月內可盈利——這可能是香港門檻最低、回報最快的創業項目之一。無論是全職經營還是作為副業，芯啟的自動化系統都能讓你輕鬆管理。</span>
+                        <span class="en">You already understand Hong Kong's education environment and parent expectations — that's your biggest advantage. Starting from HK$150K, profitable within 3 months — this may be one of HK's lowest-barrier, fastest-return opportunities. Whether full-time or as a side business, CorLin's automated system makes management easy.</span>
+                    </p>
+                </div>
+
+                <div class="case-card fade-up">
+                    <span class="case-num">2</span>
+                    <h3><span class="tc">教育移民家長</span><span class="en">Education-Focused Immigrant Parents</span></h3>
+                    <p class="case-who">
+                        <span class="tc">為子女教育移居香港的家長</span>
+                        <span class="en">Parents who moved to HK for their children's education</span>
+                    </p>
+                    <p>
+                        <span class="tc">你為了孩子的未來來到香港，但也需要自己的事業和收入。開辦補習社讓你既能深入了解香港教育體系、掌握第一手升學資訊，又能獲得穩定的商業收入——教育和事業兩不誤。</span>
+                        <span class="en">You came to Hong Kong for your child's future, but you also need your own career and income. Running a tutoring centre lets you deeply understand HK's education system while earning stable business income — education and career, hand in hand.</span>
+                    </p>
+                </div>
+
+                <div class="case-card fade-up">
+                    <span class="case-num">3</span>
+                    <h3><span class="tc">高才通簽證持有者</span><span class="en">Top Talent Pass (TTPS) Holders</span></h3>
+                    <p class="case-who">
+                        <span class="tc">需要續簽證明的高才通、優才等簽證持有者</span>
+                        <span class="en">TTPS / QMAS visa holders who need renewal documentation</span>
+                    </p>
+                    <p>
+                        <span class="tc">簽證續簽需要真實的在港工作和居住證明。芯啟補習事業為你提供完整的證明鏈：工作證明、強積金（MPF）供款紀錄、企業報稅和審計紀錄、員工強積金證明、在港領薪紀錄、以及業務估值增長——讓你的續簽材料無懈可擊。</span>
+                        <span class="en">Visa renewal requires genuine proof of work and residence in HK. A CorLin tutoring business provides your complete evidence chain: employment proof, MPF contributions, business tax returns and audit records, employee MPF records, salary in HK, and growing business valuation — making your renewal application bulletproof.</span>
+                    </p>
+                </div>
+
+                <div class="case-card fade-up">
+                    <span class="case-num">4</span>
+                    <h3><span class="tc">「雙減」轉型者</span><span class="en">Post-"Double Reduction" Educators</span></h3>
+                    <p class="case-who">
+                        <span class="tc">曾在內地經營補習機構、因政策被迫關閉的教育從業者</span>
+                        <span class="en">Former mainland tutoring operators forced to close by policy</span>
+                    </p>
+                    <p>
+                        <span class="tc">你的教育專業能力不應被浪費。香港的學科補習完全合法，市場活躍。芯啟幫你用最低成本、最快速度在香港重啟教育事業——帶著你的經驗，進入一個沒有政策風險的市場。</span>
+                        <span class="en">Your education expertise shouldn't go to waste. Academic tutoring is fully legal and thriving in Hong Kong. CorLin helps you restart at the lowest cost and fastest speed — bringing your experience to a market free from policy risk.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICE PACKAGE ===== -->
+    <section id="package">
+        <div class="section-inner">
+            <div class="fade-up" style="text-align:center;">
+                <span class="section-label">
+                    <span class="tc">服務</span><span class="en">SERVICE</span>
+                </span>
+                <h2 class="section-title" style="margin-left:auto;margin-right:auto;text-align:center;">
+                    <span class="tc">一站式創業服務</span><span class="en">All-in-One Startup Service</span>
+                </h2>
+                <p class="section-desc" style="margin-left:auto;margin-right:auto;text-align:center;">
+                    <span class="tc">從註冊公司到開門迎客，芯啟為你包辦一切。</span>
+                    <span class="en">From company registration to opening day, CorLin handles everything.</span>
+                </p>
+            </div>
+
+            <div class="package-wrapper fade-up">
+                <div class="package-card">
+                    <div class="package-header">
+                        <span>
+                            <span class="tc">全套創業顧問服務</span><span class="en">Complete Startup Consulting</span>
+                        </span>
+                        <div class="price">HK$150,000</div>
+                        <div class="price-note">
+                            <span class="tc">一次性費用 · 包含以下全部服務</span>
+                            <span class="en">One-time fee · Includes all services below</span>
+                        </div>
+                    </div>
+                    <div class="package-body">
+
+                        <div class="package-item">
+                            <i class="fa-solid fa-check"></i>
+                            <div>
+                                <div class="item-title"><span class="tc">全新公司註冊</span><span class="en">Brand New Company Registration</span></div>
+                                <div class="item-desc">
+                                    <span class="tc">你只需提供一個公司名稱，我們為你完成全部註冊流程——公司註冊處手續、商業登記證、公司秘書等，交付一間全新的香港有限公司。</span>
+                                    <span class="en">Just give us a company name. We handle everything — Companies Registry procedures, Business Registration Certificate, company secretary, etc. You receive a brand new Hong Kong limited company.</span>
+                                </div>
+                                <div style="margin-top:8px;">
+                                    <span class="price-strike"><span class="tc">第三方市價 ~HK$5,000</span><span class="en">Third-party cost ~HK$5,000</span></span>
+                                    &nbsp;
+                                    <span class="price-saved">✓ <span class="tc">已包含，為你節省</span><span class="en">Included &amp; saved</span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="package-item">
+                            <i class="fa-solid fa-check"></i>
+                            <div>
+                                <div class="item-title"><span class="tc">店舖選址、裝修及設備</span><span class="en">Shop Selection, Renovation &amp; Equipment</span></div>
+                                <div class="item-desc">
+                                    <span class="tc">由我們全權負責：選址調研、實地睇舖、採購桌椅等基本設備、完成簡單裝修佈置。你無需操心任何細節。</span>
+                                    <span class="en">We handle everything: location research, site visits, purchasing basic equipment (desks &amp; chairs), and completing simple renovation. You don't need to worry about any details.</span>
+                                </div>
+                                <div class="client-pays">
+                                    <div class="client-pays-title">
+                                        <i class="fa-solid fa-info-circle"></i>
+                                        <span class="tc">你需要支付的項目：</span><span class="en">What you pay for:</span>
+                                    </div>
+                                    <div class="client-pays-row"><span class="tc">首月店舖租金</span><span class="en">First month's rent</span></div>
+                                    <div class="client-pays-row"><span class="tc">租金按金（通常為兩個月租金）</span><span class="en">Rental deposit (usually 2 months' rent)</span></div>
+                                    <div class="client-pays-row"><span class="tc">水電等按金（如需要）</span><span class="en">Utility deposits (electricity, water — if required)</span></div>
+                                </div>
+                                <div class="savings-box">
+                                    <div class="savings-title">
+                                        <i class="fa-solid fa-piggy-bank"></i>
+                                        <span class="tc">預計為你節省約 HK$100,000 + 1 個月時間</span>
+                                        <span class="en">Estimated savings: ~HK$100,000 + 1 month</span>
+                                    </div>
+                                    <div class="savings-row">
+                                        <span><span class="tc">裝修及設計費用節省</span><span class="en">Renovation &amp; design savings</span></span>
+                                        <span class="savings-amount">~HK$40,000</span>
+                                    </div>
+                                    <div class="savings-row">
+                                        <span><span class="tc">設備採購優化（精準採購，零浪費）</span><span class="en">Equipment optimization (precise, zero waste)</span></span>
+                                        <span class="savings-amount">~HK$15,000</span>
+                                    </div>
+                                    <div class="savings-row">
+                                        <span><span class="tc">選址調研及租務顧問</span><span class="en">Site research &amp; leasing consultancy</span></span>
+                                        <span class="savings-amount">~HK$15,000</span>
+                                    </div>
+                                    <div class="savings-row">
+                                        <span><span class="tc">避免新手常見錯誤（選錯舖位、過度裝修等）</span><span class="en">Avoiding beginner mistakes (wrong location, over-renovation, etc.)</span></span>
+                                        <span class="savings-amount">~HK$30,000</span>
+                                    </div>
+                                    <div class="savings-total">
+                                        <span><span class="tc">合計節省</span><span class="en">Total saved</span></span>
+                                        <span>~HK$100,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="package-item">
+                            <i class="fa-solid fa-check"></i>
+                            <div>
+                                <div class="item-title"><span class="tc">一個月全方位培訓</span><span class="en">One Month Comprehensive Training</span></div>
+                                <div class="item-desc"><span class="tc">涵蓋商業營運、日常管理、市場推廣、銷售技巧四大模組</span><span class="en">Covers business operations, daily management, marketing, and sales techniques</span></div>
+                            </div>
+                        </div>
+
+                        <div class="package-item">
+                            <i class="fa-solid fa-check"></i>
+                            <div>
+                                <div class="item-title"><span class="tc">自動化營運管理系統</span><span class="en">Automated Operating System</span></div>
+                                <div class="item-desc"><span class="tc">課程排期、學生管理、賬單收費、家長溝通——高度自動化</span><span class="en">Scheduling, student management, billing, parent communication — highly automated</span></div>
+                            </div>
+                        </div>
+
+                        <div class="package-item">
+                            <i class="fa-solid fa-check"></i>
+                            <div>
+                                <div class="item-title"><span class="tc">招聘諮詢服務</span><span class="en">Recruitment Consulting</span></div>
+                                <div class="item-desc"><span class="tc">導師招聘策略和渠道指導，幫你快速組建團隊</span><span class="en">Tutor recruitment strategies and channel guidance to help you build your team fast</span></div>
+                            </div>
+                        </div>
+
+                        <div class="package-item">
+                            <i class="fa-solid fa-check"></i>
+                            <div>
+                                <div class="item-title"><span class="tc">三個月跟進服務</span><span class="en">Three Months Follow-Up Support</span></div>
+                                <div class="item-desc"><span class="tc">每兩週一次電話或面談，持續跟進營運狀況並提供優化建議</span><span class="en">Bi-weekly call or meeting, ongoing operational review and optimization advice</span></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="package-footer">
+                        <div class="package-annual">
+                            <i class="fa-solid fa-rotate" style="color:var(--primary)"></i>&nbsp;
+                            <span class="tc"><strong>營運系統年費：</strong>約 HK$5,000 / 年（最多50用戶）</span>
+                            <span class="en"><strong>Annual System Fee:</strong> ~HK$5,000 / year (up to 50 users)</span>
+                        </div>
+                        <a href="#contact" class="btn btn-accent" style="width:100%;justify-content:center;">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span class="tc">立即諮詢，開始你的創業之旅</span>
+                            <span class="en">Contact Us — Start Your Journey</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TRACK RECORD ===== -->
+    <section id="track" class="bg-light">
+        <div class="section-inner">
+            <div class="fade-up">
+                <span class="section-label">
+                    <span class="tc">實戰往績</span><span class="en">TRACK RECORD</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="tc">不是紙上談兵——7間店舖的真實記錄</span>
+                    <span class="en">Not Theory — Real Results from 7 Locations</span>
+                </h2>
+                <p class="section-desc">
+                    <span class="tc">芯啟教育累計開設7間補習中心，其中4間成功轉售予獨立經營者。這不僅證明了模式的可行性，更證明了它的退出價值。</span>
+                    <span class="en">CorLin Education has built 7 tutoring centres in total, with 4 successfully sold to independent operators. This proves not just the model's viability, but its exit value.</span>
+                </p>
+            </div>
+
+            <div class="track-stats fade-up">
+                <div class="track-stat">
+                    <span class="num">7</span>
+                    <span class="label"><span class="tc">累計開設</span><span class="en">Total Built</span></span>
+                </div>
+                <div class="track-stat">
+                    <span class="num">3</span>
+                    <span class="label"><span class="tc">現正營運</span><span class="en">Currently Operating</span></span>
+                </div>
+                <div class="track-stat">
+                    <span class="num">4</span>
+                    <span class="label"><span class="tc">成功轉售</span><span class="en">Successfully Sold</span></span>
+                </div>
+                <div class="track-stat">
+                    <span class="num">3<span style="font-size:1rem"><span class="tc">個月</span><span class="en"> mo</span></span></span>
+                    <span class="label"><span class="tc">達到盈利</span><span class="en">To Profitability</span></span>
+                </div>
+            </div>
+
+            <div class="track-locations fade-up">
+                <div class="loc-group">
+                    <h4>
+                        <i class="fa-solid fa-store" style="color:var(--success)"></i>
+                        <span class="tc">現正營運</span><span class="en">Currently Operating</span>
+                    </h4>
+                    <div class="loc-item">
+                        <div>
+                            <div class="loc-name">荃灣</div>
+                            <div class="loc-detail">The Cube</div>
+                        </div>
+                        <span class="loc-badge active"><span class="tc">營運中</span><span class="en">Active</span></span>
+                    </div>
+                    <div class="loc-item">
+                        <div>
+                            <div class="loc-name">沙田</div>
+                            <div class="loc-detail">沙田圍</div>
+                        </div>
+                        <span class="loc-badge active"><span class="tc">營運中</span><span class="en">Active</span></span>
+                    </div>
+                    <div class="loc-item">
+                        <div>
+                            <div class="loc-name">佐敦</div>
+                            <div class="loc-detail">卓能中心</div>
+                        </div>
+                        <span class="loc-badge active"><span class="tc">營運中</span><span class="en">Active</span></span>
+                    </div>
+                </div>
+
+                <div class="loc-group">
+                    <h4>
+                        <i class="fa-solid fa-handshake" style="color:var(--accent)"></i>
+                        <span class="tc">成功轉售</span><span class="en">Successfully Sold</span>
+                    </h4>
+                    <div class="loc-item">
+                        <div>
+                            <div class="loc-name">荃灣中</div>
+                            <div class="loc-detail">富德中心</div>
+                        </div>
+                        <span class="loc-badge sold"><span class="tc">已售</span><span class="en">Sold</span></span>
+                    </div>
+                    <div class="loc-item">
+                        <div>
+                            <div class="loc-name">荔枝角</div>
+                            <div class="loc-detail">聯邦廣場</div>
+                        </div>
+                        <span class="loc-badge sold"><span class="tc">已售</span><span class="en">Sold</span></span>
+                    </div>
+                    <div class="loc-item">
+                        <div>
+                            <div class="loc-name">深水埗</div>
+                            <div class="loc-detail">Soho West</div>
+                        </div>
+                        <span class="loc-badge sold"><span class="tc">已售</span><span class="en">Sold</span></span>
+                    </div>
+                    <div class="loc-item">
+                        <div>
+                            <div class="loc-name">長沙灣</div>
+                            <div class="loc-detail">恒邦商業大廈</div>
+                        </div>
+                        <span class="loc-badge sold"><span class="tc">已售</span><span class="en">Sold</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OPERATING SYSTEM ===== -->
+    <section id="system">
+        <div class="section-inner">
+            <div class="fade-up" style="text-align:center;">
+                <span class="section-label">
+                    <span class="tc">營運系統</span><span class="en">OPERATING SYSTEM</span>
+                </span>
+                <h2 class="section-title" style="text-align:center;margin-left:auto;margin-right:auto;">
+                    <span class="tc">自動化營運管理系統</span><span class="en">Automated Management System</span>
+                </h2>
+                <p class="section-desc" style="text-align:center;margin-left:auto;margin-right:auto;">
+                    <span class="tc">讓技術幫你管理日常營運，把精力集中在業務增長上。遠程營運也能輕鬆掌控。</span>
+                    <span class="en">Let technology handle daily operations so you can focus on business growth. Manage remotely with ease.</span>
+                </p>
+            </div>
+
+            <div class="system-features fade-up">
+                <div class="sys-feature">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <h4><span class="tc">課程排期</span><span class="en">Class Scheduling</span></h4>
+                    <p><span class="tc">自動排課、調課、衝突檢測</span><span class="en">Auto scheduling, rescheduling, conflict detection</span></p>
+                </div>
+                <div class="sys-feature">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <h4><span class="tc">學生管理</span><span class="en">Student Management</span></h4>
+                    <p><span class="tc">檔案、出勤、進度、成績一目了然</span><span class="en">Profiles, attendance, progress, grades at a glance</span></p>
+                </div>
+                <div class="sys-feature">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                    <h4><span class="tc">賬單收費</span><span class="en">Billing</span></h4>
+                    <p><span class="tc">自動生成賬單、跟蹤收款狀態</span><span class="en">Auto invoice generation, payment tracking</span></p>
+                </div>
+                <div class="sys-feature">
+                    <i class="fa-solid fa-comments"></i>
+                    <h4><span class="tc">家長溝通</span><span class="en">Parent Communication</span></h4>
+                    <p><span class="tc">通知、反饋、報告，一鍵送達</span><span class="en">Notifications, feedback, reports — one-click delivery</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="bg-light">
+        <div class="section-inner">
+            <div class="fade-up" style="text-align:center;">
+                <span class="section-label">
+                    <span class="tc">常見問題</span><span class="en">FAQ</span>
+                </span>
+                <h2 class="section-title" style="text-align:center;">
+                    <span class="tc">你可能想知道的</span><span class="en">Questions You May Have</span>
+                </h2>
+            </div>
+
+            <div class="faq-list fade-up">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span><span class="tc">我沒有教育行業背景，可以做嗎？</span><span class="en">I have no education background. Can I still do this?</span></span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            <span class="tc">完全可以。芯啟提供為期一個月的全方位培訓，涵蓋商業營運、日常管理、市場推廣和銷售技巧。我們已成功的店舖中，不少經營者並非教育行業出身。系統化的流程讓任何人都能快速上手。</span>
+                            <span class="en">Absolutely. CorLin provides one month of comprehensive training covering business operations, daily management, marketing, and sales. Many of our successful operators come from non-education backgrounds. Our systematic processes enable anyone to get up and running quickly.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span><span class="tc">我人不在香港，可以遠程營運嗎？</span><span class="en">Can I operate remotely if I'm not in Hong Kong?</span></span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            <span class="tc">可以。我們的自動化營運系統支援遠程管理。不過我們建議在創業初期（至少前1-2個月）親身在港參與營運和培訓，以確保最佳的啟動效果。之後可逐步過渡到遠程管理模式。</span>
+                            <span class="en">Yes. Our automated operating system supports remote management. However, we recommend being physically present in Hong Kong during the initial phase (at least the first 1–2 months) for training and launch. After that, you can transition to remote operations.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span><span class="tc">真的不需要教育牌照嗎？合法嗎？</span><span class="en">Is it really legal without an education licence?</span></span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            <span class="tc">是的，完全合法。根據香港《教育條例》（第279章），在任何一天內向不多於20人提供教育，且任何時間不多於8人同時接受教育的處所，可獲豁免學校註冊。芯啟的小班模式嚴格在此法律框架內營運。</span>
+                            <span class="en">Yes, completely legal. Under Hong Kong's Education Ordinance (Cap. 279), premises providing education to no more than 20 persons in any one day, with no more than 8 at any one time, are exempt from school registration. CorLin's small-class model operates strictly within this legal framework.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span><span class="tc">從簽約到正式開業需要多長時間？</span><span class="en">How long from signing to opening?</span></span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            <span class="tc">一般需要1至2個月，包括公司註冊、選址、裝修、培訓等。具體時間取決於你的實際情況和所選地點的可用性。</span>
+                            <span class="en">Typically 1 to 2 months, including company registration, location selection, renovation, and training. The exact timeline depends on your specific situation and location availability.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span><span class="tc">我可以用自己的品牌名稱嗎？</span><span class="en">Can I use my own brand name?</span></span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            <span class="tc">是的。你將以自己的品牌獨立營運。芯啟提供的是幕後的系統、培訓和顧問支持，而非加盟品牌。你的品牌，你做主。</span>
+                            <span class="en">Yes. You'll operate independently under your own brand. CorLin provides the behind-the-scenes system, training, and consulting support — not a franchise brand. Your brand, your rules.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span><span class="tc">15萬港幣之外還有其他費用嗎？</span><span class="en">Are there any costs beyond the HK$150K?</span></span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            <span class="tc">15萬港幣包含全部顧問服務費用（含公司註冊、選址裝修、設備採購、培訓等）。此外，你需要自行承擔店舖首月租金、租金按金、水電按金及日常營運開支。營運管理系統的年費約為5,000港幣（最多50用戶）。芯啟會幫你規劃最優的成本方案，確保總投入在可控範圍內。</span>
+                            <span class="en">The HK$150K covers all consulting service fees (including company registration, site selection &amp; renovation, equipment, training, etc.). You'll separately cover first month's rent, rental deposit, utility deposits, and daily operating costs. The operating system annual fee is ~HK$5,000 (up to 50 users). CorLin helps you plan the optimal cost structure to keep total investment manageable.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span><span class="tc">如果經營不理想怎麼辦？</span><span class="en">What if business doesn't go well?</span></span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            <span class="tc">三個月的跟進服務期內，我們會每兩週與你溝通一次，及時發現問題並提供優化方案。芯啟的模式設計本身就具有極強的抗風險能力——每班僅需2名學生即可盈利。此外，由於無牌照限制，你可以靈活調整經營策略，甚至在必要時低成本關店或搬遷。</span>
+                            <span class="en">During the 3-month follow-up period, we communicate bi-weekly to identify issues and provide solutions. CorLin's model is inherently resilient — just 2 students per class covers costs. Plus, with no licence constraints, you can flexibly adjust strategies, or even close and relocate at low cost if needed.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+        <div class="section-inner">
+            <div class="fade-up" style="text-align:center;">
+                <span class="section-label">
+                    <span class="tc">聯絡我們</span><span class="en">CONTACT US</span>
+                </span>
+                <h2 class="section-title" style="text-align:center;">
+                    <span class="tc">準備好開始了嗎？</span><span class="en">Ready to Get Started?</span>
+                </h2>
+                <p class="section-desc" style="text-align:center;margin-left:auto;margin-right:auto;">
+                    <span class="tc">填寫以下表單或透過WhatsApp / 微信聯絡我們，我們將在24小時內回覆。</span>
+                    <span class="en">Fill in the form below or reach us via WhatsApp / WeChat. We'll respond within 24 hours.</span>
+                </p>
+            </div>
+
+            <div class="contact-grid fade-up">
+                <div class="contact-form-wrap">
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><span class="tc">姓名 *</span><span class="en">Name *</span></label>
+                                <input type="text" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label><span class="tc">電話</span><span class="en">Phone</span></label>
+                                <input type="tel" name="phone">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><span class="tc">電子郵箱 *</span><span class="en">Email *</span></label>
+                                <input type="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label><span class="tc">微信號</span><span class="en">WeChat ID</span></label>
+                                <input type="text" name="wechat">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label><span class="tc">您的身份</span><span class="en">Your Background</span></label>
+                            <select name="background" id="bgSelect">
+                                <option value="" data-tc="請選擇..." data-en="Please select...">請選擇...</option>
+                                <option value="hk-local" data-tc="香港本地居民" data-en="Hong Kong local resident">香港本地居民</option>
+                                <option value="parent" data-tc="教育移民家長" data-en="Education-focused immigrant parent">教育移民家長</option>
+                                <option value="ttps" data-tc="高才通 / 優才簽證持有者" data-en="TTPS / QMAS visa holder">高才通 / 優才簽證持有者</option>
+                                <option value="double-reduction" data-tc="曾在內地經營教育機構" data-en="Former mainland education operator">曾在內地經營教育機構</option>
+                                <option value="entrepreneur" data-tc="創業者" data-en="Entrepreneur">創業者</option>
+                                <option value="other" data-tc="其他" data-en="Other">其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><span class="tc">留言</span><span class="en">Message</span></label>
+                            <textarea name="message" rows="4"></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New CorLin Startup Inquiry (HK)">
+                        <input type="hidden" name="_captcha" value="false">
+                        <button type="submit" class="btn btn-accent" style="width:100%;justify-content:center;">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span class="tc">提交諮詢</span><span class="en">Submit Inquiry</span>
+                        </button>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h3><span class="tc">提交成功！</span><span class="en">Submitted Successfully!</span></h3>
+                        <p>
+                            <span class="tc">感謝你的諮詢，我們將在24小時內與你聯絡。<br>你也可以透過WhatsApp或微信直接聯絡我們。</span>
+                            <span class="en">Thank you for your inquiry. We'll contact you within 24 hours.<br>You can also reach us directly via WhatsApp or WeChat.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-channels">
+                    <a href="https://wa.me/85256668296" target="_blank" class="channel-card">
+                        <div class="channel-icon whatsapp"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="channel-info">
+                            <h4>WhatsApp</h4>
+                            <p><span class="tc">點擊直接對話（推薦）</span><span class="en">Click to chat directly (Recommended)</span></p>
+                            <span style="color:var(--primary);font-weight:600;">+852 5666 8296</span>
+                        </div>
+                    </a>
+
+                    <div class="channel-card">
+                        <div class="channel-icon wechat"><i class="fa-brands fa-weixin"></i></div>
+                        <div class="channel-info">
+                            <h4>微信</h4>
+                            <p><span class="tc">掃碼或搜索微信號添加</span><span class="en">Scan QR or search WeChat ID</span></p>
+                            <span style="color:var(--primary);font-weight:600;">H_K_S_A_R_A</span>
+                        </div>
+                    </div>
+
+                    <div class="channel-card">
+                        <div class="channel-icon location"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="channel-info">
+                            <h4><span class="tc">荃灣總部</span><span class="en">Tsuen Wan HQ</span></h4>
+                            <p>The Cube, Tsuen Wan, Hong Kong</p>
+                        </div>
+                    </div>
+
+                    <div class="channel-card">
+                        <div class="channel-icon" style="background:var(--primary-light);"><i class="fa-solid fa-clock"></i></div>
+                        <div class="channel-info">
+                            <h4><span class="tc">回覆時間</span><span class="en">Response Time</span></h4>
+                            <p>
+                                <span class="tc">一般在24小時內回覆<br>緊急事項請直接WhatsApp聯絡</span>
+                                <span class="en">Usually within 24 hours<br>Urgent matters: WhatsApp directly</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">CorLin 芯啟教育</div>
+            <div class="footer-links">
+                <a href="https://ensovista.com/corlin/"><span class="tc">主頁</span><span class="en">Home</span></a>
+                <a href="#market"><span class="tc">市場機遇</span><span class="en">Market</span></a>
+                <a href="#package"><span class="tc">服務</span><span class="en">Service</span></a>
+                <a href="#contact"><span class="tc">聯絡我們</span><span class="en">Contact</span></a>
+            </div>
+            <div class="footer-copy">© 2016–2025 CorLin Education 芯啟教育. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Language toggle
+        function setLang(lang) {
+            var body = document.body;
+            var tcBtn = document.getElementById('langTC');
+            var enBtn = document.getElementById('langEN');
+            if (lang === 'en') {
+                body.classList.add('english');
+                tcBtn.classList.remove('active');
+                enBtn.classList.add('active');
+            } else {
+                body.classList.remove('english');
+                tcBtn.classList.add('active');
+                enBtn.classList.remove('active');
+            }
+            // Update select options
+            var opts = document.querySelectorAll('#bgSelect option');
+            opts.forEach(function(opt) {
+                var key = (lang === 'en') ? 'en' : 'tc';
+                if (opt.dataset[key]) opt.textContent = opt.dataset[key];
+            });
+        }
+
+        // Mobile menu
+        function toggleMobile() { document.getElementById('mobileMenu').classList.toggle('open'); }
+        function closeMobile() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+        // Navbar scroll
+        window.addEventListener('scroll', function() {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // FAQ accordion
+        function toggleFaq(el) {
+            var item = el.parentElement;
+            var wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+            if (!wasOpen) item.classList.add('open');
+        }
+
+        // Scroll animations
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+
+        // Chart animation
+        var chartObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.chart-bar').forEach(function(bar, i) {
+                        setTimeout(function() {
+                            bar.style.height = bar.getAttribute('data-height') + '%';
+                        }, i * 150);
+                    });
+                    chartObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        var birthChart = document.getElementById('birthChart');
+        if (birthChart) chartObserver.observe(birthChart);
+
+        // Form submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            var form = document.getElementById('contactForm');
+            var fd = new FormData(form);
+            fetch('https://formsubmit.co/ajax/Lucius@ensovista.com', {
+                method: 'POST',
+                body: fd
+            }).then(function(res) { return res.json(); })
+            .then(function(data) {
+                form.style.display = 'none';
+                document.getElementById('formSuccess').classList.add('show');
+            }).catch(function(err) {
+                // Fallback to mailto
+                var name = fd.get('name') || '';
+                var email = fd.get('email') || '';
+                var phone = fd.get('phone') || '';
+                var wechat = fd.get('wechat') || '';
+                var bg = fd.get('background') || '';
+                var msg = fd.get('message') || '';
+                var subject = encodeURIComponent('CorLin Startup Inquiry (HK) from ' + name);
+                var body = encodeURIComponent(
+                    'Name: ' + name + '\nEmail: ' + email +
+                    '\nPhone: ' + phone + '\nWeChat: ' + wechat +
+                    '\nBackground: ' + bg + '\nMessage: ' + msg
+                );
+                window.open('mailto:Lucius@ensovista.com?subject=' + subject + '&body=' + body);
+                form.style.display = 'none';
+                document.getElementById('formSuccess').classList.add('show');
+            });
+        }
+    </script>
 </body>
 </html>
