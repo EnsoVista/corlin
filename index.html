@@ -1,1051 +1,358 @@
 <!DOCTYPE html>
-<html lang="zh-Hant" class="h-full">
+<html lang="zh-Hant-HK">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CorLin 芯啟教育 | 1:5 小班補習 荃灣·沙田 P1-S6</title>
-  <meta name="description" content="芯啟教育提供 1:5 黃金比例小班補習，涵蓋全方位功課輔導及中英數專科加強班，覆蓋小一至中六。荃灣及沙田設有分校。">
-  <meta name="keywords" content="補習社,小班補習,功課輔導,荃灣補習,沙田補習,中文補習,英文補習,數學補習,DSE補習,芯啟教育,CorLin">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://ensovista.com/corlin">
-  <link rel="alternate" hreflang="zh-Hant" href="https://ensovista.com/corlin">
-  <link rel="alternate" hreflang="zh-Hans" href="https://ensovista.com/corlin?lang=zh-Hans">
-  <link rel="alternate" hreflang="en" href="https://ensovista.com/corlin?lang=en">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="CorLin 芯啟教育 | 1:5 小班補習 荃灣·沙田">
-  <meta property="og:description" content="不只教答案，更理解孩子為什麼不明白。1:5 黃金比例小班，讓每位學生都被看見。">
-  <meta property="og:url" content="https://ensovista.com/corlin">
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <style>
-    html{scroll-behavior:smooth}
-    body{font-family:'Noto Sans TC','Noto Sans SC','Inter',sans-serif}
-    .page{display:none}.page.active{display:block}
-    .lang-dd{display:none}.lang-dd.open{display:block}
-    .mob-nav{display:none}.mob-nav.open{display:flex}
-    .grad-text{background:linear-gradient(135deg,#0d97e9,#0178c7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-    .card-h{transition:all .3s ease}.card-h:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.1)}
-    .glass{background:rgba(255,255,255,.9);backdrop-filter:blur(12px)}
-    details summary::-webkit-details-marker{display:none}
-    details summary{list-style:none}
-  </style>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"EducationalOrganization","name":"CorLin Education 芯啟教育","url":"https://ensovista.com/corlin","description":"芯啟教育提供 1:5 黃金比例小班補習，覆蓋小一至中六。","foundingDate":"2016","areaServed":[{"@type":"City","name":"Tsuen Wan, Hong Kong"},{"@type":"City","name":"Sha Tin, Hong Kong"}],"contactPoint":{"@type":"ContactPoint","telephone":"+852-5666-8296","contactType":"customer service","availableLanguage":["zh-Hant","zh-Hans","en"]}}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"芯啟教育的師生比例是多少？","acceptedAnswer":{"@type":"Answer","text":"我們堅持 1:5 黃金比例小班教學，確保每位學生都能獲得導師充分的關注和個別指導。"}},{"@type":"Question","name":"功課輔導班的收費是多少？","acceptedAnswer":{"@type":"Answer","text":"功課輔導班採月費制（星期一至五），16:00-17:30 時段為 $1,480，16:00-19:00 全時段為 $2,600。"}},{"@type":"Question","name":"芯啟教育在哪裡有分校？","acceptedAnswer":{"@type":"Answer","text":"芯啟教育目前在荃灣及沙田設有分校。"}}]}
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorLin Education 芯啟教育 | 香港小班補習 · 教育創業顧問</title>
+    <meta name="description" content="芯啟教育 CorLin — 香港小班補習領導品牌。佐敦、荃灣補習中心及教育創業顧問服務。">
+    <link rel="canonical" href="https://ensovista.com/corlin/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #0c2340;
+            --primary: #1a4d7c;
+            --primary-light: #2d7ab5;
+            --accent: #e8913a;
+            --accent-hover: #d17a2a;
+            --bg: #f5f7fa;
+            --text-dark: #1a202c;
+            --text-medium: #4a5568;
+            --text-light: #718096;
+            --border: #e2e8f0;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; }
+        body {
+            font-family: 'Noto Sans TC', 'Noto Sans SC', 'Inter', sans-serif;
+            background: var(--bg); color: var(--text-dark);
+            min-height: 100vh; display: flex; flex-direction: column;
+            line-height: 1.6;
+        }
+
+        /* Language */
+        .lang-cn, .lang-en { display: none; }
+        .lang-tc { display: inline; }
+        div.lang-tc, p.lang-tc { display: block; }
+        body.show-cn .lang-tc { display: none !important; }
+        body.show-cn .lang-en { display: none !important; }
+        body.show-cn .lang-cn { display: inline !important; }
+        body.show-cn div.lang-cn, body.show-cn p.lang-cn { display: block !important; }
+        body.show-en .lang-tc { display: none !important; }
+        body.show-en .lang-cn { display: none !important; }
+        body.show-en .lang-en { display: inline !important; }
+        body.show-en div.lang-en, body.show-en p.lang-en { display: block !important; }
+
+        /* Main container */
+        main {
+            flex: 1; display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            padding: 48px 24px 40px;
+        }
+
+        /* Language toggle — top right */
+        .lang-bar {
+            position: fixed; top: 20px; right: 24px; z-index: 100;
+            display: flex; gap: 2px; background: var(--white);
+            border-radius: 10px; padding: 4px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+        }
+        .lang-btn {
+            padding: 6px 14px; border: none; background: transparent;
+            border-radius: 7px; cursor: pointer; font-size: 0.78rem;
+            font-weight: 600; color: var(--text-light);
+            transition: all 0.2s; font-family: inherit;
+        }
+        .lang-btn.active { background: var(--primary-dark); color: white; }
+        .lang-btn:hover:not(.active) { background: var(--bg); color: var(--text-dark); }
+
+        /* Header / Brand */
+        .brand { text-align: center; margin-bottom: 52px; }
+        .brand-logo {
+            font-size: 1.6rem; font-weight: 900; color: var(--primary-dark);
+            letter-spacing: -0.5px; margin-bottom: 10px;
+        }
+        .brand-logo span { color: var(--accent); }
+        .brand-sub {
+            font-size: 0.92rem; color: var(--text-medium); font-weight: 400;
+        }
+
+        /* Section Labels */
+        .group-label {
+            font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 2px; color: var(--text-light); margin-bottom: 16px;
+            text-align: center;
+        }
+
+        /* Cards grid */
+        .cards-wrap { width: 100%; max-width: 880px; }
+        .cards-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: var(--white); border-radius: 16px;
+            padding: 36px 32px; text-decoration: none; color: inherit;
+            border: 1px solid var(--border); position: relative;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex; flex-direction: column; overflow: hidden;
+        }
+        .card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 4px; border-radius: 16px 16px 0 0;
+            transition: height 0.35s;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+            border-color: transparent;
+        }
+        .card:hover::before { height: 4px; }
+
+        /* Card color accents */
+        .card.blue::before { background: var(--primary-light); }
+        .card.navy::before { background: var(--primary-dark); }
+        .card.orange::before { background: var(--accent); }
+        .card.teal::before { background: #2b9a8f; }
+
+        .card-icon {
+            width: 52px; height: 52px; border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem; color: white; margin-bottom: 20px;
+            flex-shrink: 0;
+        }
+        .card.blue .card-icon { background: linear-gradient(135deg, var(--primary-light), var(--primary)); }
+        .card.navy .card-icon { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); }
+        .card.orange .card-icon { background: linear-gradient(135deg, var(--accent), var(--accent-hover)); }
+        .card.teal .card-icon { background: linear-gradient(135deg, #2b9a8f, #1f7a70); }
+
+        .card h3 {
+            font-size: 1.18rem; font-weight: 800; color: var(--primary-dark);
+            margin-bottom: 8px; line-height: 1.35;
+        }
+        .card p {
+            font-size: 0.88rem; color: var(--text-medium); line-height: 1.65;
+            flex: 1;
+        }
+        .card-arrow {
+            display: flex; align-items: center; gap: 6px;
+            margin-top: 20px; font-size: 0.82rem; font-weight: 600;
+            transition: gap 0.3s;
+        }
+        .card.blue .card-arrow { color: var(--primary-light); }
+        .card.navy .card-arrow { color: var(--primary-dark); }
+        .card.orange .card-arrow { color: var(--accent); }
+        .card.teal .card-arrow { color: #2b9a8f; }
+        .card:hover .card-arrow { gap: 10px; }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark); color: rgba(255,255,255,0.65);
+            padding: 44px 24px 28px;
+        }
+        .footer-inner {
+            max-width: 880px; margin: 0 auto;
+            display: flex; gap: 48px; align-items: flex-start;
+        }
+        .footer-brand { flex: 1; }
+        .footer-brand h4 {
+            color: white; font-size: 1.05rem; font-weight: 800; margin-bottom: 10px;
+        }
+        .footer-brand p {
+            font-size: 0.82rem; line-height: 1.8; opacity: 0.7;
+        }
+        .footer-contact { flex-shrink: 0; }
+        .footer-contact h4 {
+            color: white; font-size: 0.78rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px;
+        }
+        .footer-contact a {
+            display: flex; align-items: center; gap: 10px;
+            color: rgba(255,255,255,0.6); text-decoration: none;
+            font-size: 0.85rem; padding: 5px 0; transition: color 0.2s;
+        }
+        .footer-contact a:hover { color: white; }
+        .footer-contact i { width: 18px; text-align: center; }
+        .footer-copy {
+            text-align: center; font-size: 0.72rem; opacity: 0.35;
+            margin-top: 36px; padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            max-width: 880px; margin-left: auto; margin-right: auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            main { padding: 40px 16px 32px; }
+            .brand { margin-bottom: 40px; }
+            .brand-logo { font-size: 1.35rem; }
+            .cards-grid { grid-template-columns: 1fr; gap: 14px; }
+            .card { padding: 28px 24px; }
+            .footer-inner { flex-direction: column; gap: 28px; }
+            .lang-bar { top: 12px; right: 12px; }
+        }
+    </style>
 </head>
-<body class="bg-white text-gray-800 h-full">
-<div class="h-full overflow-auto" id="scrollRoot">
+<body>
 
-<!-- ========== NAVIGATION ========== -->
-<nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-gray-200">
-  <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
-    <a href="javascript:void(0)" id="logoBtn" class="flex items-center gap-2 font-bold text-xl text-blue-600">
-      <img src="https://imgur.com/ORu7bCA.png" alt="CorLin 芯啟教育" class="w-10 h-10 rounded-lg" loading="lazy">
-      <span>CorLin <span class="hidden sm:inline" data-i18n="brandSub">芯啟教育</span></span>
-    </a>
-    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
-      <div id="dNav2C" class="flex items-center gap-6">
-        <a href="#philosophy" class="hover:text-blue-600 transition" data-i18n="navPhilo">教學理念</a>
-        <a href="#courses" class="hover:text-blue-600 transition" data-i18n="navCourse">課程</a>
-        <a href="#faq" class="hover:text-blue-600 transition" data-i18n="navFAQ">常見問題</a>
-        <a href="javascript:void(0)" class="nav-to-b2b hover:text-blue-600 transition font-semibold text-blue-600 border border-blue-200 px-3 py-1 rounded-full" data-i18n="navFran">創業/加盟</a>
-      </div>
-      <div id="dNav2B" class="flex items-center gap-6 hidden">
-        <a href="#b2bCompare" class="hover:text-blue-600 transition" data-i18n="navWhy">為什麼選我們</a>
-        <a href="#b2bFin" class="hover:text-blue-600 transition" data-i18n="navROI">投資回報</a>
-        <a href="javascript:void(0)" class="nav-to-b2c hover:text-blue-600 transition" data-i18n="navClass">課堂資訊</a>
-      </div>
-      <div class="relative" id="langWrap">
-        <button id="langBtn" class="flex items-center gap-1 px-3 py-1.5 rounded-lg border border-gray-300 hover:border-blue-500 transition text-sm">
-          <i data-lucide="globe" class="w-3.5 h-3.5"></i>
-          <span id="langLbl" data-i18n="langLbl">繁中</span>
-          <i data-lucide="chevron-down" class="w-3 h-3"></i>
-        </button>
-        <div id="langDD" class="lang-dd absolute right-0 top-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden min-w-max z-50">
-          <button class="block w-full text-left px-4 py-2 text-sm hover:bg-blue-50 transition lbtn" data-lang="zh-Hant">繁體中文</button>
-          <button class="block w-full text-left px-4 py-2 text-sm hover:bg-blue-50 transition lbtn" data-lang="zh-Hans">简体中文</button>
-          <button class="block w-full text-left px-4 py-2 text-sm hover:bg-blue-50 transition lbtn" data-lang="en">English</button>
-        </div>
-      </div>
+    <!-- Language Toggle -->
+    <div class="lang-bar">
+        <button class="lang-btn active" id="btnTC" onclick="setLang('tc')">繁體</button>
+        <button class="lang-btn" id="btnCN" onclick="setLang('cn')">简体</button>
+        <button class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
     </div>
-    <button id="hamBtn" class="md:hidden text-gray-600"><i data-lucide="menu" class="w-6 h-6"></i></button>
-  </div>
-  <div id="mobNav" class="mob-nav flex-col bg-white border-t border-gray-200 px-4 py-4 gap-3 text-sm font-medium text-gray-600 md:hidden">
-    <div id="mNav2C">
-      <a href="#philosophy" class="block py-2 mcl" data-i18n="navPhilo">教學理念</a>
-      <a href="#courses" class="block py-2 mcl" data-i18n="navCourse">課程</a>
-      <a href="#faq" class="block py-2 mcl" data-i18n="navFAQ">常見問題</a>
-      <a href="javascript:void(0)" class="block py-2 nav-to-b2b mcl text-blue-600 font-semibold" data-i18n="navFran">創業/加盟</a>
-    </div>
-    <div id="mNav2B" class="hidden">
-      <a href="#b2bCompare" class="block py-2 mcl" data-i18n="navWhy">為什麼選我們</a>
-      <a href="#b2bFin" class="block py-2 mcl" data-i18n="navROI">投資回報</a>
-      <a href="javascript:void(0)" class="block py-2 nav-to-b2c mcl" data-i18n="navClass">課堂資訊</a>
-    </div>
-    <div class="flex gap-2 pt-2 border-t border-gray-200">
-      <button class="px-3 py-1.5 rounded-lg border text-xs lbtn mcl" data-lang="zh-Hant">繁中</button>
-      <button class="px-3 py-1.5 rounded-lg border text-xs lbtn mcl" data-lang="zh-Hans">简中</button>
-      <button class="px-3 py-1.5 rounded-lg border text-xs lbtn mcl" data-lang="en">EN</button>
-    </div>
-  </div>
-</nav>
 
-<!-- ============================== B2C PAGE ============================== -->
-<div id="pageB2C" class="page active">
-
-  <!-- B2C HERO -->
-  <section class="pt-28 pb-20 px-4 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-    <div class="max-w-5xl mx-auto text-center">
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-6">
-        <span class="grad-text" data-i18n="heroTitle">讓學習回歸簡單</span>
-      </h1>
-      <p class="text-gray-500 text-base sm:text-lg mt-6 max-w-2xl mx-auto leading-relaxed whitespace-pre-line" data-i18n="heroDesc">不只教答案，更理解孩子為什麼不明白。
-1:5 黃金比例小班，讓每位學生都被看見。</p>
-      <div class="flex flex-col sm:flex-row gap-3 justify-center mt-8">
-        <a href="#courses" class="inline-block px-8 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition shadow-lg">
-          <span data-i18n="heroCTA1">了解課程</span>
-        </a>
-        <a id="waB2C1" href="#" target="_blank" rel="noopener" class="wa-b2c inline-flex items-center justify-center gap-2 px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-full font-semibold hover:bg-blue-50 transition">
-          <i data-lucide="message-circle" class="w-5 h-5"></i>
-          <span data-i18n="heroCTA2">WhatsApp 查詢</span>
-        </a>
-      </div>
-      <div class="grid grid-cols-3 gap-4 mt-14 max-w-lg mx-auto">
-        <div class="text-center">
-          <div class="text-2xl sm:text-3xl font-black text-blue-600">1:5</div>
-          <div class="text-xs text-gray-500 mt-1" data-i18n="s1L">師生比例</div>
-        </div>
-        <div class="text-center">
-          <div class="text-2xl sm:text-3xl font-black text-blue-600">90<span class="text-base font-semibold">min</span></div>
-          <div class="text-xs text-gray-500 mt-1" data-i18n="s2L">每堂時長</div>
-        </div>
-        <div class="text-center">
-          <div class="text-2xl sm:text-3xl font-black text-blue-600">P1-S6</div>
-          <div class="text-xs text-gray-500 mt-1" data-i18n="s3L">全級覆蓋</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- B2C PHILOSOPHY -->
-  <section id="philosophy" class="py-20 px-4 bg-white">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4" data-i18n="philoTitle">「芯」於同理，「啟」於策略</h2>
-        <p class="text-gray-500 max-w-xl mx-auto leading-relaxed" data-i18n-html="philoDesc">導師成績只是基本，具備同理心才是關鍵。<br>我們站在學生角度，診斷「不明白」的根源。</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="card-h bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 border border-blue-100">
-          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4"><i data-lucide="heart" class="w-6 h-6 text-blue-600"></i></div>
-          <h3 class="font-bold text-lg mb-2 text-gray-900" data-i18n="empT">同理心教學</h3>
-          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="empD">在我們的黃金小班模式下，導師與學生不只是師生，更是深知彼此的學習夥伴。這種深厚的信任感，讓導師能為孩子量身打造最合適的升學與成長策略。</p>
-        </div>
-        <div class="card-h bg-gradient-to-br from-indigo-50 to-white rounded-2xl p-6 border border-indigo-100">
-          <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4"><i data-lucide="target" class="w-6 h-6 text-indigo-600"></i></div>
-          <h3 class="font-bold text-lg mb-2 text-gray-900" data-i18n="strT">策略性分配</h3>
-          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="strD">以「家長願景 → 學生弱點 → 優先順序」為核心邏輯，將學習的每分鐘轉化為最高分數回報，確保每位學員身處最適切的學習環境。</p>
-        </div>
-        <div class="card-h bg-gradient-to-br from-purple-50 to-white rounded-2xl p-6 border border-purple-100">
-          <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4"><i data-lucide="layers" class="w-6 h-6 text-purple-600"></i></div>
-          <h3 class="font-bold text-lg mb-2 text-gray-900" data-i18n="segT">分段分流</h3>
-          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="segD">摒棄一成不變的模版，堅持「逐一教學、逐一操練、逐一優化」，這不單是課業輔導，更是一場為孩子量身打造、衝刺卓越的知識長跑。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- B2C 90-MIN FLOW -->
-  <section class="py-20 px-4 bg-gray-50">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl sm:text-4xl font-black text-gray-900 text-center mb-14" data-i18n="flowTitle">每堂 90 分鐘的流程</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="card-h bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center">
-          <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"><i data-lucide="activity" class="w-6 h-6 text-blue-600"></i></div>
-          <p class="text-blue-600 text-xs font-semibold mb-1" data-i18n="f1Time">前 5 分鐘</p>
-          <h3 class="font-bold text-lg mb-2" data-i18n="f1T">快速評估</h3>
-          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="f1D">當日測驗、學習進度、心理狀態，全面掌握學生狀況。</p>
-        </div>
-        <div class="card-h bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center">
-          <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"><i data-lucide="target" class="w-6 h-6 text-green-600"></i></div>
-          <h3 class="font-bold text-lg mb-1" data-i18n="f2T">針對性施教</h3>
-          <p class="text-green-600 text-xs font-semibold mb-2" data-i18n="f2S">攻弱點或備考試</p>
-          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="f2D">根據評估結果即時調整教學方向，不浪費一分鐘。</p>
-        </div>
-        <div class="card-h bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center">
-          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"><i data-lucide="cloud" class="w-6 h-6 text-purple-600"></i></div>
-          <h3 class="font-bold text-lg mb-1" data-i18n="f3T">即時反饋</h3>
-          <p class="text-purple-600 text-xs font-semibold mb-2" data-i18n="f3S">雲端備課 · 現場列印</p>
-          <p class="text-gray-500 text-sm leading-relaxed" data-i18n="f3D">教材與學生的學習節奏 100% 同步，絕非千篇一律。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- B2C COURSES -->
-  <section id="courses" class="py-20 px-4 bg-white">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl sm:text-4xl font-black text-gray-900 text-center mb-14" data-i18n="courseTitle">核心課程</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- HOMEWORK -->
-        <div class="card-h bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center"><i data-lucide="book-open" class="w-5 h-5 text-white"></i></div>
-            <div>
-              <h3 class="font-bold text-lg text-gray-900" data-i18n="hwT">全方位功課輔導班</h3>
-              <p class="text-xs text-gray-400" data-i18n="hwSub">Homework Support Group</p>
+    <main>
+        <!-- Brand -->
+        <div class="brand">
+            <div class="brand-logo">CorLin <span>芯啟教育</span></div>
+            <div class="brand-sub">
+                <span class="lang-tc">請選擇你需要的服務</span>
+                <span class="lang-cn">请选择你需要的服务</span>
+                <span class="lang-en">How can we help you?</span>
             </div>
-          </div>
-          <ul class="space-y-2 text-sm text-gray-600 mb-6">
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0"></i><span data-i18n="hwB1">1:5 小班，確保每位學生被看見</span></li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0"></i><span data-i18n="hwB2">依優先次序、高效完成功課</span></li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0"></i><span data-i18n="hwB3">每日模擬默書/測驗預備</span></li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0"></i><span data-i18n="hwB4">剩餘時間中英數基礎鞏固</span></li>
-          </ul>
-          <div class="bg-white rounded-xl p-4 border border-gray-200 space-y-2">
-            <p class="text-xs text-gray-400 mb-2" data-i18n="priceL">收費模式</p>
-            <p class="text-sm font-semibold text-gray-800" data-i18n="hwP1">月費制（星期一至五）</p>
-            <div class="flex justify-between text-sm text-gray-700"><span>16:00–17:30</span><span class="font-semibold">$1,480</span></div>
-            <div class="flex justify-between text-sm text-gray-700"><span>17:30–19:00</span><span class="font-semibold">$1,480</span></div>
-            <div class="flex justify-between text-sm text-gray-700"><span>16:00–19:00</span><span class="font-semibold">$2,600</span></div>
-            <p class="text-xs text-gray-500 pt-2 border-t border-gray-200 italic" data-i18n="hwNote">備註：因人手所限，功課輔導班目前僅限於荃灣及沙田分店提供。</p>
-          </div>
         </div>
-        <!-- SUBJECT -->
-        <div class="card-h bg-gradient-to-br from-indigo-50 to-white rounded-2xl p-8 border border-indigo-100">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center"><i data-lucide="zap" class="w-5 h-5 text-white"></i></div>
-            <div>
-              <h3 class="font-bold text-lg text-gray-900" data-i18n="subT">精英專科加強班</h3>
-              <p class="text-xs text-gray-400" data-i18n="subSub">Subject Strategy Class</p>
+
+        <div class="cards-wrap">
+
+            <!-- Group: Tutoring -->
+            <div class="group-label">
+                <span class="lang-tc">補習中心</span>
+                <span class="lang-cn">补习中心</span>
+                <span class="lang-en">Tutoring Centres</span>
             </div>
-          </div>
-          <ul class="space-y-2 text-sm text-gray-600 mb-6">
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500 mt-0.5 flex-shrink-0"></i><span data-i18n="subB1">中、英、數策略導向教學</span></li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500 mt-0.5 flex-shrink-0"></i><span data-i18n="subB2">每堂前 5 分鐘診斷式學習</span></li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500 mt-0.5 flex-shrink-0"></i><span data-i18n="subB3">配合校情的原創針對性教材</span></li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500 mt-0.5 flex-shrink-0"></i><span data-i18n="subB4">獨家解題公式，簡化繁瑣知識</span></li>
-          </ul>
-          <div class="bg-white rounded-xl p-4 border border-gray-200 space-y-2">
-            <p class="text-xs text-gray-400 mb-3 font-semibold" data-i18n="subP1">標準學費</p>
-            <p class="text-sm text-gray-700" data-i18n="subP2">小學 $138/hr → 最優惠 $78/hr</p>
-            <p class="text-sm text-gray-700" data-i18n="subP3">初中 $148/hr → 最優惠 $88/hr</p>
-            <p class="text-sm text-gray-700" data-i18n="subP4">高中 $158/hr → 最優惠 $98/hr</p>
-            <p class="text-sm text-gray-700" data-i18n="subP5">英文口語 $158/hr → 最優惠 $98/hr</p>
-            <div class="border-t border-gray-200 pt-3 mt-3">
-              <p class="text-xs font-semibold text-indigo-600 mb-2" data-i18n="subProT">🎁 三大限時疊加優惠</p>
-              <p class="text-xs text-gray-600" data-i18n="subPro1">【多科獎勵】報讀兩科或以上，每小時減 $20</p>
-              <p class="text-xs text-gray-600" data-i18n="subPro2">【口碑推薦】介紹一位新朋友報名，每小時減 $20</p>
-              <p class="text-xs text-gray-600" data-i18n="subPro3">【雙重推薦】介紹第二位新朋友報名，每小時減 $20</p>
-              <p class="text-xs text-gray-500 italic pt-2 mt-2 border-t border-gray-200" data-i18n="subNote">* 最優惠學費已包含全部優惠疊加（最高每小時減免 $60）</p>
+            <div class="cards-grid">
+                <a href="jordan/" class="card navy">
+                    <div class="card-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <h3>
+                        <span class="lang-tc">佐敦補習中心</span>
+                        <span class="lang-cn">佐敦补习中心</span>
+                        <span class="lang-en">Jordan Tutoring Centre</span>
+                    </h3>
+                    <p>
+                        <span class="lang-tc">卓能中心 · 佐敦道9號<br>小班功課輔導 · 專科補習 · DSE</span>
+                        <span class="lang-cn">卓能中心 · 佐敦道9号<br>小班功课辅导 · 专科补习 · DSE</span>
+                        <span class="lang-en">Cheuk Nang Centre · 9 Jordan Road<br>Homework support · Specialist tutoring · DSE</span>
+                    </p>
+                    <div class="card-arrow">
+                        <span class="lang-tc">了解詳情</span>
+                        <span class="lang-cn">了解详情</span>
+                        <span class="lang-en">Learn more</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+                <a href="tsuenwan/" class="card blue">
+                    <div class="card-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <h3>
+                        <span class="lang-tc">荃灣補習中心</span>
+                        <span class="lang-cn">荃湾补习中心</span>
+                        <span class="lang-en">Tsuen Wan Tutoring Centre</span>
+                    </h3>
+                    <p>
+                        <span class="lang-tc">The Cube · 荃灣<br>小班功課輔導 · 專科補習 · 幼小銜接</span>
+                        <span class="lang-cn">The Cube · 荃湾<br>小班功课辅导 · 专科补习 · 幼小衔接</span>
+                        <span class="lang-en">The Cube · Tsuen Wan<br>Homework support · Specialist tutoring · K-P1 prep</span>
+                    </p>
+                    <div class="card-arrow">
+                        <span class="lang-tc">了解詳情</span>
+                        <span class="lang-cn">了解详情</span>
+                        <span class="lang-en">Learn more</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="mt-8 text-center">
-        <p class="text-sm text-gray-500 bg-gray-50 inline-block px-6 py-3 rounded-full" data-i18n="sched">歡迎 WhatsApp 查詢上課時間。</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- B2C FAQ -->
-  <section id="faq" class="py-20 px-4 bg-gray-50">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl sm:text-4xl font-black text-gray-900 text-center mb-14" data-i18n="faqTitle">常見問題</h2>
-      <div class="space-y-4">
-        <details class="bg-white rounded-xl p-6 border border-gray-200 cursor-pointer group" open>
-          <summary class="font-bold text-base text-gray-900 flex items-center justify-between gap-4">
-            <span data-i18n="fq1Q">芯啟教育的師生比例是多少？</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 flex-shrink-0 group-open:rotate-180 transition-transform"></i>
-          </summary>
-          <p class="text-gray-600 mt-4 text-sm leading-relaxed" data-i18n="fq1A">我們堅持 1:5 黃金比例小班教學，確保每位學生都能獲得導師充分的關注和個別指導。這個比例是精心設計的，讓導師能在有限的時間內提供高質量的個性化教學。</p>
-        </details>
-        <details class="bg-white rounded-xl p-6 border border-gray-200 cursor-pointer group">
-          <summary class="font-bold text-base text-gray-900 flex items-center justify-between gap-4">
-            <span data-i18n="fq2Q">功課輔導班和專科加強班有什麼分別？</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 flex-shrink-0 group-open:rotate-180 transition-transform"></i>
-          </summary>
-          <p class="text-gray-600 mt-4 text-sm leading-relaxed" data-i18n-html="fq2A"><strong>功課輔導班</strong>聚焦於完成日常功課、測驗預備和基礎知識鞏固。<strong>專科加強班</strong>則採用策略導向教學，針對特定科目進行深度教學，使用原創教材和獨家解題方法，適合想在成績上取得突破的學生。</p>
-        </details>
-        <details class="bg-white rounded-xl p-6 border border-gray-200 cursor-pointer group">
-          <summary class="font-bold text-base text-gray-900 flex items-center justify-between gap-4">
-            <span data-i18n="fq3Q">課程覆蓋哪些年級？</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 flex-shrink-0 group-open:rotate-180 transition-transform"></i>
-          </summary>
-          <p class="text-gray-600 mt-4 text-sm leading-relaxed" data-i18n="fq3A">我們的課程覆蓋小一至中六（P1-S6）全級，包括小學、初中及高中階段。無論是基礎鞏固還是DSE備考，我們都有針對性的課程和導師配置。</p>
-        </details>
-        <details class="bg-white rounded-xl p-6 border border-gray-200 cursor-pointer group">
-          <summary class="font-bold text-base text-gray-900 flex items-center justify-between gap-4">
-            <span data-i18n="fq4Q">功課輔導班的收費是多少？</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 flex-shrink-0 group-open:rotate-180 transition-transform"></i>
-          </summary>
-          <p class="text-gray-600 mt-4 text-sm leading-relaxed" data-i18n="fq4A">功課輔導班採月費制（星期一至五）。16:00-17:30 時段為 $1,480（1.5小時），17:30-19:00 時段為 $1,480（1.5小時），16:00-19:00 全時段為 $2,600（3小時）。</p>
-        </details>
-        <details class="bg-white rounded-xl p-6 border border-gray-200 cursor-pointer group">
-          <summary class="font-bold text-base text-gray-900 flex items-center justify-between gap-4">
-            <span data-i18n="fq5Q">專科加強班的收費如何計算？</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 flex-shrink-0 group-open:rotate-180 transition-transform"></i>
-          </summary>
-          <p class="text-gray-600 mt-4 text-sm leading-relaxed" data-i18n="fq5A">專科加強班按小時計費。小學 $138/小時（優惠價 $78/小時），初中 $148/小時（優惠價 $88/小時），高中 $158/小時（優惠價 $98/小時）。報讀多科、介紹朋友報名等均有額外優惠，最高每小時減免 $60。</p>
-        </details>
-        <details class="bg-white rounded-xl p-6 border border-gray-200 cursor-pointer group">
-          <summary class="font-bold text-base text-gray-900 flex items-center justify-between gap-4">
-            <span data-i18n="fq6Q">芯啟教育在哪些地方有分校？</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 flex-shrink-0 group-open:rotate-180 transition-transform"></i>
-          </summary>
-          <p class="text-gray-600 mt-4 text-sm leading-relaxed" data-i18n="fq6A">芯啟教育目前在荃灣及沙田設有分校。兩間分校都提供功課輔導班及專科加強班服務。</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- B2C CTA -->
-  <section class="py-20 px-4 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-    <div class="max-w-3xl mx-auto text-center">
-      <p class="text-blue-100 mb-8 text-lg" data-i18n="ctaSub">為孩子找到最適合的學習方式</p>
-      <a id="waB2C2" href="#" target="_blank" rel="noopener" class="wa-b2c inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 rounded-full font-bold hover:bg-blue-50 transition shadow-lg text-lg">
-        <i data-lucide="message-circle" class="w-6 h-6"></i>
-        <span data-i18n="ctaBtn">WhatsApp 免費諮詢</span>
-      </a>
-    </div>
-  </section>
-
-  <footer class="py-8 px-4 bg-gray-900 text-center">
-    <p class="text-gray-500 text-xs" data-i18n="footer">© 2016 CorLin Education 芯啟教育</p>
-  </footer>
-</div>
-
-<!-- ============================== B2B PAGE ============================== -->
-<div id="pageB2B" class="page">
-
-  <!-- B2B HERO -->
-  <section class="pt-28 pb-20 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 text-white">
-    <div class="max-w-5xl mx-auto text-center">
-      <div class="inline-block px-4 py-1.5 bg-blue-500 bg-opacity-20 border border-blue-400 border-opacity-30 rounded-full text-blue-300 text-xs font-semibold mb-6" data-i18n="b2bTag">成熟教育創業系統 · 9年香港實戰經驗</div>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-6" data-i18n="b2bHeroT">用成功模式開業，省一半成本和時間</h1>
-      <p class="text-gray-300 text-base sm:text-lg mt-6 max-w-2xl mx-auto leading-relaxed" data-i18n-html="b2bHeroD">從零開始需要雙倍成本與時間。<br>我們的成熟系統，讓你 <strong class="text-white">30天開業</strong>、<strong class="text-white">HK$150,000 啟動</strong>。</p>
-      <div class="flex flex-col sm:flex-row gap-3 justify-center mt-8">
-        <a id="waB2B1" href="#" target="_blank" rel="noopener" class="wa-b2b inline-flex items-center justify-center gap-2 px-8 py-3 bg-green-500 text-white rounded-full font-semibold hover:bg-green-600 transition shadow-lg">
-          <i data-lucide="message-circle" class="w-5 h-5"></i> WhatsApp
-        </a>
-        <button class="wc-btn px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 transition flex items-center justify-center gap-2">
-          <i data-lucide="smartphone" class="w-5 h-5"></i> WeChat
-        </button>
-      </div>
-      <div class="grid grid-cols-3 gap-4 mt-14 max-w-lg mx-auto">
-        <div class="text-center">
-          <div class="text-2xl sm:text-3xl font-black text-blue-400" data-i18n="b2bS1V">$15萬</div>
-          <div class="text-xs text-gray-400 mt-1" data-i18n="b2bS1L">起始投資 (HKD)</div>
-        </div>
-        <div class="text-center">
-          <div class="text-2xl sm:text-3xl font-black text-blue-400">41%</div>
-          <div class="text-xs text-gray-400 mt-1" data-i18n="b2bS2L">利潤率</div>
-        </div>
-        <div class="text-center">
-          <div class="text-2xl sm:text-3xl font-black text-blue-400" data-i18n="b2bS3V">30天</div>
-          <div class="text-xs text-gray-400 mt-1" data-i18n="b2bS3L">開機收費</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- B2B COMPARE: DIY vs CORLIN (NEW) -->
-  <section id="b2bCompare" class="py-20 px-4 bg-gray-50">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-3" data-i18n="cmpTitle">為什麼選擇我們？</h2>
-        <p class="text-gray-500" data-i18n="cmpSub">沒有香港教育行業經驗？我們用 9 年系統幫你跳過所有彎路。</p>
-      </div>
-      <div class="grid md:grid-cols-2 gap-6">
-        <!-- DIY -->
-        <div class="bg-gray-100 rounded-2xl p-6 sm:p-8 border border-gray-200 relative">
-          <div class="absolute top-4 right-4 px-3 py-1 bg-red-100 text-red-600 text-xs font-bold rounded-full" data-i18n="cmpDIYBadge">高風險</div>
-          <h3 class="font-black text-lg text-gray-700 mb-6 flex items-center gap-2">
-            <i data-lucide="alert-triangle" class="w-5 h-5 text-red-400"></i>
-            <span data-i18n="cmpDIY">自行從零開設</span>
-          </h3>
-          <div class="space-y-4 text-sm">
-            <div class="flex justify-between items-center py-2 border-b border-gray-200">
-              <span class="text-gray-500" data-i18n="cmpCostL">投資成本</span>
-              <span class="font-bold text-red-500" data-i18n="cmpCostDIY">$300,000+</span>
+            <!-- Group: Startup -->
+            <div class="group-label">
+                <span class="lang-tc">教育創業顧問</span>
+                <span class="lang-cn">教育创业顾问</span>
+                <span class="lang-en">Tutoring Startup Consulting</span>
             </div>
-            <div class="flex justify-between items-center py-2 border-b border-gray-200">
-              <span class="text-gray-500" data-i18n="cmpTimeL">開業時間</span>
-              <span class="font-bold text-red-500" data-i18n="cmpTimeDIY">3–6 個月</span>
+            <div class="cards-grid">
+                <a href="startup-hk/" class="card orange">
+                    <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <h3>
+                        <span class="lang-tc">香港本地創業指南</span>
+                        <span class="lang-cn">香港本地创业指南</span>
+                        <span class="lang-en">HK Local Startup Guide</span>
+                    </h3>
+                    <p>
+                        <span class="lang-tc">適合香港居民、在港人士<br>以繁體中文呈現完整創業方案</span>
+                        <span class="lang-cn">适合香港居民、在港人士<br>以繁体中文呈现完整创业方案</span>
+                        <span class="lang-en">For Hong Kong residents &amp; locals<br>Full startup guide in Traditional Chinese</span>
+                    </p>
+                    <div class="card-arrow">
+                        <span class="lang-tc">查看方案</span>
+                        <span class="lang-cn">查看方案</span>
+                        <span class="lang-en">View guide</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+                <a href="startup/" class="card teal">
+                    <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <h3>
+                        <span class="lang-tc">內地來港創業指南</span>
+                        <span class="lang-cn">内地来港创业指南</span>
+                        <span class="lang-en">Mainland-to-HK Startup Guide</span>
+                    </h3>
+                    <p>
+                        <span class="lang-tc">適合高才通、內地移居人士<br>以簡體中文呈現完整創業方案</span>
+                        <span class="lang-cn">适合高才通、内地移居人士<br>以简体中文呈现完整创业方案</span>
+                        <span class="lang-en">For TTPAS holders &amp; mainland migrants<br>Full startup guide in Simplified Chinese</span>
+                    </p>
+                    <div class="card-arrow">
+                        <span class="lang-tc">查看方案</span>
+                        <span class="lang-cn">查看方案</span>
+                        <span class="lang-en">View guide</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
             </div>
-            <div class="flex justify-between items-center py-2 border-b border-gray-200">
-              <span class="text-gray-500" data-i18n="cmpExpL">行業經驗</span>
-              <span class="font-bold text-gray-600" data-i18n="cmpExpDIY">需自行摸索</span>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h4>CorLin 芯啟教育</h4>
+                <p>
+                    <span class="lang-tc">香港小班補習領導品牌，始於2016年。10年實戰經驗，累計開設7間店舖。我們相信，好的教育不需要大班——每班最多5人，讓每個孩子都被看見。</span>
+                    <span class="lang-cn">香港小班补习领导品牌，始于2016年。10年实战经验，累计开设7间店铺。我们相信，好的教育不需要大班——每班最多5人，让每个孩子都被看见。</span>
+                    <span class="lang-en">Hong Kong's leading small-class tutoring brand since 2016. 10 years of experience, 7 locations built. We believe great education doesn't need big classes — max 5 per class, every child seen.</span>
+                </p>
             </div>
-            <div class="flex justify-between items-center py-2 border-b border-gray-200">
-              <span class="text-gray-500" data-i18n="cmpMatL">教材系統</span>
-              <span class="font-bold text-gray-600" data-i18n="cmpMatDIY">從零建立</span>
+            <div class="footer-contact">
+                <h4>
+                    <span class="lang-tc">聯絡</span>
+                    <span class="lang-cn">联系</span>
+                    <span class="lang-en">Contact</span>
+                </h4>
+                <a href="https://wa.me/85256668296" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> +852 5666 8296
+                </a>
+                <a href="mailto:Lucius@ensovista.com">
+                    <i class="fa-solid fa-envelope"></i> Lucius@ensovista.com
+                </a>
             </div>
-            <div class="flex justify-between items-center py-2 border-b border-gray-200">
-              <span class="text-gray-500" data-i18n="cmpLocL">選址策略</span>
-              <span class="font-bold text-gray-600" data-i18n="cmpLocDIY">反覆試錯</span>
-            </div>
-            <div class="flex justify-between items-center py-2">
-              <span class="text-gray-500" data-i18n="cmpSuptL">持續支援</span>
-              <span class="font-bold text-gray-600" data-i18n="cmpSuptDIY">無</span>
-            </div>
-          </div>
         </div>
-        <!-- CORLIN -->
-        <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 sm:p-8 border-2 border-blue-300 shadow-lg relative">
-          <div class="absolute top-4 right-4 px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full" data-i18n="cmpUsBadge">推薦</div>
-          <h3 class="font-black text-lg text-blue-700 mb-6 flex items-center gap-2">
-            <i data-lucide="shield-check" class="w-5 h-5 text-blue-600"></i>
-            <span data-i18n="cmpUs">CorLin 創業包</span>
-          </h3>
-          <div class="space-y-4 text-sm">
-            <div class="flex justify-between items-center py-2 border-b border-blue-100">
-              <span class="text-gray-600" data-i18n="cmpCostL">投資成本</span>
-              <span class="font-black text-green-600" data-i18n="cmpCostUs">HK$150,000</span>
-            </div>
-            <div class="flex justify-between items-center py-2 border-b border-blue-100">
-              <span class="text-gray-600" data-i18n="cmpTimeL">開業時間</span>
-              <span class="font-black text-green-600" data-i18n="cmpTimeUs">30 天</span>
-            </div>
-            <div class="flex justify-between items-center py-2 border-b border-blue-100">
-              <span class="text-gray-600" data-i18n="cmpExpL">行業經驗</span>
-              <span class="font-bold text-blue-600" data-i18n="cmpExpUs">9年系統全套移植</span>
-            </div>
-            <div class="flex justify-between items-center py-2 border-b border-blue-100">
-              <span class="text-gray-600" data-i18n="cmpMatL">教材系統</span>
-              <span class="font-bold text-blue-600" data-i18n="cmpMatUs">雲端即用</span>
-            </div>
-            <div class="flex justify-between items-center py-2 border-b border-blue-100">
-              <span class="text-gray-600" data-i18n="cmpLocL">選址策略</span>
-              <span class="font-bold text-blue-600" data-i18n="cmpLocUs">數據驅動選址</span>
-            </div>
-            <div class="flex justify-between items-center py-2">
-              <span class="text-gray-600" data-i18n="cmpSuptL">持續支援</span>
-              <span class="font-bold text-blue-600" data-i18n="cmpSuptUs">管理系統 + 雲端資源</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="footer-copy">© 2016 CorLin Education 芯啟教育</div>
+    </footer>
 
-  <!-- B2B BUSINESS MODEL -->
-  <section class="py-20 px-4 bg-white">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl sm:text-4xl font-black text-gray-900 text-center mb-14" data-i18n="b2bModTitle">商業模式</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="card-h bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100">
-          <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mb-4"><i data-lucide="anchor" class="w-5 h-5 text-white"></i></div>
-          <h3 class="font-bold text-lg text-gray-900 mb-4" data-i18n="b2bM1T">功課輔導班 — 穩定基石</h3>
-          <ul class="space-y-3 text-sm text-gray-600">
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0"></i><span data-i18n="b2bM1D1">覆蓋基礎開支（租金 + 基本人工）</span></li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0"></i><span data-i18n="b2bM1D2">填補下午 4:00 - 7:00 時段</span></li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0"></i><span data-i18n="b2bM1D3">導師人才池</span></li>
-          </ul>
-        </div>
-        <div class="card-h bg-gradient-to-br from-amber-50 to-white rounded-2xl p-8 border border-amber-100">
-          <div class="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center mb-4"><i data-lucide="rocket" class="w-5 h-5 text-white"></i></div>
-          <h3 class="font-bold text-lg text-gray-900 mb-4" data-i18n="b2bM2T">專科加強班 — 利潤引擎</h3>
-          <ul class="space-y-3 text-sm text-gray-600">
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0"></i><span data-i18n="b2bM2D1">創造純利與導師分紅</span></li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0"></i><span data-i18n="b2bM2D2">填補平日晚間與週六日</span></li>
-            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0"></i><span data-i18n="b2bM2D3">資深導師（底薪 或 50% 分成）</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- B2B PACKAGE -->
-  <section class="py-20 px-4 bg-gray-50">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-3" data-i18n="b2bPkgTitle">HK$150,000 創業懶人包</h2>
-        <p class="text-gray-500" data-i18n="b2bPkgSub">一個價格，全套啟動</p>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="card-h bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
-          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3"><i data-lucide="map-pin" class="w-6 h-6 text-blue-600"></i></div>
-          <h4 class="font-bold text-sm mb-1" data-i18n="pkg1T">精準選址</h4>
-          <p class="text-xs text-gray-500" data-i18n="pkg1D">「10 分鐘校區」研究</p>
-        </div>
-        <div class="card-h bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
-          <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3"><i data-lucide="palette" class="w-6 h-6 text-green-600"></i></div>
-          <h4 class="font-bold text-sm mb-1" data-i18n="pkg2T">輕裝修方案</h4>
-          <p class="text-xs text-gray-500" data-i18n="pkg2D">100 呎空間極致利用</p>
-        </div>
-        <div class="card-h bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
-          <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3"><i data-lucide="cloud" class="w-6 h-6 text-purple-600"></i></div>
-          <h4 class="font-bold text-sm mb-1" data-i18n="pkg3T">雲端教材系統</h4>
-          <p class="text-xs text-gray-500" data-i18n="pkg3D">電子化管理 + 雲端資源</p>
-        </div>
-        <div class="card-h bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
-          <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-3"><i data-lucide="shield" class="w-6 h-6 text-amber-600"></i></div>
-          <h4 class="font-bold text-sm mb-1" data-i18n="pkg4T">免牌照策略</h4>
-          <p class="text-xs text-gray-500" data-i18n="pkg4D">每班 ≤8 人，每日 ≤20 人</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- B2B FINANCIAL MODEL -->
-  <section id="b2bFin" class="py-20 px-4 bg-white">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-3xl sm:text-4xl font-black text-gray-900 text-center mb-14" data-i18n="finTitle">財務模型</h2>
-      <div class="space-y-8">
-        <div class="grid md:grid-cols-2 gap-6">
-          <!-- 75% -->
-          <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 sm:p-8 border border-blue-200">
-            <h3 class="text-lg font-black text-gray-900 mb-1" data-i18n="finR">現實主義案例 — 75%</h3>
-            <p class="text-xs text-gray-500 mb-6" data-i18n="finRD">保守估算，確保投資者信心</p>
-            <div class="space-y-3 mb-4">
-              <div class="flex justify-between text-sm"><span class="text-gray-600" data-i18n="finAnc">周一至五穩定基石</span><span class="font-bold text-blue-600">$13,700</span></div>
-              <div class="flex justify-between text-sm"><span class="text-gray-600" data-i18n="finUp">週末/專科增長溢價</span><span class="font-bold text-amber-600">$4,300</span></div>
-              <hr class="border-gray-200">
-              <div class="flex justify-between text-sm font-semibold"><span class="text-gray-700" data-i18n="finTot">月度淨利潤</span><span class="text-lg text-blue-600">$18,000</span></div>
-            </div>
-            <div class="bg-white rounded-lg p-3 border border-gray-200 text-center">
-              <p class="text-2xl font-black text-green-600">$18,000<span class="text-sm font-semibold text-gray-400">/月</span></p>
-              <p class="text-xs text-gray-400 mt-1" data-i18n="finRM">41% 利潤率 | 144% 年度 ROI</p>
-            </div>
-          </div>
-          <!-- 100% -->
-          <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-6 sm:p-8 border-2 border-green-300 shadow-md">
-            <div class="flex items-center gap-2 mb-1">
-              <h3 class="text-lg font-black text-gray-900" data-i18n="finO">優化案例 — 100%</h3>
-              <span class="px-2 py-0.5 bg-green-200 text-green-800 text-xs font-bold rounded-full" data-i18n="finPeak">高峰</span>
-            </div>
-            <p class="text-xs text-gray-500 mb-6" data-i18n="finOD">全滿招生時的收益上限</p>
-            <div class="space-y-3 mb-4">
-              <div class="flex justify-between text-sm"><span class="text-gray-600" data-i18n="finAnc">周一至五穩定基石</span><span class="font-bold text-blue-600">$14,265</span></div>
-              <div class="flex justify-between text-sm"><span class="text-gray-600" data-i18n="finUp">週末/專科增長溢價</span><span class="font-bold text-green-600">$9,488</span></div>
-              <hr class="border-gray-200">
-              <div class="flex justify-between text-sm font-semibold"><span class="text-gray-700" data-i18n="finTot">月度淨利潤</span><span class="text-lg text-green-600">$23,753</span></div>
-            </div>
-            <div class="bg-green-100 rounded-lg p-3 border-2 border-green-300 text-center">
-              <p class="text-2xl font-black text-green-700">$23,753<span class="text-sm font-semibold text-green-500">/月</span></p>
-              <p class="text-xs text-gray-500 mt-1" data-i18n="finOM">46% 利潤率 | 190% 年度 ROI</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- COST BREAKDOWN -->
-        <div class="bg-gray-50 rounded-2xl p-6 sm:p-8 border border-gray-200">
-          <h4 class="font-black text-gray-900 mb-6 text-lg" data-i18n="finBD">營運成本結構分析</h4>
-          <div class="space-y-4">
-            <div>
-              <div class="flex justify-between items-center mb-2">
-                <span class="font-bold text-gray-800 text-sm" data-i18n="finExp">總支出</span>
-                <span class="font-black text-red-500">~$26,000</span>
-              </div>
-              <div class="space-y-1 pl-4 text-xs sm:text-sm text-gray-600">
-                <div class="flex justify-between"><span data-i18n="finRent">租金</span><span class="font-semibold">$4,000</span></div>
-                <div class="flex justify-between"><span data-i18n="finTutor">導師薪酬</span><span class="font-semibold">$20,000</span></div>
-                <div class="flex justify-between"><span data-i18n="finMisc">雜費</span><span class="font-semibold">$2,000</span></div>
-              </div>
-            </div>
-            <hr class="border-gray-300">
-            <div class="flex justify-between items-center">
-              <span class="font-bold text-gray-900 text-sm" data-i18n="finRev">總收入</span>
-              <span class="font-black text-lg text-green-500">~$44,000</span>
-            </div>
-            <hr class="border-gray-300">
-            <div class="flex justify-between items-center bg-green-50 rounded-xl p-3 sm:p-4 border border-green-200">
-              <span class="font-bold text-green-800 text-sm" data-i18n="finNet">淨利潤</span>
-              <div class="text-right">
-                <span class="font-black text-xl sm:text-2xl text-green-600">$18,000</span>
-                <span class="text-green-500 text-xs ml-1">(41%)</span>
-              </div>
-            </div>
-          </div>
-          <p class="mt-6 pt-4 border-t border-gray-300 text-xs text-gray-500 text-center italic" data-i18n="finDisc">投影基於 1:5 師生比例，符合香港教育局指引。租金固定 ➜ 第 10 名學生後為純邊際收益。</p>
-        </div>
-
-        <!-- VALUATION -->
-        <div>
-          <p class="text-center text-xl sm:text-2xl font-black text-green-600 mb-6 leading-tight" data-i18n="finVal">資產退出估值：年純利 × 2-3 倍 (EBITDA) ｜ 三店集群 ~$1.9M</p>
-          <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 border-2 border-green-300">
-            <p class="text-center text-sm font-semibold text-gray-800 leading-relaxed" data-i18n="finExpan">專為同區擴張設計；三店集群每月現金流 $55,250+。助您在熟悉商圈快速複製營運系統，實現投資組合估值倍增。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- B2B MANAGEMENT SYSTEM -->
-  <section class="py-20 px-4 bg-gray-50">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-3" data-i18n="mgmtTitle">管理系統授權</h2>
-        <p class="text-gray-500 text-sm" data-i18n="mgmtSub">首年包含在創業包內，次年 $3,000 - $5,000 / 年</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="card-h bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"><i data-lucide="users" class="w-6 h-6 text-blue-600"></i></div>
-          <h3 class="font-bold text-lg mb-2" data-i18n="mgmt1T">學生管理</h3>
-          <p class="text-gray-500 text-sm" data-i18n="mgmt1D">點名、功課進度、成績記錄，一鍵通知家長。</p>
-        </div>
-        <div class="card-h bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-          <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"><i data-lucide="calculator" class="w-6 h-6 text-green-600"></i></div>
-          <h3 class="font-bold text-lg mb-2" data-i18n="mgmt2T">財務自動化</h3>
-          <p class="text-gray-500 text-sm" data-i18n="mgmt2D">學費收支、導師 50% 拆帳自動核算，零人工對帳。</p>
-        </div>
-        <div class="card-h bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-          <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"><i data-lucide="database" class="w-6 h-6 text-purple-600"></i></div>
-          <h3 class="font-bold text-lg mb-2" data-i18n="mgmt3T">雲端資源庫</h3>
-          <p class="text-gray-500 text-sm" data-i18n="mgmt3D">內建各級練習與教學，換導師也能維持品質。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- B2B HANDOVER -->
-  <section class="py-20 px-4 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl sm:text-4xl font-black text-gray-900 text-center mb-14" data-i18n="handTitle">三段式交店機制</h2>
-      <div class="grid grid-cols-3 gap-4 sm:gap-8">
-        <div class="text-center">
-          <div class="w-16 h-16 sm:w-20 sm:h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-            <span class="text-2xl sm:text-3xl font-black text-blue-600">20%</span>
-          </div>
-          <h4 class="font-bold text-sm sm:text-base mb-1" data-i18n="h1T">合約金</h4>
-          <p class="text-xs text-gray-500" data-i18n="h1D">簽約確認合作意向</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 sm:w-20 sm:h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-            <span class="text-2xl sm:text-3xl font-black text-green-600">40%</span>
-          </div>
-          <h4 class="font-bold text-sm sm:text-base mb-1" data-i18n="h2T">實習培訓</h4>
-          <p class="text-xs text-gray-500" data-i18n="h2D">一週標準化培訓完成</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 sm:w-20 sm:h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-3">
-            <span class="text-2xl sm:text-3xl font-black text-amber-600">40%</span>
-          </div>
-          <h4 class="font-bold text-sm sm:text-base mb-1" data-i18n="h3T">尾數交店</h4>
-          <p class="text-xs text-gray-500" data-i18n="h3D">正式接手營運</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- B2B TTPS + LOCATIONS -->
-  <section class="py-20 px-4 bg-gray-50">
-    <div class="max-w-3xl mx-auto space-y-8">
-      <!-- TTPS Note -->
-      <div class="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl p-6 border border-indigo-200">
-        <div class="flex items-start gap-3">
-          <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"><i data-lucide="briefcase" class="w-5 h-5 text-indigo-600"></i></div>
-          <div>
-            <h4 class="font-bold text-gray-900 mb-1" data-i18n="ttpsT">TTPS 簽證兼容</h4>
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="ttpsD">本創業模式符合香港「一般就業政策 / 投資者簽證」的營運及僱傭要求，適合計劃以商業投資方式取得香港身份的人士。詳情請諮詢我們。</p>
-          </div>
-        </div>
-      </div>
-      <!-- Locations -->
-      <div class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-200">
-        <h3 class="font-bold text-lg text-gray-900 mb-6 flex items-center gap-2"><i data-lucide="map-pin" class="w-5 h-5 text-blue-600"></i><span data-i18n="locTitle">分校位置 — 歡迎預約參觀</span></h3>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-white rounded-xl p-4 border border-gray-200">
-            <p class="text-sm font-semibold text-gray-900 mb-1" data-i18n="locTW">荃灣分校</p>
-            <p class="text-xs text-gray-600 mb-2" data-i18n="locTWA">荃灣海壩街 132 號荃立方 S63</p>
-            <p class="text-xs text-gray-500 italic" data-i18n="locAppt">預約訪問</p>
-          </div>
-          <div class="bg-white rounded-xl p-4 border border-gray-200">
-            <p class="text-sm font-semibold text-gray-900 mb-1" data-i18n="locST">沙田分校</p>
-            <p class="text-xs text-gray-600 mb-2" data-i18n="locSTA">沙田新界</p>
-            <p class="text-xs text-gray-500 italic" data-i18n="locAppt2">預約訪問</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- B2B CTA -->
-  <section class="py-20 px-4 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl sm:text-4xl font-black mb-3" data-i18n="b2bCTAT">準備好開始你的教育事業了嗎？</h2>
-      <p class="text-gray-300 mb-8" data-i18n="b2bCTAD">聯絡我們，獲取完整創業資訊。</p>
-      <div class="flex flex-col sm:flex-row gap-3 justify-center">
-        <a id="waB2B2" href="#" target="_blank" rel="noopener" class="wa-b2b inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white rounded-full font-bold hover:bg-green-600 transition shadow-lg text-lg">
-          <i data-lucide="message-circle" class="w-6 h-6"></i> WhatsApp
-        </a>
-        <button class="wc-btn px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-gray-900 transition flex items-center justify-center gap-2 text-lg">
-          <i data-lucide="smartphone" class="w-6 h-6"></i> WeChat
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <footer class="py-8 px-4 bg-gray-900 text-center border-t border-gray-800">
-    <p class="text-gray-500 text-xs" data-i18n="footer">© 2016 CorLin Education 芯啟教育</p>
-  </footer>
-</div>
-
-<!-- ========== WECHAT MODAL ========== -->
-<div id="wcModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black bg-opacity-50 hidden">
-  <div class="bg-white rounded-2xl p-8 max-w-sm mx-4 text-center shadow-2xl">
-    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-      <i data-lucide="smartphone" class="w-8 h-8 text-green-600"></i>
-    </div>
-    <h3 class="font-bold text-xl mb-2" data-i18n="wcT">WeChat 聯絡</h3>
-    <p class="text-gray-500 text-sm mb-4" data-i18n="wcD">請使用以下號碼添加 WeChat 好友</p>
-    <div class="bg-gray-100 rounded-xl p-4 mb-6">
-      <p class="text-2xl font-black text-gray-900 tracking-wide select-all">85256668296</p>
-    </div>
-    <button id="wcClose" class="px-6 py-2 bg-gray-200 rounded-full text-sm font-semibold hover:bg-gray-300 transition" data-i18n="wcC">關閉</button>
-  </div>
-</div>
-
-</div><!-- end scrollRoot -->
-
-<!-- ========== JAVASCRIPT ========== -->
-<script>
-const T = {
-'zh-Hant': {
-  brandSub:'芯啟教育', langLbl:'繁中',
-  navPhilo:'教學理念', navCourse:'課程', navFAQ:'常見問題', navFran:'創業/加盟',
-  navWhy:'為什麼選我們', navROI:'投資回報', navClass:'課堂資訊',
-  // B2C Hero
-  heroTitle:'讓學習回歸簡單',
-  heroDesc:'不只教答案，更理解孩子為什麼不明白。\n1:5 黃金比例小班，讓每位學生都被看見。',
-  heroCTA1:'了解課程', heroCTA2:'WhatsApp 查詢',
-  s1L:'師生比例', s2L:'每堂時長', s3L:'全級覆蓋',
-  // Philosophy
-  philoTitle:'「芯」於同理，「啟」於策略',
-  philoDesc:'導師成績只是基本，具備同理心才是關鍵。<br>我們站在學生角度，診斷「不明白」的根源。',
-  empT:'同理心教學', empD:'在我們的黃金小班模式下，導師與學生不只是師生，更是深知彼此的學習夥伴。這種深厚的信任感，讓導師能為孩子量身打造最合適的升學與成長策略。',
-  strT:'策略性分配', strD:'以「家長願景 → 學生弱點 → 優先順序」為核心邏輯，將學習的每分鐘轉化為最高分數回報，確保每位學員身處最適切的學習環境。',
-  segT:'分段分流', segD:'摒棄一成不變的模版，堅持「逐一教學、逐一操練、逐一優化」，這不單是課業輔導，更是一場為孩子量身打造、衝刺卓越的知識長跑。',
-  // Flow
-  flowTitle:'每堂 90 分鐘的流程',
-  f1Time:'前 5 分鐘', f1T:'快速評估', f1D:'當日測驗、學習進度、心理狀態，全面掌握學生狀況。',
-  f2T:'針對性施教', f2S:'攻弱點或備考試', f2D:'根據評估結果即時調整教學方向，不浪費一分鐘。',
-  f3T:'即時反饋', f3S:'雲端備課 · 現場列印', f3D:'教材與學生的學習節奏 100% 同步，絕非千篇一律。',
-  // Courses
-  courseTitle:'核心課程',
-  hwT:'全方位功課輔導班', hwSub:'Homework Support Group',
-  hwB1:'1:5 小班，確保每位學生被看見', hwB2:'依優先次序、高效完成功課',
-  hwB3:'每日模擬默書/測驗預備', hwB4:'剩餘時間中英數基礎鞏固',
-  priceL:'收費模式', hwP1:'月費制（星期一至五）',
-  hwNote:'備註：因人手所限，功課輔導班目前僅限於荃灣及沙田分店提供。',
-  subT:'精英專科加強班', subSub:'Subject Strategy Class',
-  subB1:'中、英、數策略導向教學', subB2:'每堂前 5 分鐘診斷式學習',
-  subB3:'配合校情的原創針對性教材', subB4:'獨家解題公式，簡化繁瑣知識',
-  subP1:'標準學費', subP2:'小學 $138/hr → 最優惠 $78/hr', subP3:'初中 $148/hr → 最優惠 $88/hr',
-  subP4:'高中 $158/hr → 最優惠 $98/hr', subP5:'英文口語 $158/hr → 最優惠 $98/hr',
-  subProT:'🎁 三大限時疊加優惠',
-  subPro1:'【多科獎勵】報讀兩科或以上，每小時減 $20',
-  subPro2:'【口碑推薦】介紹一位新朋友報名，每小時減 $20',
-  subPro3:'【雙重推薦】介紹第二位新朋友報名，每小時減 $20',
-  subNote:'* 最優惠學費已包含全部優惠疊加（最高每小時減免 $60）',
-  sched:'歡迎 WhatsApp 查詢上課時間。',
-  // FAQ
-  faqTitle:'常見問題',
-  fq1Q:'芯啟教育的師生比例是多少？', fq1A:'我們堅持 1:5 黃金比例小班教學，確保每位學生都能獲得導師充分的關注和個別指導。這個比例是精心設計的，讓導師能在有限的時間內提供高質量的個性化教學。',
-  fq2Q:'功課輔導班和專科加強班有什麼分別？', fq2A:'<strong>功課輔導班</strong>聚焦於完成日常功課、測驗預備和基礎知識鞏固。<strong>專科加強班</strong>則採用策略導向教學，針對特定科目進行深度教學，使用原創教材和獨家解題方法，適合想在成績上取得突破的學生。',
-  fq3Q:'課程覆蓋哪些年級？', fq3A:'我們的課程覆蓋小一至中六（P1-S6）全級，包括小學、初中及高中階段。無論是基礎鞏固還是DSE備考，我們都有針對性的課程和導師配置。',
-  fq4Q:'功課輔導班的收費是多少？', fq4A:'功課輔導班採月費制（星期一至五）。16:00-17:30 時段為 $1,480（1.5小時），17:30-19:00 時段為 $1,480（1.5小時），16:00-19:00 全時段為 $2,600（3小時）。',
-  fq5Q:'專科加強班的收費如何計算？', fq5A:'專科加強班按小時計費。小學 $138/小時（優惠價 $78/小時），初中 $148/小時（優惠價 $88/小時），高中 $158/小時（優惠價 $98/小時）。報讀多科、介紹朋友報名等均有額外優惠，最高每小時減免 $60。',
-  fq6Q:'芯啟教育在哪些地方有分校？', fq6A:'芯啟教育目前在荃灣及沙田設有分校。兩間分校都提供功課輔導班及專科加強班服務。',
-  // CTA
-  ctaSub:'為孩子找到最適合的學習方式', ctaBtn:'WhatsApp 免費諮詢',
-  footer:'© 2016 CorLin Education 芯啟教育',
-  // B2B
-  b2bTag:'成熟教育創業系統 · 9年香港實戰經驗',
-  b2bHeroT:'用成功模式開業，省一半成本和時間',
-  b2bHeroD:'從零開始需要雙倍成本與時間。<br>我們的成熟系統，讓你 <strong class="text-white">30天開業</strong>、<strong class="text-white">HK$150,000 啟動</strong>。',
-  b2bS1V:'$15萬', b2bS1L:'起始投資 (HKD)', b2bS2L:'利潤率', b2bS3V:'30天', b2bS3L:'開機收費',
-  // Compare
-  cmpTitle:'為什麼選擇我們？', cmpSub:'沒有香港教育行業經驗？我們用 9 年系統幫你跳過所有彎路。',
-  cmpDIYBadge:'高風險', cmpDIY:'自行從零開設', cmpUsBadge:'推薦', cmpUs:'CorLin 創業包',
-  cmpCostL:'投資成本', cmpCostDIY:'$300,000+', cmpCostUs:'HK$150,000',
-  cmpTimeL:'開業時間', cmpTimeDIY:'3–6 個月', cmpTimeUs:'30 天',
-  cmpExpL:'行業經驗', cmpExpDIY:'需自行摸索', cmpExpUs:'9年系統全套移植',
-  cmpMatL:'教材系統', cmpMatDIY:'從零建立', cmpMatUs:'雲端即用',
-  cmpLocL:'選址策略', cmpLocDIY:'反覆試錯', cmpLocUs:'數據驅動選址',
-  cmpSuptL:'持續支援', cmpSuptDIY:'無', cmpSuptUs:'管理系統 + 雲端資源',
-  // Model
-  b2bModTitle:'商業模式',
-  b2bM1T:'功課輔導班 — 穩定基石', b2bM1D1:'覆蓋基礎開支（租金 + 基本人工）', b2bM1D2:'填補下午 4:00 - 7:00 時段', b2bM1D3:'導師人才池',
-  b2bM2T:'專科加強班 — 利潤引擎', b2bM2D1:'創造純利與導師分紅', b2bM2D2:'填補平日晚間與週六日', b2bM2D3:'資深導師（底薪 或 50% 分成）',
-  // Package
-  b2bPkgTitle:'HK$150,000 創業懶人包', b2bPkgSub:'一個價格，全套啟動',
-  pkg1T:'精準選址', pkg1D:'「10 分鐘校區」研究', pkg2T:'輕裝修方案', pkg2D:'100 呎空間極致利用',
-  pkg3T:'雲端教材系統', pkg3D:'電子化管理 + 雲端資源', pkg4T:'免牌照策略', pkg4D:'每班 ≤8 人，每日 ≤20 人',
-  // Finance
-  finTitle:'財務模型',
-  finR:'現實主義案例 — 75%', finRD:'保守估算，確保投資者信心',
-  finAnc:'周一至五穩定基石', finUp:'週末/專科增長溢價', finTot:'月度淨利潤',
-  finRM:'41% 利潤率 | 144% 年度 ROI',
-  finO:'優化案例 — 100%', finPeak:'高峰', finOD:'全滿招生時的收益上限',
-  finOM:'46% 利潤率 | 190% 年度 ROI',
-  finBD:'營運成本結構分析', finExp:'總支出', finRent:'租金', finTutor:'導師薪酬', finMisc:'雜費',
-  finRev:'總收入', finNet:'淨利潤',
-  finDisc:'投影基於 1:5 師生比例，符合香港教育局指引。租金固定 ➜ 第 10 名學生後為純邊際收益。',
-  finVal:'資產退出估值：年純利 × 2-3 倍 (EBITDA) ｜ 三店集群 ~$1.9M',
-  finExpan:'專為同區擴張設計；三店集群每月現金流 $55,250+。助您在熟悉商圈快速複製營運系統，實現投資組合估值倍增。',
-  // Mgmt
-  mgmtTitle:'管理系統授權', mgmtSub:'首年包含在創業包內，次年 $3,000 - $5,000 / 年',
-  mgmt1T:'學生管理', mgmt1D:'點名、功課進度、成績記錄，一鍵通知家長。',
-  mgmt2T:'財務自動化', mgmt2D:'學費收支、導師 50% 拆帳自動核算，零人工對帳。',
-  mgmt3T:'雲端資源庫', mgmt3D:'內建各級練習與教學，換導師也能維持品質。',
-  // Handover
-  handTitle:'三段式交店機制',
-  h1T:'合約金', h1D:'簽約確認合作意向', h2T:'實習培訓', h2D:'一週標準化培訓完成', h3T:'尾數交店', h3D:'正式接手營運',
-  // TTPS
-  ttpsT:'TTPS 簽證兼容', ttpsD:'本創業模式符合香港「一般就業政策 / 投資者簽證」的營運及僱傭要求，適合計劃以商業投資方式取得香港身份的人士。詳情請諮詢我們。',
-  // Locations
-  locTitle:'分校位置 — 歡迎預約參觀', locTW:'荃灣分校', locTWA:'荃灣海壩街 132 號荃立方 S63',
-  locST:'沙田分校', locSTA:'沙田新界', locAppt:'預約訪問', locAppt2:'預約訪問',
-  // B2B CTA
-  b2bCTAT:'準備好開始你的教育事業了嗎？', b2bCTAD:'聯絡我們，獲取完整創業資訊。',
-  // Modal
-  wcT:'WeChat 聯絡', wcD:'請使用以下號碼添加 WeChat 好友', wcC:'關閉',
-},
-'zh-Hans': {
-  brandSub:'芯启教育', langLbl:'简中',
-  navPhilo:'教学理念', navCourse:'课程', navFAQ:'常见问题', navFran:'创业/加盟',
-  navWhy:'为什么选我们', navROI:'投资回报', navClass:'课堂资讯',
-  heroTitle:'让学习回归简单',
-  heroDesc:'不只教答案，更理解孩子为什么不明白。\n1:5 黄金比例小班，让每位学生都被看见。',
-  heroCTA1:'了解课程', heroCTA2:'WhatsApp 查询',
-  s1L:'师生比例', s2L:'每堂时长', s3L:'全级覆盖',
-  philoTitle:'「芯」于同理，「启」于策略',
-  philoDesc:'导师成绩只是基本，具备同理心才是关键。<br>我们站在学生角度，诊断「不明白」的根源。',
-  empT:'同理心教学', empD:'在我们的黄金小班模式下，导师与学生不只是师生，更是深知彼此的学习伙伴。这种深厚的信任感，让导师能为孩子量身打造最合适的升学与成长策略。',
-  strT:'策略性分配', strD:'以「家长愿景 → 学生弱点 → 优先顺序」为核心逻辑，将学习的每分钟转化为最高分数回报，确保每位学员身处最适切的学习环境。',
-  segT:'分段分流', segD:'摒弃一成不变的模版，坚持「逐一教学、逐一操练、逐一优化」，这不单是课业辅导，更是一场为孩子量身打造、冲刺卓越的知识长跑。',
-  flowTitle:'每堂 90 分钟的流程',
-  f1Time:'前 5 分钟', f1T:'快速评估', f1D:'当日测验、学习进度、心理状态，全面掌握学生状况。',
-  f2T:'针对性施教', f2S:'攻弱点或备考试', f2D:'根据评估结果即时调整教学方向，不浪费一分钟。',
-  f3T:'即时反馈', f3S:'云端备课 · 现场打印', f3D:'教材与学生的学习节奏 100% 同步，绝非千篇一律。',
-  courseTitle:'核心课程',
-  hwT:'全方位功课辅导班', hwSub:'Homework Support Group',
-  hwB1:'1:5 小班，确保每位学生被看见', hwB2:'依优先次序、高效完成功课',
-  hwB3:'每日模拟默书/测验预备', hwB4:'剩余时间中英数基础巩固',
-  priceL:'收费模式', hwP1:'月费制（星期一至五）',
-  hwNote:'备注：因人手所限，功课辅导班目前仅限于荃湾及沙田分店提供。',
-  subT:'精英专科加强班', subSub:'Subject Strategy Class',
-  subB1:'中、英、数策略导向教学', subB2:'每堂前 5 分钟诊断式学习',
-  subB3:'配合校情的原创针对性教材', subB4:'独家解题公式，简化繁琐知识',
-  subP1:'标准学费', subP2:'小学 $138/hr → 最优惠 $78/hr', subP3:'初中 $148/hr → 最优惠 $88/hr',
-  subP4:'高中 $158/hr → 最优惠 $98/hr', subP5:'英文口语 $158/hr → 最优惠 $98/hr',
-  subProT:'🎁 三大限时叠加优惠',
-  subPro1:'【多科奖励】报读两科或以上，每小时减 $20',
-  subPro2:'【口碑推荐】介绍一位新朋友报名，每小时减 $20',
-  subPro3:'【双重推荐】介绍第二位新朋友报名，每小时减 $20',
-  subNote:'* 最优惠学费已包含全部优惠叠加（最高每小时减免 $60）',
-  sched:'欢迎 WhatsApp 查询上课时间。',
-  faqTitle:'常见问题',
-  fq1Q:'芯启教育的师生比例是多少？', fq1A:'我们坚持 1:5 黄金比例小班教学，确保每位学生都能获得导师充分的关注和个别指导。这个比例是精心设计的，让导师能在有限的时间内提供高质量的个性化教学。',
-  fq2Q:'功课辅导班和专科加强班有什么分别？', fq2A:'<strong>功课辅导班</strong>聚焦于完成日常功课、测验预备和基础知识巩固。<strong>专科加强班</strong>则采用策略导向教学，针对特定科目进行深度教学，使用原创教材和独家解题方法，适合想在成绩上取得突破的学生。',
-  fq3Q:'课程覆盖哪些年级？', fq3A:'我们的课程覆盖小一至中六（P1-S6）全级，包括小学、初中及高中阶段。无论是基础巩固还是DSE备考，我们都有针对性的课程和导师配置。',
-  fq4Q:'功课辅导班的收费是多少？', fq4A:'功课辅导班采月费制（星期一至五）。16:00-17:30 时段为 $1,480（1.5小时），17:30-19:00 时段为 $1,480（1.5小时），16:00-19:00 全时段为 $2,600（3小时）。',
-  fq5Q:'专科加强班的收费如何计算？', fq5A:'专科加强班按小时计费。小学 $138/小时（优惠价 $78/小时），初中 $148/小时（优惠价 $88/小时），高中 $158/小时（优惠价 $98/小时）。报读多科、介绍朋友报名等均有额外优惠，最高每小时减免 $60。',
-  fq6Q:'芯启教育在哪些地方有分校？', fq6A:'芯启教育目前在荃湾及沙田设有分校。两间分校都提供功课辅导班及专科加强班服务。',
-  ctaSub:'为孩子找到最适合的学习方式', ctaBtn:'WhatsApp 免费咨询',
-  footer:'© 2016 CorLin Education 芯启教育',
-  b2bTag:'成熟教育创业系统 · 9年香港实战经验',
-  b2bHeroT:'用成功模式开业，省一半成本和时间',
-  b2bHeroD:'从零开始需要双倍成本与时间。<br>我们的成熟系统，让你 <strong class="text-white">30天开业</strong>、<strong class="text-white">HK$150,000 启动</strong>。',
-  b2bS1V:'$15万', b2bS1L:'起始投资 (HKD)', b2bS2L:'利润率', b2bS3V:'30天', b2bS3L:'开机收费',
-  cmpTitle:'为什么选择我们？', cmpSub:'没有香港教育行业经验？我们用 9 年系统帮你跳过所有弯路。',
-  cmpDIYBadge:'高风险', cmpDIY:'自行从零开设', cmpUsBadge:'推荐', cmpUs:'CorLin 创业包',
-  cmpCostL:'投资成本', cmpCostDIY:'$300,000+', cmpCostUs:'HK$150,000',
-  cmpTimeL:'开业时间', cmpTimeDIY:'3–6 个月', cmpTimeUs:'30 天',
-  cmpExpL:'行业经验', cmpExpDIY:'需自行摸索', cmpExpUs:'9年系统全套移植',
-  cmpMatL:'教材系统', cmpMatDIY:'从零建立', cmpMatUs:'云端即用',
-  cmpLocL:'选址策略', cmpLocDIY:'反复试错', cmpLocUs:'数据驱动选址',
-  cmpSuptL:'持续支援', cmpSuptDIY:'无', cmpSuptUs:'管理系统 + 云端资源',
-  b2bModTitle:'商业模式',
-  b2bM1T:'功课辅导班 — 稳定基石', b2bM1D1:'覆盖基础开支（租金 + 基本人工）', b2bM1D2:'填补下午 4:00 - 7:00 时段', b2bM1D3:'导师人才池',
-  b2bM2T:'专科加强班 — 利润引擎', b2bM2D1:'创造纯利与导师分红', b2bM2D2:'填补平日晚间与周六日', b2bM2D3:'资深导师（底薪 或 50% 分成）',
-  b2bPkgTitle:'HK$150,000 创业懒人包', b2bPkgSub:'一个价格，全套启动',
-  pkg1T:'精准选址', pkg1D:'「10 分钟校区」研究', pkg2T:'轻装修方案', pkg2D:'100 呎空间极致利用',
-  pkg3T:'云端教材系统', pkg3D:'电子化管理 + 云端资源', pkg4T:'免牌照策略', pkg4D:'每班 ≤8 人，每日 ≤20 人',
-  finTitle:'财务模型',
-  finR:'现实主义案例 — 75%', finRD:'保守估算，确保投资者信心',
-  finAnc:'周一至五稳定基石', finUp:'周末/专科增长溢价', finTot:'月度净利润',
-  finRM:'41% 利润率 | 144% 年度 ROI',
-  finO:'优化案例 — 100%', finPeak:'高峰', finOD:'全满招生时的收益上限',
-  finOM:'46% 利润率 | 190% 年度 ROI',
-  finBD:'营运成本结构分析', finExp:'总支出', finRent:'租金', finTutor:'导师薪酬', finMisc:'杂费',
-  finRev:'总收入', finNet:'净利润',
-  finDisc:'投影基于 1:5 师生比例，符合香港教育局指引。租金固定 ➜ 每增加一名学生（第 10 名后）为纯边际收益。',
-  finVal:'资产退出估值：年纯利 × 2-3 倍 (EBITDA) ｜ 三店集群 ~$1.9M',
-  finExpan:'专为同区扩张设计；三店集群每月现金流 $55,250+。助您在熟悉商圈快速复制营运系统，实现投资组合估值倍增。',
-  mgmtTitle:'管理系统授权', mgmtSub:'首年包含在创业包内，次年 $3,000 - $5,000 / 年',
-  mgmt1T:'学生管理', mgmt1D:'点名、功课进度、成绩记录，一键通知家长。',
-  mgmt2T:'财务自动化', mgmt2D:'学费收支、导师 50% 拆帐自动核算，零人工对帐。',
-  mgmt3T:'云端资源库', mgmt3D:'内建各级练习与教学，换导师也能维持品质。',
-  handTitle:'三段式交店机制',
-  h1T:'合约金', h1D:'签约确认合作意向', h2T:'实习培训', h2D:'一周标准化培训完成', h3T:'尾数交店', h3D:'正式接手营运',
-  ttpsT:'TTPS 签证兼容', ttpsD:'本创业模式符合香港「一般就业政策 / 投资者签证」的营运及雇佣要求，适合计划以商业投资方式取得香港身份的人士。详情请咨询我们。',
-  locTitle:'分校位置 — 欢迎预约参观', locTW:'荃湾分校', locTWA:'荃湾海坝街 132 号荃立方 S63',
-  locST:'沙田分校', locSTA:'沙田新界', locAppt:'预约访问', locAppt2:'预约访问',
-  b2bCTAT:'准备好开始你的教育事业了吗？', b2bCTAD:'联络我们，获取完整创业资讯。',
-  wcT:'WeChat 联络', wcD:'请使用以下号码添加 WeChat 好友', wcC:'关闭',
-},
-'en': {
-  brandSub:'Education', langLbl:'EN',
-  navPhilo:'Philosophy', navCourse:'Courses', navFAQ:'FAQ', navFran:'Start-Up',
-  navWhy:'Why Us', navROI:'ROI', navClass:'Class Info',
-  heroTitle:'Let Learning Return to Simplicity',
-  heroDesc:"We don't just teach answers — we understand why your child doesn't understand.\n1:5 golden-ratio small classes where every student is seen.",
-  heroCTA1:'View Courses', heroCTA2:'WhatsApp Us',
-  s1L:'Teacher:Student', s2L:'Per Session', s3L:'All Levels',
-  philoTitle:'Rooted in Empathy, Guided by Strategy',
-  philoDesc:"Tutor grades are just the basics — empathy is what truly matters.<br>We stand in the student's shoes to diagnose the root of every \"I don't understand.\"",
-  empT:'Empathetic Teaching', empD:'In our golden small-class model, tutors and students become true learning partners. This deep trust enables tutors to tailor the most suitable academic and growth strategies for every child.',
-  strT:'Strategic Allocation', strD:"Our core logic follows: Parental Vision → Student Weakness → Prioritization, ensuring every minute of study is converted into the highest possible score return within an optimal learning environment.",
-  segT:'Tiered Streaming', segD:"Rejecting one-size-fits-all templates, we commit to 'Teach One, Train One, Optimize One.' This is more than tutoring — it's a bespoke intellectual marathon designed to propel every child toward excellence.",
-  flowTitle:'90-Minute Lesson Flow',
-  f1Time:'First 5 min', f1T:'Quick Assessment', f1D:"Same-day quizzes, learning progress, mental state — a complete picture.",
-  f2T:'Targeted Teaching', f2S:'Weaknesses or Exam Prep', f2D:'Teaching direction adjusted in real time — not a single minute wasted.',
-  f3T:'Instant Feedback', f3S:'Cloud Prep · On-Site Print', f3D:"Materials 100% synced with each student's pace — never one-size-fits-all.",
-  courseTitle:'Core Courses',
-  hwT:'Homework Support Group', hwSub:'全方位功課輔導班',
-  hwB1:'1:5 small class — every student is seen', hwB2:'Complete homework efficiently by priority',
-  hwB3:'Daily dictation / quiz preparation', hwB4:'Remaining time for core subject review',
-  priceL:'Pricing', hwP1:'Monthly (Mon–Fri)',
-  hwNote:'Note: Homework Support is currently available only at Tsuen Wan and Sha Tin.',
-  subT:'Subject Strategy Class', subSub:'精英專科加強班',
-  subB1:'Strategy-oriented Chinese, English & Maths', subB2:'5-min diagnostic at the start of each lesson',
-  subB3:'Original materials tailored to each school', subB4:'Exclusive formulas that simplify complexity',
-  subP1:'Standard Fees → Special Offer', subP2:'Primary $138/hr → $78/hr', subP3:'Jr Sec $148/hr → $88/hr',
-  subP4:'Sr Sec $158/hr → $98/hr', subP5:'Eng Speaking $158/hr → $98/hr',
-  subProT:'🎁 3 Stackable Promotions',
-  subPro1:'【Multi-Subject】 Book 2+ subjects → $20/hr off',
-  subPro2:'【Referral Bonus】 Refer a friend → $20/hr off',
-  subPro3:'【Double Referral】 Refer 2 friends → $20/hr off',
-  subNote:'* Special offer includes all stacked discounts (up to $60/hr off)',
-  sched:'Feel free to WhatsApp us about the schedule.',
-  faqTitle:'FAQ',
-  fq1Q:'What is the teacher-to-student ratio?', fq1A:"We maintain a 1:5 golden-ratio small class to ensure every student receives the tutor's full attention and personalised guidance.",
-  fq2Q:"What's the difference between Homework Support and Subject Strategy Class?", fq2A:'<strong>Homework Support</strong> focuses on daily homework, quiz preparation and foundational review. <strong>Subject Strategy Class</strong> uses strategy-oriented teaching for specific subjects with original materials and exclusive techniques — ideal for students aiming for a breakthrough.',
-  fq3Q:'What grade levels are covered?', fq3A:"Our courses cover P1 to S6 (Primary 1 through Secondary 6). Whether it's foundational reinforcement or DSE preparation, we have targeted courses and tutor arrangements.",
-  fq4Q:'How much does Homework Support cost?', fq4A:'Homework Support is charged monthly (Mon–Fri). 4:00–5:30 PM is $1,480 (1.5 hrs), 5:30–7:00 PM is $1,480 (1.5 hrs), and 4:00–7:00 PM is $2,600 (3 hrs).',
-  fq5Q:'How is the Subject Strategy Class priced?', fq5A:'Subject Strategy Class is charged per hour. Primary $138/hr (special $78/hr), Jr Sec $148/hr (special $88/hr), Sr Sec $158/hr (special $98/hr). Additional discounts for multi-subject enrolment and referrals — up to $60/hr off.',
-  fq6Q:'Where are your branches located?', fq6A:'We currently have branches in Tsuen Wan and Sha Tin. Both offer Homework Support and Subject Strategy Classes.',
-  ctaSub:'Find the best learning approach for your child', ctaBtn:'Free WhatsApp Consultation',
-  footer:'© 2016 CorLin Education',
-  b2bTag:'Proven Education Startup System · 9 Years HK Experience',
-  b2bHeroT:'Launch with a Proven Model — Save Half the Cost & Time',
-  b2bHeroD:'Starting from scratch costs double the money and time.<br>Our proven system gets you <strong class="text-white">open in 30 days</strong> at <strong class="text-white">HK$150,000</strong>.',
-  b2bS1V:'$150K', b2bS1L:'Investment (HKD)', b2bS2L:'Profit Margin', b2bS3V:'30 Days', b2bS3L:'To Revenue',
-  cmpTitle:'Why Choose Us?', cmpSub:"No HK education industry experience? Our 9-year system helps you skip every pitfall.",
-  cmpDIYBadge:'High Risk', cmpDIY:'Build from Scratch', cmpUsBadge:'Recommended', cmpUs:'CorLin Business-in-a-Box',
-  cmpCostL:'Investment', cmpCostDIY:'$300,000+', cmpCostUs:'HK$150,000',
-  cmpTimeL:'Time to Launch', cmpTimeDIY:'3–6 months', cmpTimeUs:'30 days',
-  cmpExpL:'Industry Experience', cmpExpDIY:'Required (trial & error)', cmpExpUs:'9-year system transplanted',
-  cmpMatL:'Teaching Materials', cmpMatDIY:'Build from zero', cmpMatUs:'Cloud-ready',
-  cmpLocL:'Location Strategy', cmpLocDIY:'Trial & error', cmpLocUs:'Data-driven selection',
-  cmpSuptL:'Ongoing Support', cmpSuptDIY:'None', cmpSuptUs:'Management system + cloud resources',
-  b2bModTitle:'Business Model',
-  b2bM1T:'Homework Support — Stable Foundation', b2bM1D1:'Covers base expenses (rent + labour)', b2bM1D2:'Fills the 4:00–7:00 PM slot', b2bM1D3:'Tutor Talent Reserve',
-  b2bM2T:'Subject Classes — Profit Engine', b2bM2D1:'Generates net profit and tutor bonuses', b2bM2D2:'Fills evenings and weekends', b2bM2D3:'Senior tutors (salary or 50% share)',
-  b2bPkgTitle:'HK$150,000 Business-in-a-Box', b2bPkgSub:'One price, everything to launch',
-  pkg1T:'Location Research', pkg1D:'"10-Min School Zone" analysis', pkg2T:'Light Renovation', pkg2D:'Maximise 100 sq ft',
-  pkg3T:'Cloud Materials', pkg3D:'Digital management + resources', pkg4T:'Licence-Free', pkg4D:'≤8 per class, ≤20 per day',
-  finTitle:'Financial Model',
-  finR:'Realistic Case — 75%', finRD:'Conservative forecast for investor confidence',
-  finAnc:'Mon–Fri Stable Foundation', finUp:'Weekend/Subject Upside', finTot:'Monthly Net Profit',
-  finRM:'41% Margin | 144% Annual ROI',
-  finO:'Optimized Case — 100%', finPeak:'Peak', finOD:'Revenue ceiling at full enrolment',
-  finOM:'46% Margin | 190% Annual ROI',
-  finBD:'Operating Cost Breakdown', finExp:'Expenses', finRent:'Rent', finTutor:'Tutor Wages', finMisc:'Misc',
-  finRev:'Revenue', finNet:'Net Profit',
-  finDisc:'Projections based on 1:5 ratio per HK EDB guidelines. Rent is fixed — every student after the 10th is pure margin.',
-  finVal:'Exit Valuation: Annual Profit × 2-3x (EBITDA) | 3-Unit Cluster ~$1.9M',
-  finExpan:'Purpose-built for district clustering; 3-unit cluster monthly cash flow $55,250+. Multiply your portfolio value with our proven replication system.',
-  mgmtTitle:'Management System Licence', mgmtSub:'Year 1 included; $3,000–$5,000/yr from Year 2',
-  mgmt1T:'Student Mgmt', mgmt1D:'Attendance, homework, grades — one-click parent notifications.',
-  mgmt2T:'Finance Auto', mgmt2D:'Fees, 50% tutor split — auto-calculated, zero manual work.',
-  mgmt3T:'Cloud Library', mgmt3D:'Built-in exercises for all levels — quality maintained across tutor changes.',
-  handTitle:'Three-Stage Handover',
-  h1T:'Deposit', h1D:'Sign to confirm intent', h2T:'Training', h2D:'One week standardised', h3T:'Handover', h3D:'Take over operations',
-  ttpsT:'TTPS Visa Compatible', ttpsD:'This business model meets the operational and employment requirements of Hong Kong\'s General Employment Policy / Investor Visa, suitable for those planning to obtain HK residency through business investment. Contact us for details.',
-  locTitle:'Our Locations — Visits by Appointment', locTW:'Tsuen Wan Branch', locTWA:'Unit S63, 132 Hoi Pa Street, Tsuen Wan',
-  locST:'Sha Tin Branch', locSTA:'Sha Tin, New Territories', locAppt:'By appointment', locAppt2:'By appointment',
-  b2bCTAT:'Ready to Start Your Education Business?', b2bCTAD:'Contact us for complete information.',
-  wcT:'WeChat Contact', wcD:'Add us on WeChat using the number below', wcC:'Close',
-}
-};
-
-const waMsg = {
-  'zh-Hant': { b2c:'你好！我想了解芯啟教育的補習課程。', b2b:'你好！我對芯啟教育的創業方案感興趣，想了解更多詳情。' },
-  'zh-Hans': { b2c:'你好！我想了解芯启教育的补习课程。', b2b:'你好！我对芯启教育的创业方案感兴趣，想了解更多详情。' },
-  'en':      { b2c:"Hi! I'd like to learn about CorLin's tutoring programs.", b2b:"Hi! I'm interested in CorLin's business startup package. Please share more details." }
-};
-
-let lang = 'zh-Hant', page = 'b2c', userChose = false;
-
-function apply() {
-  const t = T[lang]; if(!t) return;
-  document.querySelectorAll('[data-i18n]').forEach(el => { const k=el.getAttribute('data-i18n'); if(t[k]!==undefined) el.textContent=t[k]; });
-  document.querySelectorAll('[data-i18n-html]').forEach(el => { const k=el.getAttribute('data-i18n-html'); if(t[k]!==undefined) el.innerHTML=t[k]; });
-  document.documentElement.lang = lang==='en'?'en':(lang==='zh-Hans'?'zh-Hans':'zh-Hant');
-  // Update WhatsApp links
-  const m = waMsg[lang] || waMsg['zh-Hant'];
-  document.querySelectorAll('.wa-b2c').forEach(a => a.href='https://wa.me/85256668296?text='+encodeURIComponent(m.b2c));
-  document.querySelectorAll('.wa-b2b').forEach(a => a.href='https://wa.me/85256668296?text='+encodeURIComponent(m.b2b));
-}
-
-function setLang(l) { lang=l; apply(); document.getElementById('langDD').classList.remove('open'); document.getElementById('mobNav').classList.remove('open'); }
-
-function showPage(p) {
-  page = p;
-  var b2c=document.getElementById('pageB2C'), b2b=document.getElementById('pageB2B');
-  var d2c=document.getElementById('dNav2C'), d2b=document.getElementById('dNav2B');
-  var m2c=document.getElementById('mNav2C'), m2b=document.getElementById('mNav2B');
-  if(p==='b2c'){
-    b2c.classList.add('active'); b2b.classList.remove('active');
-    d2c.classList.remove('hidden'); d2b.classList.add('hidden');
-    m2c.classList.remove('hidden'); m2b.classList.add('hidden');
-    if(!userChose) setLang('zh-Hant');
-    history.pushState({p:'b2c'},'','?page=b2c');
-  } else {
-    b2c.classList.remove('active'); b2b.classList.add('active');
-    d2c.classList.add('hidden'); d2b.classList.remove('hidden');
-    m2c.classList.add('hidden'); m2b.classList.remove('hidden');
-    if(!userChose) setLang('zh-Hans');
-    history.pushState({p:'b2b'},'','?page=b2b');
-  }
-  document.getElementById('scrollRoot').scrollTo({top:0,behavior:'auto'});
-  document.getElementById('mobNav').classList.remove('open');
-  apply();
-}
-
-document.addEventListener('DOMContentLoaded', function(){
-  lucide.createIcons();
-
-  // URL check
-  var params = new URLSearchParams(location.search);
-  var pp = params.get('page');
-  var ll = params.get('lang');
-  if(ll && T[ll]) { userChose=true; lang=ll; }
-  if(pp==='b2b') { page='b2b'; if(!userChose){lang='zh-Hans';} showPage('b2b'); }
-  else { apply(); }
-
-  window.addEventListener('popstate',function(e){ if(e.state&&e.state.p) showPage(e.state.p); });
-
-  document.getElementById('logoBtn').addEventListener('click',function(e){e.preventDefault();showPage('b2c');});
-  document.getElementById('hamBtn').addEventListener('click',function(){document.getElementById('mobNav').classList.toggle('open');});
-  document.getElementById('langBtn').addEventListener('click',function(e){e.stopPropagation();document.getElementById('langDD').classList.toggle('open');});
-
-  document.querySelectorAll('.lbtn').forEach(function(b){ b.addEventListener('click',function(){ userChose=true; setLang(this.getAttribute('data-lang')); }); });
-  document.querySelectorAll('.nav-to-b2b').forEach(function(b){ b.addEventListener('click',function(e){e.preventDefault();showPage('b2b');}); });
-  document.querySelectorAll('.nav-to-b2c').forEach(function(b){ b.addEventListener('click',function(e){e.preventDefault();showPage('b2c');}); });
-  document.querySelectorAll('.mcl').forEach(function(b){ b.addEventListener('click',function(){document.getElementById('mobNav').classList.remove('open');}); });
-  document.querySelectorAll('.wc-btn').forEach(function(b){ b.addEventListener('click',function(){document.getElementById('wcModal').classList.remove('hidden');}); });
-  document.getElementById('wcClose').addEventListener('click',function(){document.getElementById('wcModal').classList.add('hidden');});
-  document.getElementById('wcModal').addEventListener('click',function(e){if(e.target===this)this.classList.add('hidden');});
-  document.addEventListener('click',function(e){var w=document.getElementById('langWrap');if(w&&!w.contains(e.target))document.getElementById('langDD').classList.remove('open');});
-});
-</script>
+    <script>
+        function setLang(lang) {
+            document.body.classList.remove('show-cn', 'show-en');
+            if (lang === 'cn') document.body.classList.add('show-cn');
+            else if (lang === 'en') document.body.classList.add('show-en');
+            document.querySelectorAll('.lang-btn').forEach(function(b) { b.classList.remove('active'); });
+            document.getElementById(lang === 'tc' ? 'btnTC' : lang === 'cn' ? 'btnCN' : 'btnEN').classList.add('active');
+        }
+    </script>
 </body>
 </html>
