@@ -1,15 +1,39 @@
-corlin/
-├── index.html                  ← Main hub page (existing, will update in Step 6)
-├── sitemap.xml                 ← NEW — below
-├── jordan/
-│   └── index.html              ← NEW — Step 2
-├── tsuenwan/
-│   └── index.html              ← NEW — Step 3
-├── startup/
-│   └── index.html              ← NEW — Step 4 (简体)
-├── startup-hk/
-│   └── index.html              ← NEW — Step 5 (繁體)
-├── images/
-│   ├── (your existing images)
-│   └── (OG images — you can add later via Canva)
-└── (other existing files like CSS/JS)
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://ensovista.com/corlin/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://ensovista.com/corlin/jordan/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ensovista.com/corlin/tsuenwan/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ensovista.com/corlin/startup/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ensovista.com/corlin/startup-hk/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
